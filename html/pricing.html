@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing — VerdantPack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/theme.css"/>
+  <link rel="stylesheet" href="../css/pricing.css"/>
+  <script src="../js/common.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+  <script src="../js/navigation-data.js" defer></script>
+  <script src="../js/pricing.js" defer></script>
+  <script src="../js/index.js" defer></script>
+  <script>(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="hero" style="min-height:100vh;display:flex;align-items:center;padding:120px 0 60px;position:relative;overflow:hidden">
+    <canvas id="hero-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.3"></canvas>
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1">
+      <div class="hero-content" style="max-width:none;text-align:left;padding:0">
+        <div class="hero-tag animate-on-scroll" style="margin:0">
+          <span class="pulse-dot"></span> 💰 Transparent Pricing
+        </div>
+        <h1 class="hero-title animate-on-scroll delay-1" style="font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;margin:24px 0">
+          Simple, Volume-Based<br/>
+          <span class="hero-accent">Pricing</span>
+        </h1>
+        <p class="hero-subtitle animate-on-scroll delay-2" style="font-size:1.1rem;max-width:540px;margin:0 0 40px">
+          No hidden fees, no contracts. The more you order, the more you save — automatically.
+        </p>
+        <div class="billing-toggle animate-on-scroll delay-3" style="justify-content:flex-start; margin: 0">
+          <button class="toggle-btn active" id="monthlyBtn">Monthly</button>
+          <button class="toggle-btn" id="annualBtn">Annual <span class="save-badge">Save 20%</span></button>
+        </div>
+      </div>
+      <div class="hero-visual animate-on-scroll delay-4" style="position:relative">
+         <img src="../assets/images/verdantpack_pricing_value.png" alt="VerdantPack Pricing Value" style="width:100%;height:auto;border-radius:30px;box-shadow:var(--shadow-xl);transform:perspective(1000px) rotateY(-5deg)" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing-section">
+    <div class="container">
+      <div class="pricing-grid">
+        <div class="pricing-card animate-on-scroll delay-1">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price"><span class="price-amount" data-monthly="0" data-annual="0">Free</span></div>
+          <p class="plan-desc">For businesses just getting started with sustainable packaging.</p>
+          <ul class="plan-features">
+            <li>✅ Access to all products</li>
+            <li>✅ Basic order management</li>
+            <li>✅ Standard pricing</li>
+            <li>✅ Email support</li>
+            <li>❌ Volume discounts</li>
+            <li>❌ Analytics dashboard</li>
+            <li>❌ Custom branding</li>
+            <li>❌ Dedicated account manager</li>
+          </ul>
+          <a href="login.html" class="btn-outline" style="display:block;text-align:center;margin-top:24px">Get Started Free</a>
+        </div>
+
+        <div class="pricing-card featured animate-on-scroll delay-2">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-name">Business</div>
+          <div class="plan-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" data-monthly="149" data-annual="119">149</span>
+            <span class="price-period">/mo</span>
+          </div>
+          <p class="plan-desc">For growing businesses ordering regularly. Unlock real savings.</p>
+          <ul class="plan-features">
+            <li>✅ Everything in Starter</li>
+            <li>✅ Up to 20% volume discount</li>
+            <li>✅ Full analytics dashboard</li>
+            <li>✅ Smart reorder alerts</li>
+            <li>✅ Priority support (24hr)</li>
+            <li>✅ Custom branding (500+ units)</li>
+            <li>✅ Shipment tracking</li>
+            <li>❌ Dedicated account manager</li>
+          </ul>
+          <a href="login.html" class="btn-primary" style="display:block;text-align:center;margin-top:24px">Start Free Trial</a>
+        </div>
+
+        <div class="pricing-card animate-on-scroll delay-3">
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price"><span class="price-amount">Custom</span></div>
+          <p class="plan-desc">For large-scale operations with complex supply chain needs.</p>
+          <ul class="plan-features">
+            <li>✅ Everything in Business</li>
+            <li>✅ Up to 40% volume discount</li>
+            <li>✅ Dedicated account manager</li>
+            <li>✅ Custom product development</li>
+            <li>✅ SLA guarantee (99.9% uptime)</li>
+            <li>✅ API access & integrations</li>
+            <li>✅ Quarterly impact reports</li>
+            <li>✅ White-label dashboard</li>
+          </ul>
+          <a href="contact.html" class="btn-outline" style="display:block;text-align:center;margin-top:24px">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section volume-section" id="volume" style="background:var(--bg2)">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">📊 Volume Pricing</span>
+        <h2 class="section-title">The More You Order,<br/>The More You Save</h2>
+      </div>
+      <div class="volume-table-wrap animate-on-scroll delay-1">
+        <table class="volume-table">
+          <thead>
+            <tr>
+              <th>Order Volume</th>
+              <th>Mailers (per unit)</th>
+              <th>Boxes (per unit)</th>
+              <th>Retail Bags (per unit)</th>
+              <th>Discount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>500 – 1,999</td><td>$0.22</td><td>$0.85</td><td>$0.09</td><td>Standard</td></tr>
+            <tr><td>2,000 – 4,999</td><td>$0.19</td><td>$0.74</td><td>$0.08</td><td class="discount-cell">10% off</td></tr>
+            <tr><td>5,000 – 9,999</td><td>$0.16</td><td>$0.65</td><td>$0.07</td><td class="discount-cell">20% off</td></tr>
+            <tr><td>10,000 – 24,999</td><td>$0.14</td><td>$0.58</td><td>$0.06</td><td class="discount-cell">28% off</td></tr>
+            <tr><td>25,000+</td><td>$0.12</td><td>$0.50</td><td>$0.05</td><td class="discount-cell best-discount">40% off</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">❓ FAQ</span>
+        <h2 class="section-title">Pricing Questions Answered</h2>
+      </div>
+      <div class="faq-accordion animate-on-scroll delay-1" id="pricingFaq">
+        <div class="faq-item-acc">
+          <button class="faq-question">Is there a free trial for the Business plan?</button>
+          <div class="faq-answer"><p>Yes! Every Business plan comes with a 14-day free trial — no credit card required. Cancel anytime before the trial ends.</p></div>
+        </div>
+        <div class="faq-item-acc">
+          <button class="faq-question">How are volume discounts calculated?</button>
+          <div class="faq-answer"><p>Discounts are applied automatically based on the total units per order line. Mix and match product types in a single order to hit higher tiers faster.</p></div>
+        </div>
+        <div class="faq-item-acc">
+          <button class="faq-question">Can I upgrade or downgrade my plan?</button>
+          <div class="faq-answer"><p>Absolutely. Plans are month-to-month. You can upgrade instantly and downgrade at the end of your current billing cycle.</p></div>
+        </div>
+        <div class="faq-item-acc">
+          <button class="faq-question">Are there setup fees or hidden costs?</button>
+          <div class="faq-answer"><p>None. The price you see is the price you pay. Custom branding setup fees are a one-time cost shown transparently during checkout.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  </body>
+</html>

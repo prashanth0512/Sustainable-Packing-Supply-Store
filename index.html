@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - VerdantPack</title>
+  <meta name="description" content="Premium compostable and recyclable packaging for businesses. B-Corp certified, carbon neutral."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/theme.css"/>
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+  <script src="js/navigation-data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js" defer></script>
+  <script src="js/index.js" defer></script>
+  <script>!function(){try{var t=localStorage.getItem("vp-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);var d=localStorage.getItem("vp-dir")||"ltr";document.documentElement.setAttribute("dir",d)}catch(e){}}();</script>
+</head>
+<body class="full-screen-res">
+  <div id="header-placeholder"></div>
+  <section class="hero" style="min-height:90vh;display:flex;align-items:center;padding:120px 0 60px;position:relative;overflow:hidden">
+    <canvas id="hero-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.3"></canvas>
+    <div class="container hero-container" style="position:relative;z-index:1">
+      <div class="hero-content" style="max-width:none;text-align:left;padding:0">
+        <div class="hero-tag animate-on-scroll" style="margin:0">
+          <span class="pulse-dot"></span> 100% Planet-Positive Packaging
+        </div>
+        <h1 class="hero-title animate-on-scroll delay-1" style="font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;margin:24px 0">
+          Package Smarter.<br/>
+          <span class="hero-accent">Not at Earth's Cost.</span>
+        </h1>
+        <p class="hero-subtitle animate-on-scroll delay-2" style="font-size:1.1rem;max-width:540px;margin:0 0 40px">
+          Bulk compostable & recyclable packaging for forward-thinking businesses. Volume discounts, real-time tracking, and a dashboard built for scale.
+        </p>
+        <div class="hero-actions animate-on-scroll delay-3">
+          <a href="html/services.html" class="btn-primary">Explore Products <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+          <a href="html/login.html" class="btn-outline">Get Started Free</a>
+        </div>
+      </div>
+      <div class="hero-visual animate-on-scroll delay-4" style="position:relative">
+         <img src="assets/images/blog-1.png" alt="VerdantPack Solutions" style="width:100%;height:auto;border-radius:30px;box-shadow:var(--shadow-xl);transform:perspective(1000px) rotateY(calc(var(--dir-factor, 1) * -5deg))" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <a href="html/compostable-bags.html"><span>🌿 Compostable Bags</span></a>
+        <a href="html/recyclable-boxes.html"><span>♻️ Recyclable Boxes</span></a>
+        <a href="html/eco-mailers.html"><span>🌱 Zero Waste Mailers</span></a>
+        <a href="html/services.html?category=tape"><span>📦 Eco Bubble Wrap</span></a>
+        <a href="html/services.html?category=tape"><span>🏷️ Plant-Based Labels</span></a>
+        <a href="html/services.html?category=tape"><span>🔒 Biodegradable Tape</span></a>
+        <a href="html/compostable-bags.html"><span>🌿 Compostable Bags</span></a>
+        <a href="html/recyclable-boxes.html"><span>♻️ Recyclable Boxes</span></a>
+        <a href="html/eco-mailers.html"><span>🌱 Zero Waste Mailers</span></a>
+        <a href="html/services.html?category=tape"><span>📦 Eco Bubble Wrap</span></a>
+        <a href="html/services.html?category=tape"><span>🏷️ Plant-Based Labels</span></a>
+        <a href="html/services.html?category=tape"><span>🔒 Biodegradable Tape</span></a>
+      </div>
+    </div>
+  </div>
+  <section class="section features-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">🌿 Why VerdantPack</span>
+        <h2 class="section-title">Built for Businesses<br/>That Care</h2>
+        <p class="section-subtitle">Every product is certified compostable or recyclable, sourced from regenerative suppliers, and delivered with net-zero logistics.</p>
+      </div>
+      <div class="features-grid">
+        <a href="html/service-detail.html?service=compostable" class="feature-card animate-on-scroll delay-1" style="text-decoration:none;color:inherit;display:block">
+          <div class="feature-icon">🌱</div>
+          <h3>Certified Sustainable</h3>
+          <p>All materials are BPI-certified compostable or Forest Stewardship Council (FSC) recyclable. We audit every supplier annually.</p>
+        </a>
+        <a href="html/dashboard.html" class="feature-card animate-on-scroll delay-2" style="text-decoration:none;color:inherit;display:block">
+          <div class="feature-icon">📊</div>
+          <h3>Business Dashboard</h3>
+          <p>Manage bulk orders, track shipments live, unlock volume discounts, and reorder with one click from your personalized dashboard.</p>
+        </a>
+        <a href="html/about.html" class="feature-card animate-on-scroll delay-3" style="text-decoration:none;color:inherit;display:block">
+          <div class="feature-icon">🚚</div>
+          <h3>Carbon-Neutral Delivery</h3>
+          <p>We offset 100% of delivery emissions and use electric fleets for last-mile urban delivery in 30+ cities.</p>
+        </a>
+        <a href="html/pricing.html" class="feature-card animate-on-scroll delay-4" style="text-decoration:none;color:inherit;display:block">
+          <div class="feature-icon">💰</div>
+          <h3>Volume Pricing</h3>
+          <p>Unlock up to 40% off as your order volume grows. Transparent tiered pricing with no hidden fees or long-term contracts.</p>
+        </a>
+        <a href="html/login.html" class="feature-card animate-on-scroll delay-1" style="text-decoration:none;color:inherit;display:block">
+          <div class="feature-icon">🔄</div>
+          <h3>Smart Reordering</h3>
+          <p>Set reorder triggers for frequently used SKUs. Never run out of packaging with our predictive inventory alerts.</p>
+        </a>
+        <a href="html/service-detail.html?service=custom" class="feature-card animate-on-scroll delay-2" style="text-decoration:none;color:inherit;display:block">
+          <div class="feature-icon">🎨</div>
+          <h3>Custom Branding</h3>
+          <p>Soy-based ink printing on all packaging. Full custom sizing, shapes, and branded inserts with no MOQ minimums under 500 units.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section products-preview">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">📦 Top Categories</span>
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <div class="products-grid">
+        <a href="html/service-detail.html?service=compostable" class="product-cat animate-on-scroll delay-1">
+          <div class="product-cat-img" style="background:linear-gradient(135deg,#c8e6c0,#a5d6a7)">🌿</div>
+          <div class="product-cat-info">
+            <h3>Compostable Bags</h3>
+            <p>From 68 SKUs</p>
+            <span class="product-cat-link">Shop Now →</span>
+          </div>
+        </a>
+        <a href="html/service-detail.html?service=recyclable" class="product-cat animate-on-scroll delay-2">
+          <div class="product-cat-img" style="background:linear-gradient(135deg,#b3e0f7,#81d4fa)">♻️</div>
+          <div class="product-cat-info">
+            <h3>Recyclable Boxes</h3>
+            <p>From 120 SKUs</p>
+            <span class="product-cat-link">Shop Now →</span>
+          </div>
+        </a>
+        <a href="html/service-detail.html?service=mailers" class="product-cat animate-on-scroll delay-3">
+          <div class="product-cat-img" style="background:linear-gradient(135deg,#ffe0b2,#ffcc80)">📮</div>
+          <div class="product-cat-info">
+            <h3>Eco Mailers</h3>
+            <p>From 45 SKUs</p>
+            <span class="product-cat-link">Shop Now →</span>
+          </div>
+        </a>
+        <a href="html/service-detail.html?service=tape" class="product-cat animate-on-scroll delay-4">
+          <div class="product-cat-img" style="background:linear-gradient(135deg,#e1bee7,#ce93d8)">🏷️</div>
+          <div class="product-cat-info">
+            <h3>Labels & Tape</h3>
+            <p>From 32 SKUs</p>
+            <span class="product-cat-link">Shop Now →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section advantage-section" style="background:var(--bg1)">
+    <div class="container">
+      <div class="section-header animate-on-scroll" style="text-align:center;margin-bottom:60px">
+        <span class="section-tag" style="margin-inline:auto;margin-bottom:16px">💎 The Advantage</span>
+        <h2 class="section-title">Why Scale with VerdantPack?</h2>
+        <p class="section-subtitle" style="margin-inline:auto;margin-top:20px;max-width:600px">We provide more than just boxes. We provide the infrastructure for a planet-positive supply chain.</p>
+      </div>
+      
+      <div class="advantage-grid">
+        <div class="advantage-card animate-on-scroll" style="background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;transition:transform 0.3s ease, box-shadow 0.3s ease;display:flex;flex-direction:column">
+          <div class="advantage-img" style="border-radius:16px;overflow:hidden;margin-bottom:24px;aspect-ratio:16/9">
+            <img src="assets/images/sustainable_packaging_flatlay.png" alt="Seamless Integration" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+          </div>
+          <h3 style="font-size:1.4rem;margin-bottom:12px">Seamless SKU Integration</h3>
+          <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.6;margin-bottom:24px">Our dynamic inventory system links directly with your ERP, ensuring your custom packaging is always in stock and never stalls your fulfillment line.</p>
+          <a href="html/services.html" style="margin-top:auto;color:var(--accent);text-decoration:none;font-weight:700;font-size:0.9rem">Learn About Integration →</a>
+        </div>
+
+        <div class="advantage-card animate-on-scroll delay-1" style="background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;transition:transform 0.3s ease, box-shadow 0.3s ease;display:flex;flex-direction:column">
+          <div class="advantage-img" style="border-radius:16px;overflow:hidden;margin-bottom:24px;aspect-ratio:16/9">
+            <img src="assets/images/modern_eco_fulfillment_center.png" alt="Carbon Neutral Logistics" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+          </div>
+          <h3 style="font-size:1.4rem;margin-bottom:12px">Global Eco-Logistics</h3>
+          <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.6;margin-bottom:24px">Leverage our decentralized fulfillment network to reduce shipping distances and lower your carbon footprint by an average of 32% per shipment.</p>
+          <a href="html/about.html" style="margin-top:auto;color:var(--accent);text-decoration:none;font-weight:700;font-size:0.9rem">Explore Our Network →</a>
+        </div>
+
+        <div class="advantage-card animate-on-scroll delay-2" style="background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;transition:transform 0.3s ease, box-shadow 0.3s ease;display:flex;flex-direction:column">
+          <div class="advantage-img" style="border-radius:16px;overflow:hidden;margin-bottom:24px;aspect-ratio:16/9">
+            <img src="assets/images/unboxing_satisfaction_moments.png" alt="Unboxing Design" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+          </div>
+          <h3 style="font-size:1.4rem;margin-bottom:12px">Retention-Driven Design</h3>
+          <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.6;margin-bottom:24px">Our in-house design team specializes in 'unboxing delight', turning every delivery into a moment that fosters deep customer loyalty.</p>
+          <a href="html/contact.html" style="margin-top:auto;color:var(--accent);text-decoration:none;font-weight:700;font-size:0.9rem">Consult with Designers →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section impact-section">
+    <div class="container">
+      <div class="impact-grid" style="align-items:center">
+        <div class="impact-text animate-on-scroll">
+          <span class="section-tag">🌍 Our Impact</span>
+          <h2 class="section-title">Numbers That<br/>Actually Matter</h2>
+          <p class="section-subtitle">Every order placed with VerdantPack contributes to measurable environmental impact. Here's what we've achieved together.</p>
+          <div class="impact-stats" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px">
+            <div class="impact-stat">
+              <div class="impact-num"><span class="stat-num" data-target="840">840</span>T</div>
+              <p>CO₂ Offset This Year</p>
+            </div>
+            <div class="impact-stat">
+              <div class="impact-num"><span class="stat-num" data-target="3200">3200</span>+</div>
+              <p>Trees Planted via Orders</p>
+            </div>
+            <div class="impact-stat">
+              <div class="impact-num"><span class="stat-num" data-target="99">99</span>%</div>
+              <p>Landfill Diversion Rate</p>
+            </div>
+            <div class="impact-stat">
+              <div class="impact-num"><span class="stat-num" data-target="18">18</span>K+</div>
+              <p>Businesses Gone Green</p>
+            </div>
+          </div>
+          <a href="html/about.html" class="btn-outline" style="margin-top:40px">Our Full Impact Story →</a>
+        </div>
+        <div class="impact-visual animate-on-scroll delay-2">
+           <img src="assets/images/compostable-bags.png" alt="VerdantPack Impact" style="width:100%;height:auto;border-radius:24px;box-shadow:var(--shadow-lg)" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section lifecycle-section" style="background:var(--bg2)">
+    <div class="container">
+      <div class="lifecycle-grid" style="align-items:center">
+        <div class="lifecycle-visual animate-on-scroll">
+           <img src="assets/images/verdantpack_lifecycle_journey.png" alt="VerdantPack Life Cycle" style="width:100%;height:auto;border-radius:30px;box-shadow:var(--shadow-xl)" loading="lazy"/>
+        </div>
+        <div class="lifecycle-text animate-on-scroll delay-2">
+          <span class="section-tag">♻️ Full Circle</span>
+          <h2 class="section-title">The Journey of a<br/>VerdantPackage</h2>
+          <p class="section-subtitle">We don't just sell packaging; we manage a circular material flow that ensures nothing ends up in a landfill.</p>
+          
+          <div class="step-list" style="margin-top:32px">
+            <div class="step-item" style="display:flex;gap:16px;margin-bottom:24px">
+              <div class="step-num" style="width:32px;height:32px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;box-shadow:0 0 10px rgba(0,0,0,0.3);text-shadow:0 1px 2px rgba(0,0,0,0.4)">1</div>
+              <div><strong style="display:block;margin-bottom:4px">Regenerative Sourcing</strong><p style="font-size:0.9rem;color:var(--text-muted)">We only use agricultural waste (corn/beets) or FSC-certified recycled paper.</p></div>
+            </div>
+            <div class="step-item" style="display:flex;gap:16px;margin-bottom:24px">
+              <div class="step-num" style="width:32px;height:32px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;box-shadow:0 0 10px rgba(0,0,0,0.3);text-shadow:0 1px 2px rgba(0,0,0,0.4)">2</div>
+              <div><strong style="display:block;margin-bottom:4px">Carbon-Neutral Mfg</strong><p style="font-size:0.9rem;color:var(--text-muted)">Our factories run on 100% renewable energy with closed-loop water systems.</p></div>
+            </div>
+            <div class="step-item" style="display:flex;gap:16px">
+              <div class="step-num" style="width:32px;height:32px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;box-shadow:0 0 10px rgba(0,0,0,0.3);text-shadow:0 1px 2px rgba(0,0,0,0.4)">3</div>
+              <div><strong style="display:block;margin-bottom:4px">Guaranteed Disposal</strong><p style="font-size:0.9rem;color:var(--text-muted)">Every package includes a pre-paid "return to compost" label for end-of-life security.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">💬 Testimonials</span>
+        <h2 class="section-title">Trusted by Leading Brands</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll delay-1">
+          <div class="stars">★★★★★</div>
+          <p>"VerdantPack transformed our packaging workflow. The dashboard is incredible — bulk reorders take 30 seconds, not 30 minutes."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#c8e6c0">SB</div>
+            <div><strong>Sarah B.</strong><span>Head of Operations, NatureBox Co.</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll delay-2">
+          <div class="stars">★★★★★</div>
+          <p>"Switched from our old supplier and immediately got 30% better pricing with genuinely certified sustainable materials. Huge win."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#b3e0f7">MK</div>
+            <div><strong>Marcus K.</strong><span>Procurement, GreenLeaf Retail</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll delay-3">
+          <div class="stars">★★★★★</div>
+          <p>"Our customers noticed immediately. Unboxing experience went through the roof — 22% increase in 5-star reviews after switching."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#ffe0b2">AT</div>
+            <div><strong>Anika T.</strong><span>Founder, Bloom Skincare</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner animate-on-scroll">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Ready to go green at scale?</h2>
+          <p>Join 18,000+ businesses shipping sustainably with VerdantPack.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="html/login.html" class="btn-primary">Start Free Trial</a>
+          <a href="html/contact.html" class="btn-outline" style="color:#fff;border-color:#fff;">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>

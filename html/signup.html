@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Sign Up — VerdantPack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/theme.css"/>
+  <link rel="stylesheet" href="../css/login.css"/>
+  <script src="../js/common.js" defer></script>
+  <script src="../js/login.js" defer></script>
+  <script>(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body class="auth-body">
+  <div class="auth-theme-toggle">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+    </button>
+  </div>
+
+  <main class="auth-container">
+    <div class="auth-header">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="-2 -2 36 40" fill="none">
+            <path d="M16 2L4 8v8c0 7.732 5.04 14.96 12 16.928C23.96 30.96 28 23.732 28 16V8L16 2z" fill="var(--accent)" opacity="0.2"/>
+            <path d="M16 2L4 8v8c0 7.732 5.04 14.96 12 16.928C23.96 30.96 28 23.732 28 16V8L16 2z" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+            <path d="M11 16l3 3 7-7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">Verdant<span class="logo-accent">Pack</span></span>
+      </a>
+      <h1>Create account</h1>
+      <p>Join the future of sustainable packaging</p>
+    </div>
+
+    <div class="social-grid">
+      <button type="button" class="social-btn" onclick="window.location.href='https://google.com'" aria-label="Sign up with Google">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      </button>
+      <button type="button" class="social-btn" onclick="window.location.href='https://apple.com'" aria-label="Sign up with Apple">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 20.28c-.96.95-2.4 2.72-4.22 2.72-1.72 0-2.28-1.05-4.23-1.05-1.94 0-2.58 1.02-4.21 1.05-1.78.03-3.66-2.35-4.66-4.14-2.04-3.63-1.56-6.99.12-8.91 1.63-1.85 3.52-2.11 4.79-2.11 1.25 0 2.22.75 3.3.75 1.04 0 2.37-1 3.85-1 1.55 0 2.91.82 3.73 1.95-3.08 1.65-2.58 5.4 0 6.6-1.15 2.25-3.02 5.23-4.47 6.1zm-3.04-14.77c-1.35 1.25-3.4 1.15-4.15 1.05-.12-1.63.75-3.26 1.66-4.32 1.34-1.57 3.44-1.57 4.15-1.57.12 1.63-0.31 3.59-1.66 4.84z"/></svg>
+      </button>
+      <button type="button" class="social-btn" onclick="window.location.href='https://linkedin.com'" aria-label="Sign up with LinkedIn">
+        <svg viewBox="0 0 24 24" fill="#0077b5" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+      </button>
+    </div>
+
+    <div class="auth-divider"><span>or sign up with email</span></div>
+
+    <form class="auth-form" id="signupForm">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <div class="form-input-wrapper">
+          <input type="text" id="fullname" class="form-input" placeholder="Jamie Rivera" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Work Email</label>
+        <div class="form-input-wrapper">
+          <input type="email" id="email" class="form-input" placeholder="name@company.com" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="form-input-wrapper">
+          <input type="password" id="password" class="form-input" placeholder="Min. 8 characters" required/>
+          <button type="button" class="eye-btn" id="toggleSignupPass" aria-label="Toggle password visibility">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="form-input-wrapper">
+          <input type="password" id="confirmPassword" class="form-input" placeholder="••••••••" required/>
+        </div>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:10px">Create Account</button>
+    </form>
+
+    <div class="auth-footer">
+      Already have an account? <a href="login.html">Sign in</a>
+    </div>
+  </main>
+</body>
+</html>

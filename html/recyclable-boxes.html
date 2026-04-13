@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corrugated Boxes — VerdantPack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/theme.css"/>
+  <link rel="stylesheet" href="../css/service-detail.css"/>
+  <script src="../js/common.js" defer></script>
+  <script src="../js/navigation-data.js" defer></script>
+  <script src="../js/service-detail.js" defer></script>
+  <script>(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <section class="detail-hero">
+    <div class="container">
+      <div class="breadcrumb animate-on-scroll">
+        <a href="../index.html">Home</a> <span>/</span>
+        <a href="services.html">Products</a> <span>/</span>
+        <span>Corrugated Shipping Boxes</span>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-gallery animate-on-scroll">
+          <div class="gallery-main">
+            <img src="../assets/images/recyclable-boxes.png" alt="Recyclable Boxes" style="width:100%;height:100%;object-fit:cover;border-radius:12px"/>
+          </div>
+          <div class="gallery-thumbs">
+            <div class="thumb active"><img src="../assets/images/recyclable-boxes.png" style="width:100%;height:100%;object-fit:cover"/></div>
+            <div class="thumb"><img src="../assets/images/custom-boxes.png" style="width:100%;height:100%;object-fit:cover"/></div>
+            <div class="thumb"><img src="../assets/images/blog-2.png" style="width:100%;height:100%;object-fit:cover"/></div>
+          </div>
+        </div>
+        <div class="detail-info animate-on-scroll delay-2">
+          <span class="product-category-tag" style="background:#e3f2fd;color:#2196f3;border-color:#bbdefb">♻️ 100% Recyclable</span>
+          <h1>Recyclable Corrugated Boxes</h1>
+          <div class="rating-row">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">4.9 (245 reviews)</span>
+            <span class="cert-tag">FSC Certified</span>
+          </div>
+          <div class="price-row">
+            <span class="price-main">From <strong>$0.85</strong>/unit</span>
+            <span class="price-bulk">$0.55/unit at 2,000+</span>
+          </div>
+          <p class="detail-desc">Double-walled industrial strength shipping boxes made from 100% recycled post-consumer waste. Fully FSC certified, 100% biodegradable, and incredibly durable for international shipping.</p>
+
+          <div class="config-box animate-on-scroll delay-3" style="background:var(--bg2);padding:24px;border-radius:var(--radius);margin:24px 0;border:1px solid var(--border)">
+            <h4>Configure Your Box</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
+              <div class="form-group">
+                <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:8px">Dimensions</label>
+                <select class="form-input" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--surface)">
+                  <option>8x6x4" Small</option>
+                  <option selected>12x10x4" Medium</option>
+                  <option>16x12x8" Large</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:8px">Flute Type</label>
+                <select class="form-input" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--surface)">
+                  <option>E-Flute (1.5mm)</option>
+                  <option selected>B-Flute (3.0mm)</option>
+                  <option>C-Flute (4.0mm)</option>
+                </select>
+              </div>
+            </div>
+            <div class="qty-row" style="margin-top:20px;border-top:1px solid var(--border);padding-top:20px">
+              <div class="qty-control">
+                <button class="qty-btn" id="qtyMinus">−</button>
+                <span id="qtyDisplay">250</span>
+                <button class="qty-btn" id="qtyPlus">+</button>
+              </div>
+              <div class="qty-price">Total: <strong id="qtyTotal">$212.50</strong></div>
+            </div>
+          </div>
+
+          <div class="detail-actions">
+            <a href="login.html" class="btn-primary" style="flex:1;justify-content:center">Add to Order</a>
+            <a href="dashboard.html" class="btn-outline">Open Dashboard</a>
+          </div>
+          <div style="margin-top:16px;text-align:center;">
+             <a href="login.html" style="font-size:0.875rem;font-weight:600;color:var(--text-muted)">Volume discounts available! <u>Get Started for Free</u></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg2)">
+    <div class="container">
+      <div class="tabs-section animate-on-scroll">
+        <div class="detail-tabs">
+          <button class="detail-tab active" data-tab="specs">Specs</button>
+          <button class="detail-tab" data-tab="eco">Material Origin</button>
+        </div>
+        <div class="tab-content active" id="tab-specs">
+          <table class="specs-table">
+            <tr><td>Material</td><td>100% Recycled Kraft Board (FSC Certified)</td></tr>
+            <tr><td>Burst Strength</td><td>200 lbs/sq inch (Mullen Test)</td></tr>
+            <tr><td>Edge Crush Test (ECT)</td><td>32 ECT - Standard Duty</td></tr>
+            <tr><td>Weight Capacity</td><td>Up to 15kg (Medium), 25kg (Large)</td></tr>
+            <tr><td>Glue Type</td><td>Eco-friendly Starch Based (Vegan)</td></tr>
+            <tr><td>Sustainability</td><td>100% Curbside Recyclable</td></tr>
+          </table>
+        </div>
+        <div class="tab-content" id="tab-eco">
+           <div class="cert-list">
+             <p>Our corrugated board comes from 100% post-consumer waste collected from local recycling programs. We use zero virgin timber in the core fluting of our boxes.</p>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    const customPrice = 0.85;
+    const qtyDisplay = document.getElementById('qtyDisplay');
+    const totalDisplay = document.getElementById('qtyTotal');
+    let currentQty = 250;
+    
+    function updateBagsTotal() {
+       qtyDisplay.textContent = currentQty.toLocaleString();
+       totalDisplay.textContent = '$' + (currentQty * customPrice).toFixed(2);
+    }
+    
+    document.getElementById('qtyPlus').onclick = () => { currentQty += 250; updateBagsTotal(); };
+    document.getElementById('qtyMinus').onclick = () => { if(currentQty > 250) currentQty -= 250; updateBagsTotal(); };
+  </script>
+</body>
+</html>
+

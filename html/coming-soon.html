@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon — VerdantPack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/theme.css"/>
+  <link rel="stylesheet" href="../css/coming-soon.css"/>
+  <script src="../js/common.js" defer></script>
+  <script src="../js/coming-soon.js" defer></script>
+  <script>(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="coming-page">
+    <div class="coming-emoji animate-on-scroll">🌱</div>
+    <div class="coming-tag animate-on-scroll delay-1">🔧 Under Construction</div>
+    <h1 class="animate-on-scroll delay-1">Something Sustainable<br/>Is Growing Here</h1>
+    <p class="animate-on-scroll delay-2">We're building something great. Be the first to know when it launches.</p>
+    <div class="countdown animate-on-scroll delay-2" id="countdown">
+      <div class="count-unit"><strong id="cDays">00</strong><span>Days</span></div>
+      <div class="count-unit"><strong id="cHours">00</strong><span>Hours</span></div>
+      <div class="count-unit"><strong id="cMins">00</strong><span>Mins</span></div>
+      <div class="count-unit"><strong id="cSecs">00</strong><span>Secs</span></div>
+    </div>
+    <form class="coming-form animate-on-scroll delay-3" onsubmit="handleNotify(event)">
+      <input type="email" placeholder="Enter your email to get notified" class="form-input" required/>
+      <button type="submit" class="btn-primary">Notify Me</button>
+    </form>
+    <div class="coming-success" id="comingSuccess" style="display:none">
+      <span>✅</span> You're on the list! We'll email you when we launch.
+    </div>
+    <a href="../index.html" class="back-link animate-on-scroll delay-4">← Back to VerdantPack</a>
+  </main>
+  <div id="footer-placeholder"></div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+.page-hero {
+  padding: 140px 24px 80px;
+  background: linear-gradient(180deg, var(--accent-light) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.page-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 12px 0 20px; }
+.page-hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 540px; line-height: 1.7; margin: 0 auto 28px; }
+
+.billing-toggle {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 4px;
+  gap: 4px;
+}
+.toggle-btn {
+  padding: 10px 24px; border-radius: 26px; border: none;
+  background: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 600;
+  cursor: pointer; transition: all var(--transition); min-height: 44px;
+  display: flex; align-items: center; gap: 8px;
+}
+.toggle-btn.active { background: var(--accent); color: #fff; }
+.save-badge { background: #fff8e1; color: var(--warning); border-radius: 10px; padding: 2px 8px; font-size: 0.7rem; font-weight: 700; }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  position: relative;
+  transition: all var(--transition);
+}
+.pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.pricing-card.featured { border-color: var(--accent); border-width: 2px; background: var(--surface); transform: scale(1.03); }
+.pricing-card.featured:hover { transform: scale(1.03) translateY(-4px); }
+
+.plan-badge {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: #fff;
+  border-radius: 20px; padding: 4px 18px;
+  font-size: 0.75rem; font-weight: 700; white-space: nowrap;
+}
+.plan-name { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px; }
+.plan-price { display: flex; align-items: baseline; gap: 2px; margin-bottom: 12px; }
+.price-currency { font-size: 1.5rem; font-weight: 700; color: var(--text); }
+.price-amount { font-size: 3rem; font-weight: 800; color: var(--text); line-height: 1; }
+.price-period { color: var(--text-muted); font-size: 0.9rem; }
+.plan-desc { color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 24px; }
+.plan-features { list-style: none; display: grid; gap: 10px; }
+.plan-features li { font-size: 0.875rem; color: var(--text2); }
+
+.volume-table-wrap { overflow-x: auto; }
+.volume-table {
+  width: 100%; border-collapse: collapse;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.volume-table th {
+  background: var(--bg3); padding: 14px 20px;
+  text-align: start; font-size: 0.85rem; font-weight: 700;
+  color: var(--text); border-bottom: 1px solid var(--border);
+}
+.volume-table td { padding: 14px 20px; font-size: 0.875rem; border-bottom: 1px solid var(--border); }
+.volume-table tr:last-child td { border-bottom: none; }
+.volume-table tr:hover td { background: var(--accent-light); }
+.discount-cell { color: var(--success); font-weight: 700; }
+.best-discount { color: var(--accent); font-size: 1rem; font-weight: 800; }
+
+.faq-accordion { max-width: 720px; margin: 0 auto; display: grid; gap: 12px; }
+.faq-item-acc {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+}
+.faq-question {
+  width: 100%; padding: 18px 24px; background: none; border: none;
+  color: var(--text); font-size: 0.95rem; font-weight: 600;
+  text-align: start; cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; min-height: 44px;
+  transition: background var(--transition);
+}
+.faq-question::after { content: '+'; font-size: 1.3rem; color: var(--accent); flex-shrink: 0; }
+.faq-item-acc.open .faq-question { background: var(--accent-light); }
+.faq-item-acc.open .faq-question::after { content: '−'; }
+.faq-answer { display: none; padding: 0 24px 18px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+.faq-item-acc.open .faq-answer { display: block; }
+
+@media (max-width: 1024px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } .pricing-card.featured { transform: none; } }
+@media (max-width: 640px) { .volume-table th, .volume-table td { padding: 10px 14px; font-size: 0.8rem; } }

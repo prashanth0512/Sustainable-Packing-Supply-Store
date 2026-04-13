@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco Mailers — VerdantPack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/theme.css"/>
+  <link rel="stylesheet" href="../css/service-detail.css"/>
+  <script src="../js/common.js" defer></script>
+  <script src="../js/navigation-data.js" defer></script>
+  <script src="../js/service-detail.js" defer></script>
+  <script>(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="detail-hero">
+    <div class="container">
+      <div class="breadcrumb animate-on-scroll">
+        <a href="../index.html">Home</a> <span>/</span>
+        <a href="services.html">Products</a> <span>/</span>
+        <span>Eco Mailers</span>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-gallery animate-on-scroll">
+          <div class="gallery-main">
+            <img src="../assets/images/eco-mailers.png" alt="Eco Mailers" style="width:100%;height:100%;object-fit:cover;border-radius:12px"/>
+          </div>
+          <div class="gallery-thumbs">
+            <div class="thumb active"><img src="../assets/images/eco-mailers.png" style="width:100%;height:100%;object-fit:cover"/></div>
+            <div class="thumb"><img src="../assets/images/honeycomb-wrap.png" style="width:100%;height:100%;object-fit:cover"/></div>
+            <div class="thumb"><img src="../assets/images/blog-1.png" style="width:100%;height:100%;object-fit:cover"/></div>
+          </div>
+        </div>
+        <div class="detail-info animate-on-scroll delay-2">
+          <span class="product-category-tag" style="background:#f3e5f5;color:#9c27b0;border-color:#e1bee7">✨ Premium Eco</span>
+          <h1>Eco Compostable Mailers</h1>
+          <div class="rating-row">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">5.0 (88 reviews)</span>
+            <span class="cert-tag">BPI Certified</span>
+          </div>
+          <div class="price-row">
+            <span class="price-main">From <strong>$0.28</strong>/unit</span>
+            <span class="price-bulk">$0.20/unit at 3,000+</span>
+          </div>
+          <p class="detail-desc">Double-adhesive strip mailers for easy returns. 100% home compostable, tear-proof, and moisture-resistant. The ultimate sustainable alternative for apparel and lightweight e-commerce.</p>
+
+          <div class="config-box animate-on-scroll delay-3" style="background:var(--bg2);padding:24px;border-radius:var(--radius);margin:24px 0;border:1px solid var(--border)">
+            <h4>Configure Your Mailer</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
+              <div class="form-group">
+                <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:8px">Mailer Size</label>
+                <select class="form-input" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--surface)">
+                  <option>9x12" Small Apparel</option>
+                  <option selected>12x15" Large Apparel</option>
+                  <option>19x24" Bulky Goods</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:8px">Color Option</label>
+                <select class="form-input" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--surface)">
+                  <option selected>Natural Moss Green</option>
+                  <option>Midnight Onyx Black</option>
+                  <option>Unbleached Kraft</option>
+                </select>
+              </div>
+            </div>
+            <div class="qty-row" style="margin-top:20px;border-top:1px solid var(--border);padding-top:20px">
+              <div class="qty-control">
+                <button class="qty-btn" id="qtyMinus">−</button>
+                <span id="qtyDisplay">500</span>
+                <button class="qty-btn" id="qtyPlus">+</button>
+              </div>
+              <div class="qty-price">Total: <strong id="qtyTotal">$140.00</strong></div>
+            </div>
+          </div>
+
+          <div class="detail-actions">
+            <a href="login.html" class="btn-primary" style="flex:1;justify-content:center">Add to Order</a>
+            <a href="dashboard.html" class="btn-outline">Open Dashboard</a>
+          </div>
+          <div style="margin-top:16px;text-align:center;">
+             <a href="login.html" style="font-size:0.875rem;font-weight:600;color:var(--text-muted)">New business? <u>Claim Your 100 Free Sample Kits</u></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg2)">
+    <div class="container">
+      <div class="tabs-section animate-on-scroll">
+        <div class="detail-tabs">
+          <button class="detail-tab active" data-tab="specs">Specs</button>
+          <button class="detail-tab" data-tab="eco">Returns Policy</button>
+        </div>
+        <div class="tab-content active" id="tab-specs">
+          <table class="specs-table">
+            <tr><td>Material</td><td>Corn Starch + PBAT (Certified Home Compostable)</td></tr>
+            <tr><td>Thickness</td><td>60 Microns High Grade (Tear-Resistant)</td></tr>
+            <tr><td>Print Capability</td><td>Front & Back Soy-Ink Printing</td></tr>
+            <tr><td>Certifications</td><td>BPI, TUV Home Compost, EN 13432</td></tr>
+            <tr><td>Closure</td><td>Double self-seal strips for easy returns</td></tr>
+          </table>
+        </div>
+        <div class="tab-content" id="tab-eco">
+           <div class="cert-list">
+             <p>Our mailers feature a "re-sealable" second adhesive strip, allowing your customers to reuse the same mailer for returns, reducing waste and simplifying the circular economy.</p>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section performance-section" style="background:var(--bg1)">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">🛠️ Performance Architecture</span>
+        <h2 class="section-title">Designed for the Rigors<br/>of Global Logistics</h2>
+      </div>
+      <div class="performance-grid" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px;margin-top:40px">
+        <div class="perf-card animate-on-scroll" style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:24px">
+          <div style="font-size:2rem;margin-bottom:16px">🛡️</div>
+          <h4 style="margin-bottom:12px;font-size:1.2rem">Tear-Proof Poly</h4>
+          <p style="font-size:0.9rem;line-height:1.6;color:var(--text-muted)">Engineered with a 60-micron PBAT blend, our mailers rival traditional plastic in strength, ensuring edge-to-edge durability.</p>
+        </div>
+        <div class="perf-card animate-on-scroll delay-1" style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:24px">
+          <div style="font-size:2rem;margin-bottom:16px">🔄</div>
+          <h4 style="margin-bottom:12px;font-size:1.2rem">Double-Seal Strip</h4>
+          <p style="font-size:0.9rem;line-height:1.6;color:var(--text-muted)">The dual adhesive strip allows for seamless customer returns in the same packaging, halving material waste and boosting satisfaction.</p>
+        </div>
+        <div class="perf-card animate-on-scroll delay-2" style="background:var(--surface);border:1px solid var(--border);padding:32px;border-radius:24px">
+          <div style="font-size:2rem;margin-bottom:16px">🌡️</div>
+          <h4 style="margin-bottom:12px;font-size:1.2rem">Moisture Barrier</h4>
+          <p style="font-size:0.9rem;line-height:1.6;color:var(--text-muted)">UV-stable and 100% waterproof. Your goods stay protected from the elements while the material remains fully home-compostable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    const customPrice = 0.28;
+    const qtyDisplay = document.getElementById('qtyDisplay');
+    const totalDisplay = document.getElementById('qtyTotal');
+    let currentQty = 500;
+    
+    function updateBagsTotal() {
+       qtyDisplay.textContent = currentQty.toLocaleString();
+       totalDisplay.textContent = '$' + (currentQty * customPrice).toFixed(2);
+    }
+    
+    document.getElementById('qtyPlus').onclick = () => { currentQty += 500; updateBagsTotal(); };
+    document.getElementById('qtyMinus').onclick = () => { if(currentQty > 500) currentQty -= 500; updateBagsTotal(); };
+  </script>
+</body>
+</html>
+
