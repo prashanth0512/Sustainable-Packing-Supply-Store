@@ -29,6 +29,7 @@ const HEADER_CONTENT = `
           <li><a href="pricing.html" class="nav-link">Pricing</a></li>
           <li><a href="blogs.html" class="nav-link">Blog</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
         </ul>
       </nav>
     </div>
@@ -37,7 +38,6 @@ const HEADER_CONTENT = `
       <div class="header-actions">
         <div class="auth-links">
           <a href="login.html" class="btn-outline-sm">Login</a>
-          <a href="dashboard.html" class="btn-primary-sm">Dashboard</a>
         </div>
         <button class="dir-toggle" id="dirToggle" aria-label="Toggle direction">RTL</button>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -87,8 +87,8 @@ const FOOTER_CONTENT = `
       </a>
       <p class="footer-tagline">Packaging that gives back to the planet. Certified B-Corp, 100% compostable & recyclable solutions for forward-thinking businesses.</p>
       <div class="footer-badges">
-        <span class="badge">🌿 Carbon Neutral</span>
-        <span class="badge">📍 Hyderabad, India</span>
+        <span class="badge"><i data-lucide="leaf" class="icon-sm"></i> Carbon Neutral</span>
+        <span class="badge"><i data-lucide="map-pin" class="icon-sm"></i> Hyderabad, India</span>
       </div>
     </div>
     <div class="footer-links">
@@ -295,7 +295,7 @@ const BLOGS_DATA = {
       <p>Recent data shows that 74% of e-commerce shoppers are "actively frustrated" by unnecessary plastic filler. This frustration manifests as fewer repeat purchases and lower Net Promoter Scores (NPS). When you switch to compostable mailers, you're not just buying a bag — you're buying a marketing asset that reinforces your commitment to the planet every time it arrives on a doorstep.</p>
 
       <div class="article-callout" style="background:var(--bg2);padding:24px;border-radius:16px;border-left:4px solid var(--accent);margin:32px 0">
-        <strong>💡 Economic Case Study:</strong> A mid-size apparel brand saved $12,000 annually by switching to PBAT mailers. While the mailer's cost increased by 15%, their "Unboxing Satisfaction" scores jumped 300%, leading to a direct increase in secondary referral sales.
+        <strong><i data-lucide="lightbulb" class="icon-sm"></i> Economic Case Study:</strong> A mid-size apparel brand saved $12,000 annually by switching to PBAT mailers. While the mailer's cost increased by 15%, their "Unboxing Satisfaction" scores jumped 300%, leading to a direct increase in secondary referral sales.
       </div>
 
       <h2>3. Regulatory Future-Proofing</h2>

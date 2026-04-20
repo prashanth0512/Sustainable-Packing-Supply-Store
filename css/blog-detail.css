@@ -187,3 +187,13 @@
   .article-body { padding: 24px 20px 40px; } 
   .article-content p { margin-bottom: 14px; }
 }
+.inline-style-37d30b { margin-bottom:24px }
+.inline-style-145303 { text-decoration:none;color:var(--text-muted);font-weight:600 }
+.inline-style-b4490e { display:inline-block;padding:4px 12px;background:var(--accent-light);color:var(--accent);border-radius:20px;font-size:0.85rem;font-weight:700;margin-bottom:16px }
+.inline-style-534c5e { font-size:clamp(2rem, 4vw, 3rem);line-height:1.2;margin-bottom:24px }
+.inline-style-041f29 { display:flex;align-items:center;gap:20px }
+.inline-style-9f0e4d { display:flex;align-items:center;gap:12px }
+.inline-style-4531a5 { width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;background:#c8e6c0 }
+.inline-style-6819b8 { display:block;font-size:1rem }
+.inline-style-2ac431 { font-size:0.85rem;color:var(--text-muted) }
+.inline-style-721c3f { width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:30px;box-shadow:var(--shadow-xl) }

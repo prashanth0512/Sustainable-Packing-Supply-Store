@@ -94,3 +94,16 @@
 
 @media (max-width: 1024px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } .pricing-card.featured { transform: none; } }
 @media (max-width: 640px) { .volume-table th, .volume-table td { padding: 10px 14px; font-size: 0.8rem; } }
+
+.inline-style-87d468 { min-height:100vh;display:flex;align-items:center;padding:120px 0 60px;position:relative;overflow:hidden }
+.inline-style-a86bef { position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.3 }
+.inline-style-63391a { display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1 }
+.inline-style-2c8922 { max-width:none;text-align:left;padding:0 }
+.inline-style-1386d5 { margin:0 }
+.inline-style-4da3c8 { font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;margin:24px 0 }
+.inline-style-ba75c9 { font-size:1.1rem;max-width:540px;margin:0 0 40px }
+.inline-style-9fcc7e { justify-content:flex-start; margin: 0 }
+.inline-style-c451fd { position:relative }
+.inline-style-882f70 { width:100%;height:auto;border-radius:30px;box-shadow:var(--shadow-xl);transform:perspective(1000px) rotateY(-5deg) }
+.inline-style-0954c6 { display:block;text-align:center;margin-top:24px }
+.inline-style-bcba7b { background:var(--bg2) }

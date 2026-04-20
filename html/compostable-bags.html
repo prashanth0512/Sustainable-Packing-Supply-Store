@@ -11,7 +11,7 @@
   <script src="../js/common.js" defer></script>
   <script src="../js/navigation-data.js" defer></script>
   <script src="../js/service-detail.js" defer></script>
-  <script>(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
 <body>
@@ -27,19 +27,19 @@
       <div class="detail-grid">
         <div class="detail-gallery animate-on-scroll">
           <div class="gallery-main">
-            <img src="../assets/images/retail-bags.png" alt="Compostable Retail Bags" style="width:100%;height:100%;object-fit:cover;border-radius:12px"/>
+            <img src="../assets/images/retail-bags.png" alt="Compostable Retail Bags" / class="inline-style-47299f">
           </div>
           <div class="gallery-thumbs">
-            <div class="thumb active"><img src="../assets/images/retail-bags.png" style="width:100%;height:100%;object-fit:cover"/></div>
-            <div class="thumb"><img src="../assets/images/blog-1.png" style="width:100%;height:100%;object-fit:cover"/></div>
-            <div class="thumb"><img src="../assets/images/blog-3.png" style="width:100%;height:100%;object-fit:cover"/></div>
+            <div class="thumb active"><img src="../assets/images/retail-bags.png" / class="inline-style-fc4f3d"></div>
+            <div class="thumb"><img src="../assets/images/blog-1.png" / class="inline-style-fc4f3d"></div>
+            <div class="thumb"><img src="../assets/images/blog-3.png" / class="inline-style-fc4f3d"></div>
           </div>
         </div>
         <div class="detail-info animate-on-scroll delay-2">
-          <span class="product-category-tag">🌿 100% Compostable</span>
+          <span class="product-category-tag"><i data-lucide="leaf" class="icon-sm"></i> 100% Compostable</span>
           <h1>Compostable Retail Bags</h1>
           <div class="rating-row">
-            <span class="stars">★★★★★</span>
+            <span class="stars"><i data-lucide="star" class="icon-sm"></i><i data-lucide="star" class="icon-sm"></i><i data-lucide="star" class="icon-sm"></i><i data-lucide="star" class="icon-sm"></i><i data-lucide="star" class="icon-sm"></i></span>
             <span class="rating-text">4.8 (156 reviews)</span>
             <span class="cert-tag">BPI Certified</span>
           </div>
@@ -49,27 +49,27 @@
           </div>
           <p class="detail-desc">Premium, heavy-duty retail bags designed for boutique and grocery use. Made from organic corn-starch resins. Silky texture, high puncture resistance, and TUV Austria certified for home composting.</p>
 
-          <div class="config-box animate-on-scroll delay-3" style="background:var(--bg2);padding:24px;border-radius:var(--radius);margin:24px 0;border:1px solid var(--border)">
+          <div class="config-box animate-on-scroll delay-3 inline-style-384250" >
             <h4>Configure Your Order</h4>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
+            <div  class="inline-style-1983d5">
               <div class="form-group">
-                <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:8px">Bag Size</label>
-                <select class="form-input" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--surface)">
+                <label  class="inline-style-567f1a">Bag Size</label>
+                <select class="form-input inline-style-60f1d8" >
                   <option>Small (8x12")</option>
                   <option selected>Medium (12x18")</option>
                   <option>Large (16x24")</option>
                 </select>
               </div>
               <div class="form-group">
-                <label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:8px">Handle Type</label>
-                <select class="form-input" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--surface)">
+                <label  class="inline-style-567f1a">Handle Type</label>
+                <select class="form-input inline-style-60f1d8" >
                   <option>Die-cut Handle</option>
                   <option>T-Shirt Handle</option>
                   <option>Flat Handle</option>
                 </select>
               </div>
             </div>
-            <div class="qty-row" style="margin-top:20px;border-top:1px solid var(--border);padding-top:20px">
+            <div class="qty-row inline-style-502b97" >
               <div class="qty-control">
                 <button class="qty-btn" id="qtyMinus">−</button>
                 <span id="qtyDisplay">1000</span>
@@ -80,18 +80,18 @@
           </div>
 
           <div class="detail-actions">
-            <a href="login.html" class="btn-primary" style="flex:1;justify-content:center">Add to Order</a>
+            <a href="login.html" class="btn-primary inline-style-4b99fd" >Add to Order</a>
             <a href="dashboard.html" class="btn-outline">Open Dashboard</a>
           </div>
-          <div style="margin-top:16px;text-align:center;">
-             <a href="login.html" style="font-size:0.875rem;font-weight:600;color:var(--text-muted)">Need a custom logo? <u>Sign up for a Quote</u></a>
+          <div  class="inline-style-7951f7">
+             <a href="login.html"  class="inline-style-d5946e">Need a custom logo? <u>Sign up for a Quote</u></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--bg2)">
+  <section class="section inline-style-bcba7b" >
     <div class="container">
       <div class="tabs-section animate-on-scroll">
         <div class="detail-tabs">
@@ -118,20 +118,7 @@
   </section>
 
   <div id="footer-placeholder"></div>
-  <script>
-    const customPrice = 0.12;
-    const qtyDisplay = document.getElementById('qtyDisplay');
-    const totalDisplay = document.getElementById('qtyTotal');
-    let currentQty = 1000;
-    
-    function updateBagsTotal() {
-       qtyDisplay.textContent = currentQty.toLocaleString();
-       totalDisplay.textContent = '$' + (currentQty * customPrice).toFixed(2);
-    }
-    
-    document.getElementById('qtyPlus').onclick = () => { currentQty += 500; updateBagsTotal(); };
-    document.getElementById('qtyMinus').onclick = () => { if(currentQty > 500) currentQty -= 500; updateBagsTotal(); };
-  </script>
+  
 </body>
 </html>
 

@@ -13,32 +13,32 @@
   <script src="../js/navigation-data.js" defer></script>
   <script src="../js/services.js" defer></script>
   <script src="../js/index.js" defer></script>
-  <script>(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <section class="hero" style="min-height:100vh;display:flex;align-items:center;padding:120px 0 60px;position:relative;overflow:hidden">
-    <canvas id="hero-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.3"></canvas>
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1">
-      <div class="hero-content" style="max-width:none;text-align:left;padding:0">
-        <div class="hero-tag animate-on-scroll" style="margin:0">
-          <span class="pulse-dot"></span> 📦 All Products
+  <section class="hero inline-style-87d468" >
+    <canvas id="hero-canvas"  class="inline-style-a86bef"></canvas>
+    <div class="container inline-style-63391a" >
+      <div class="hero-content inline-style-2c8922" >
+        <div class="hero-tag animate-on-scroll inline-style-1386d5" >
+          <span class="pulse-dot"></span> <i data-lucide="package" class="icon-sm"></i> All Products
         </div>
-        <h1 class="hero-title animate-on-scroll delay-1" style="font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;margin:24px 0">
+        <h1 class="hero-title animate-on-scroll delay-1 inline-style-4da3c8" >
           Sustainable Packaging<br/>
           <span class="hero-accent">for Every Need</span>
         </h1>
-        <p class="hero-subtitle animate-on-scroll delay-2" style="font-size:1.1rem;max-width:540px;margin:0 0 40px">
+        <p class="hero-subtitle animate-on-scroll delay-2 inline-style-ba75c9" >
           From compostable mailers to custom branded boxes — every product is third-party certified and built for bulk ordering.
         </p>
-        <div class="hero-actions animate-on-scroll delay-3" style="justify-content:flex-start">
+        <div class="hero-actions animate-on-scroll delay-3 inline-style-fa4778" >
           <a href="#products" class="btn-primary">View Catalogue <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
         </div>
       </div>
-      <div class="hero-visual animate-on-scroll delay-4" style="position:relative;background:var(--bg2);border-radius:30px;overflow:hidden">
-         <img src="../assets/images/sustainable_packaging_flatlay.png" alt="VerdantPack Insights" style="width:100%;height:100%;object-fit:cover;box-shadow:var(--shadow-xl)" loading="lazy"/>
+      <div class="hero-visual animate-on-scroll delay-4 inline-style-492b9f" >
+         <img src="../assets/images/sustainable_packaging_flatlay.png" alt="VerdantPack Insights"  loading="lazy"/ class="inline-style-cdc2a0">
       </div>
     </div>
   </section>
@@ -48,11 +48,11 @@
       <div class="filters-bar animate-on-scroll">
         <div class="filter-tabs" id="filterTabs">
           <button class="filter-tab active" data-filter="all">All Products</button>
-          <button class="filter-tab" data-filter="compostable">🌿 Compostable</button>
-          <button class="filter-tab" data-filter="recyclable">♻️ Recyclable</button>
-          <button class="filter-tab" data-filter="mailers">📮 Mailers</button>
-          <button class="filter-tab" data-filter="tape">🏷️ Tape & Labels</button>
-          <button class="filter-tab" data-filter="custom">🎨 Custom</button>
+          <button class="filter-tab" data-filter="compostable"><i data-lucide="leaf" class="icon-sm"></i> Compostable</button>
+          <button class="filter-tab" data-filter="recyclable"><i data-lucide="recycle" class="icon-sm"></i> Recyclable</button>
+          <button class="filter-tab" data-filter="mailers"><i data-lucide="mailbox" class="icon-sm"></i> Mailers</button>
+          <button class="filter-tab" data-filter="tape"><i data-lucide="tag" class="icon-sm"></i> Tape & Labels</button>
+          <button class="filter-tab" data-filter="custom"><i data-lucide="palette" class="icon-sm"></i> Custom</button>
         </div>
         <div class="filter-sort">
           <select class="sort-select" id="sortSelect">
@@ -66,7 +66,7 @@
     </div>
   </section>
 
-  <section class="section" id="products" style="padding-top:0">
+  <section class="section inline-style-511cd1" id="products" >
     <div class="container">
       <div class="products-grid">
         <div class="product-card animate-on-scroll" data-category="compostable" data-service="compostable">
@@ -105,7 +105,7 @@
             </div>
           </div>
           <div class="product-img-wrapper">
-            <div class="product-badge" style="background:#e3f2fd;color:#2196f3">FSC Certified</div>
+            <div class="product-badge inline-style-1a58e2" >FSC Certified</div>
             <img src="../assets/images/recyclable-boxes.png" alt="Corrugated Cardboard Boxes" class="product-fluid-img" loading="lazy"/>
           </div>
         </div>
@@ -125,7 +125,7 @@
             </div>
           </div>
           <div class="product-img-wrapper">
-            <div class="product-badge" style="background:#fff3e0;color:#ef6c00">Plastic-Free</div>
+            <div class="product-badge inline-style-ec7823" >Plastic-Free</div>
             <img src="../assets/images/eco-mailers.png" alt="Kraft Paper Mailers" class="product-fluid-img" loading="lazy"/>
           </div>
         </div>
@@ -145,7 +145,7 @@
             </div>
           </div>
           <div class="product-img-wrapper">
-            <div class="product-badge" style="background:#e1f5fe;color:#039be5">Water-Activated</div>
+            <div class="product-badge inline-style-3a3372" >Water-Activated</div>
             <img src="../assets/images/paper-tape.png" alt="Paper Gummed Tape" class="product-fluid-img" loading="lazy"/>
           </div>
         </div>
@@ -165,7 +165,7 @@
             </div>
           </div>
           <div class="product-img-wrapper">
-            <div class="product-badge" style="background:#f1f8e9;color:#558b2f">Home Compostable</div>
+            <div class="product-badge inline-style-314dcd" >Home Compostable</div>
             <img src="../assets/images/retail-bags.png" alt="Compostable Retail Bags" class="product-fluid-img" loading="lazy"/>
           </div>
         </div>
@@ -185,7 +185,7 @@
             </div>
           </div>
           <div class="product-img-wrapper">
-            <div class="product-badge" style="background:#fce4ec;color:#c2185b">Best Seller</div>
+            <div class="product-badge inline-style-36d561" >Best Seller</div>
             <img src="../assets/images/custom-boxes.png" alt="Custom Branded Boxes" class="product-fluid-img" loading="lazy"/>
           </div>
         </div>
@@ -205,7 +205,7 @@
             </div>
           </div>
           <div class="product-img-wrapper">
-            <div class="product-badge" style="background:#e8f5e9;color:#2e7d32">New</div>
+            <div class="product-badge inline-style-b121be" >New</div>
             <img src="../assets/images/pulp-inserts.png" alt="Molded Pulp Inserts" class="product-fluid-img" loading="lazy"/>
           </div>
         </div>
@@ -225,7 +225,7 @@
             </div>
           </div>
           <div class="product-img-wrapper">
-            <div class="product-badge" style="background:#fffde7;color:#fbc02d">New</div>
+            <div class="product-badge inline-style-cba5bc" >New</div>
             <img src="../assets/images/honeycomb-wrap.png" alt="Honeycomb Paper Cushion" class="product-fluid-img" loading="lazy"/>
           </div>
         </div>
@@ -233,43 +233,44 @@
     </div>
   </section>
 
-  <section class="section faq-section" style="background:var(--bg2)">
+  <section class="section faq-section inline-style-bcba7b" >
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-tag">❓ Service FAQ</span>
+        <span class="section-tag"><i data-lucide="circle-help" class="icon-sm"></i> Service FAQ</span>
         <h2 class="section-title">Common Questions About<br/>Our Packaging Solutions</h2>
       </div>
-      <div class="faq-accordion" id="servicesFaq" style="max-width:800px;margin:32px auto 0">
-        <div class="faq-item animate-on-scroll" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:16px;overflow:hidden">
-          <button class="faq-question" style="width:100%;padding:20px;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-weight:700;font-size:1.1rem;color:var(--text);text-align:left">
+      <div class="faq-accordion inline-style-f384b1" id="servicesFaq" >
+        <div class="faq-item animate-on-scroll inline-style-c94cf3" >
+          <button class="faq-question inline-style-3aef38" >
             What is the minimum order quantity for custom branding?
-            <span class="faq-icon" style="transition:transform 0.3s ease">+</span>
+            <span class="faq-icon inline-style-107e6d" >+</span>
           </button>
-          <div class="faq-answer" style="max-height:0;padding:0 20px;overflow:hidden;transition:all 0.3s ease;color:var(--text-muted);font-size:1rem;line-height:1.6">
-            <p style="padding-bottom:20px">For custom branded mailers, the MOQ starts at just 500 units. For custom corrugated boxes, we can start with as few as 250 units, allowing small businesses to upgrade their unboxing experience without massive inventory commitments.</p>
+          <div class="faq-answer inline-style-2b9718" >
+            <p  class="inline-style-79845e">For custom branded mailers, the MOQ starts at just 500 units. For custom corrugated boxes, we can start with as few as 250 units, allowing small businesses to upgrade their unboxing experience without massive inventory commitments.</p>
           </div>
         </div>
-        <div class="faq-item animate-on-scroll" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:16px;overflow:hidden">
-          <button class="faq-question" style="width:100%;padding:20px;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-weight:700;font-size:1.1rem;color:var(--text);text-align:left">
+        <div class="faq-item animate-on-scroll inline-style-c94cf3" >
+          <button class="faq-question inline-style-3aef38" >
             How long does home composting actually take?
-            <span class="faq-icon" style="transition:transform 0.3s ease">+</span>
+            <span class="faq-icon inline-style-107e6d" >+</span>
           </button>
-          <div class="faq-answer" style="max-height:0;padding:0 20px;overflow:hidden;transition:all 0.3s ease;color:var(--text-muted);font-size:1rem;line-height:1.6">
-            <p style="padding-bottom:20px">Our BPI-certified home compostable products typically break down within 90-180 days in a healthy home compost pile. In industrial composting facilities, the process is even faster, often taking less than 60 days.</p>
+          <div class="faq-answer inline-style-2b9718" >
+            <p  class="inline-style-79845e">Our BPI-certified home compostable products typically break down within 90-180 days in a healthy home compost pile. In industrial composting facilities, the process is even faster, often taking less than 60 days.</p>
           </div>
         </div>
-        <div class="faq-item animate-on-scroll" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:16px;overflow:hidden">
-          <button class="faq-question" style="width:100%;padding:20px;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-weight:700;font-size:1.1rem;color:var(--text);text-align:left">
+        <div class="faq-item animate-on-scroll inline-style-c94cf3" >
+          <button class="faq-question inline-style-3aef38" >
             Are your recyclable boxes made from 100% recycled content?
-            <span class="faq-icon" style="transition:transform 0.3s ease">+</span>
+            <span class="faq-icon inline-style-107e6d" >+</span>
           </button>
-          <div class="faq-answer" style="max-height:0;padding:0 20px;overflow:hidden;transition:all 0.3s ease;color:var(--text-muted);font-size:1rem;line-height:1.6">
-            <p style="padding-bottom:20px">Yes! Our corrugated cardboard boxes are made from 100% post-consumer recycled content and are 100% recyclable at the end of their life through standard curbside recycling programs.</p>
+          <div class="faq-answer inline-style-2b9718" >
+            <p  class="inline-style-79845e">Yes! Our corrugated cardboard boxes are made from 100% post-consumer recycled content and are 100% recyclable at the end of their life through standard curbside recycling programs.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <div id="footer-placeholder"></div>
   </body>
 </html>

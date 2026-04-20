@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
-  const serviceId = params.get('service') || 'compostable';
+  const path = window.location.pathname;
+  let defaultService = 'compostable';
+  if (path.includes('eco-mailers')) defaultService = 'mailers';
+  else if (path.includes('recyclable-boxes')) defaultService = 'recyclable';
+  else if (path.includes('compostable-bags')) defaultService = 'compostable';
+  
+  const serviceId = params.get('service') || defaultService;
   const isSubfolder = window.location.pathname.includes('/html/');
   const data = SERVICES_DATA[serviceId];
 
@@ -20,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (titleEl) titleEl.textContent = data.title;
 
     const tagEl = document.querySelector('.product-category-tag');
-    if (tagEl) tagEl.textContent = `🌿 ${data.category}`;
+    if (tagEl) tagEl.textContent = `<i data-lucide="leaf" class="icon-sm"></i> ${data.category}`;
 
     const badgeEl = document.querySelector('.cert-tag');
     if (badgeEl) badgeEl.textContent = data.tag;
@@ -54,6 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   let qty = 500;
+  let step = 500;
+  const path = window.location.pathname;
+  if (path.includes('compostable-bags')) { qty = 1000; step = 500; }
+  else if (path.includes('eco-mailers')) { qty = 500; step = 500; }
+  else if (path.includes('recyclable-boxes')) { qty = 250; step = 250; }
+
   const priceVal = data ? parseFloat(data.price.replace('$', '')) : 0.22;
   const display = document.getElementById('qtyDisplay');
   const total = document.getElementById('qtyTotal');
@@ -64,10 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.getElementById('qtyMinus')?.addEventListener('click', () => {
-    if (qty > 500) { qty -= 500; updateTotal(); }
+    if (qty > step) { qty -= step; updateTotal(); }
   });
   document.getElementById('qtyPlus')?.addEventListener('click', () => {
-    qty += 500; updateTotal();
+    qty += step; updateTotal();
   });
   
   updateTotal();

@@ -1,3 +1,5 @@
+(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);var d=localStorage.getItem('vp-dir')||'ltr';document.documentElement.setAttribute('dir',d);}catch(e){}})();
+
 const THEME_KEY = 'vp-theme';
 const DIR_KEY = 'vp-dir';
 
@@ -169,10 +171,24 @@ initDir();
 document.documentElement.style.scrollBehavior = "smooth";
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const lucideScript = document.createElement('script');
+  lucideScript.src = "https://unpkg.com/lucide@latest";
+  lucideScript.onload = () => {
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  };
+  document.head.appendChild(lucideScript);
+
   loadNavigation().then(() => {
     initScrollAnimations();
     setupSmoothNavigation();
     setupButtonFeedback();
+    
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
   });
 });
 
@@ -198,13 +214,9 @@ function setupSmoothNavigation() {
     link.addEventListener("click", function(e) {
       e.preventDefault();
       
-      document.body.style.transition = "opacity 0.25s ease, transform 0.25s ease";
-      document.body.style.opacity = "0";
-      document.body.style.transform = "translateY(-10px)";
-
       setTimeout(() => {
         window.location.href = href;
-      }, 250);
+      }, 50);
     });
   });
 }
@@ -223,15 +235,6 @@ function setupButtonFeedback() {
 }
 
 const globalCSS = `
-body {
-  animation: pageFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes pageFadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
 .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .animate-on-scroll.delay-1 { transition-delay: 0.1s; }
 .animate-on-scroll.delay-2 { transition-delay: 0.2s; }
@@ -242,10 +245,9 @@ body {
   .animate-on-scroll { opacity: 1; transform: none; transition: none; }
 }
 
-html, body {
+body {
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

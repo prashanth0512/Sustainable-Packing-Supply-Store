@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reorder-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      btn.textContent = '✅ Added';
+      btn.textContent = '<i data-lucide="check-circle" class="icon-sm"></i> Added';
       btn.classList.add('success-state');
       setTimeout(() => {
         btn.textContent = 'Reorder';

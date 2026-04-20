@@ -13,32 +13,32 @@
   <script src="../js/navigation-data.js" defer></script>
   <script src="../js/blogs.js" defer></script>
   <script src="../js/index.js" defer></script>
-  <script>(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);var d=localStorage.getItem("vp-dir")||"ltr";document.documentElement.setAttribute("dir",d)}catch(e){}})();</script>
+  
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <section class="hero" style="min-height:100vh;display:flex;align-items:center;padding:120px 0 60px;position:relative;overflow:hidden">
-    <canvas id="hero-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;opacity:0.3"></canvas>
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1">
-      <div class="hero-content" style="max-width:none;text-align:left;padding:0">
-        <div class="hero-tag animate-on-scroll" style="margin:0">
-          <span class="pulse-dot"></span> 📝 Insights
+  <section class="hero inline-style-87d468" >
+    <canvas id="hero-canvas"  class="inline-style-a86bef"></canvas>
+    <div class="container inline-style-63391a" >
+      <div class="hero-content inline-style-2c8922" >
+        <div class="hero-tag animate-on-scroll inline-style-1386d5" >
+          <span class="pulse-dot"></span> <i data-lucide="file-pen-line" class="icon-sm"></i> Insights
         </div>
-        <h1 class="hero-title animate-on-scroll delay-1" style="font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;margin:24px 0">
+        <h1 class="hero-title animate-on-scroll delay-1 inline-style-4da3c8" >
           Packaging<br/>
           <span class="hero-accent">Intelligence</span>
         </h1>
-        <p class="hero-subtitle animate-on-scroll delay-2" style="font-size:1.1rem;max-width:540px;margin:0 0 40px">
+        <p class="hero-subtitle animate-on-scroll delay-2 inline-style-ba75c9" >
           Industry insights, sustainability guides, and business tips for eco-forward companies.
         </p>
-        <div class="hero-actions animate-on-scroll delay-3" style="justify-content:flex-start">
+        <div class="hero-actions animate-on-scroll delay-3 inline-style-fa4778" >
           <a href="#blogGrid" class="btn-primary">Browse All Posts</a>
         </div>
       </div>
-      <div class="hero-visual animate-on-scroll delay-4" style="position:relative">
-         <img src="../assets/images/blog-hero.png" alt="VerdantPack Insights" style="width:100%;height:auto;border-radius:30px;box-shadow:var(--shadow-xl);transform:perspective(1000px) rotateY(-5deg)" loading="lazy"/>
+      <div class="hero-visual animate-on-scroll delay-4 inline-style-c451fd" >
+         <img src="../assets/images/blog-hero.png" alt="VerdantPack Insights"  loading="lazy"/ class="inline-style-882f70">
       </div>
     </div>
   </section>
@@ -47,7 +47,7 @@
     <div class="container">
       <div class="featured-post animate-on-scroll">
         <div class="featured-visual">
-          <img src="../assets/images/blog-1.png" alt="Sustainability blog" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+          <img src="../assets/images/blog-1.png" alt="Sustainability blog"  loading="lazy"/ class="inline-style-fc4f3d">
         </div>
         <div class="featured-content">
           <span class="post-tag">Sustainability</span>
@@ -58,13 +58,13 @@
             <span class="post-date">January 14, 2026</span>
             <span class="post-read">8 min read</span>
           </div>
-          <a href="blog-detail.html?post=plastic-cost" class="btn-outline" style="margin-top:20px;display:inline-flex">Read Article →</a>
+          <a href="blog-detail.html?post=plastic-cost" class="btn-outline inline-style-8ed927" >Read Article →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--bg2)">
+  <section class="section inline-style-bcba7b" >
     <div class="container">
       <div class="blog-filters animate-on-scroll">
         <button class="filter-tab active" data-filter="all">All Posts</button>
@@ -73,53 +73,53 @@
         <button class="filter-tab" data-filter="packaging">Packaging Tech</button>
       </div>
       <div class="blog-grid" id="blogGrid">
-        <article class="blog-card animate-on-scroll delay-1" data-cat="sustainability" data-post="composting-labels" style="display:flex;flex-direction:column;background:var(--surface);border-radius:24px;border:1px solid var(--border);overflow:hidden;transition:transform 0.3s ease">
-          <div class="blog-card-img" style="aspect-ratio:16/9;background:var(--bg2);overflow:hidden">
-            <img src="../assets/images/honeycomb-wrap.png" alt="Composting guide" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+        <article class="blog-card animate-on-scroll delay-1 inline-style-c19532" data-cat="sustainability" data-post="composting-labels" >
+          <div class="blog-card-img inline-style-5ab058" >
+            <img src="../assets/images/honeycomb-wrap.png" alt="Composting guide"  loading="lazy"/ class="inline-style-fc4f3d">
           </div>
-          <div class="blog-card-body" style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <span class="post-tag" style="background:var(--bg2);padding:4px 12px;border-radius:20px;font-size:0.8rem;width:fit-content;margin-bottom:12px">Sustainability</span>
-            <h3 style="font-size:1.3rem;margin-bottom:12px;line-height:1.4">Home vs. Industrial Composting: What Your Labels Actually Mean</h3>
-            <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.6;margin-bottom:20px">Decoding the certification labels on your packaging so you can make genuinely informed choices.</p>
-            <div class="post-meta" style="font-size:0.85rem;color:var(--text-muted);display:flex;gap:12px;margin-bottom:20px">
+          <div class="blog-card-body inline-style-3cb1b6" >
+            <span class="post-tag inline-style-1d6d25" >Sustainability</span>
+            <h3  class="inline-style-3b0dac">Home vs. Industrial Composting: What Your Labels Actually Mean</h3>
+            <p  class="inline-style-4f9185">Decoding the certification labels on your packaging so you can make genuinely informed choices.</p>
+            <div class="post-meta inline-style-ba8fcb" >
               <span>Jan 10, 2026</span><span>5 min read</span>
             </div>
-            <div style="margin-top:auto">
-              <a href="blog-detail.html?post=composting-labels" class="btn-outline-sm" style="width:100%;justify-content:center">Read More →</a>
+            <div  class="inline-style-56115e">
+              <a href="blog-detail.html?post=composting-labels" class="btn-outline-sm inline-style-d6167d" >Read More →</a>
             </div>
           </div>
         </article>
 
-        <article class="blog-card animate-on-scroll delay-2" data-cat="business" data-post="negotiation" style="display:flex;flex-direction:column;background:var(--surface);border-radius:24px;border:1px solid var(--border);overflow:hidden;transition:transform 0.3s ease">
-          <div class="blog-card-img" style="aspect-ratio:16/9;background:var(--bg2);overflow:hidden">
-            <img src="../assets/images/blog-2.png" alt="Business negotiation" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+        <article class="blog-card animate-on-scroll delay-2 inline-style-c19532" data-cat="business" data-post="negotiation" >
+          <div class="blog-card-img inline-style-5ab058" >
+            <img src="../assets/images/blog-2.png" alt="Business negotiation"  loading="lazy"/ class="inline-style-fc4f3d">
           </div>
-          <div class="blog-card-body" style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <span class="post-tag" style="background:var(--bg2);padding:4px 12px;border-radius:20px;font-size:0.8rem;width:fit-content;margin-bottom:12px">Business</span>
-            <h3 style="font-size:1.3rem;margin-bottom:12px;line-height:1.4">How to Negotiate Volume Pricing with Packaging Suppliers</h3>
-            <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.6;margin-bottom:20px">A practical guide to getting the best bulk pricing — from timing your orders to strategic quotes.</p>
-            <div class="post-meta" style="font-size:0.85rem;color:var(--text-muted);display:flex;gap:12px;margin-bottom:20px">
+          <div class="blog-card-body inline-style-3cb1b6" >
+            <span class="post-tag inline-style-1d6d25" >Business</span>
+            <h3  class="inline-style-3b0dac">How to Negotiate Volume Pricing with Packaging Suppliers</h3>
+            <p  class="inline-style-4f9185">A practical guide to getting the best bulk pricing — from timing your orders to strategic quotes.</p>
+            <div class="post-meta inline-style-ba8fcb" >
               <span>Jan 7, 2026</span><span>6 min read</span>
             </div>
-            <div style="margin-top:auto">
-              <a href="blog-detail.html?post=negotiation" class="btn-outline-sm" style="width:100%;justify-content:center">Read More →</a>
+            <div  class="inline-style-56115e">
+              <a href="blog-detail.html?post=negotiation" class="btn-outline-sm inline-style-d6167d" >Read More →</a>
             </div>
           </div>
         </article>
 
-        <article class="blog-card animate-on-scroll delay-3" data-cat="packaging" data-post="pbat-vs-pla" style="display:flex;flex-direction:column;background:var(--surface);border-radius:24px;border:1px solid var(--border);overflow:hidden;transition:transform 0.3s ease">
-          <div class="blog-card-img" style="aspect-ratio:16/9;background:var(--bg2);overflow:hidden">
-            <img src="../assets/images/blog-3.png" alt="Packaging science" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+        <article class="blog-card animate-on-scroll delay-3 inline-style-c19532" data-cat="packaging" data-post="pbat-vs-pla" >
+          <div class="blog-card-img inline-style-5ab058" >
+            <img src="../assets/images/blog-3.png" alt="Packaging science"  loading="lazy"/ class="inline-style-fc4f3d">
           </div>
-          <div class="blog-card-body" style="padding:24px;display:flex;flex-direction:column;flex:1">
-            <span class="post-tag" style="background:var(--bg2);padding:4px 12px;border-radius:20px;font-size:0.8rem;width:fit-content;margin-bottom:12px">Packaging Tech</span>
-            <h3 style="font-size:1.3rem;margin-bottom:12px;line-height:1.4">PBAT vs. PLA: Which Compostable Polymer Is Right for Your Business?</h3>
-            <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.6;margin-bottom:20px">A deep dive into the two dominant compostable materials — their properties and certifications.</p>
-            <div class="post-meta" style="font-size:0.85rem;color:var(--text-muted);display:flex;gap:12px;margin-bottom:20px">
+          <div class="blog-card-body inline-style-3cb1b6" >
+            <span class="post-tag inline-style-1d6d25" >Packaging Tech</span>
+            <h3  class="inline-style-3b0dac">PBAT vs. PLA: Which Compostable Polymer Is Right for Your Business?</h3>
+            <p  class="inline-style-4f9185">A deep dive into the two dominant compostable materials — their properties and certifications.</p>
+            <div class="post-meta inline-style-ba8fcb" >
               <span>Jan 3, 2026</span><span>7 min read</span>
             </div>
-            <div style="margin-top:auto">
-              <a href="blog-detail.html?post=pbat-vs-pla" class="btn-outline-sm" style="width:100%;justify-content:center">Read More →</a>
+            <div  class="inline-style-56115e">
+              <a href="blog-detail.html?post=pbat-vs-pla" class="btn-outline-sm inline-style-d6167d" >Read More →</a>
             </div>
           </div>
         </article>
