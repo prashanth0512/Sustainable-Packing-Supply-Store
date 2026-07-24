@@ -9,124 +9,99 @@
   <link rel="stylesheet" href="../css/theme.css"/>
   <link rel="stylesheet" href="../css/blogs.css"/>
   <script src="../js/common.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
   <script src="../js/navigation-data.js" defer></script>
   <script src="../js/blogs.js" defer></script>
-  <script src="../js/index.js" defer></script>
-  
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <section class="hero inline-style-87d468" >
-    <canvas id="hero-canvas"  class="inline-style-a86bef"></canvas>
-    <div class="container inline-style-63391a" >
-      <div class="hero-content inline-style-2c8922" >
-        <div class="hero-tag animate-on-scroll inline-style-1386d5" >
-          <span class="pulse-dot"></span> <i data-lucide="file-pen-line" class="icon-sm"></i> Insights
-        </div>
-        <h1 class="hero-title animate-on-scroll delay-1 inline-style-4da3c8" >
-          Packaging<br/>
-          <span class="hero-accent">Intelligence</span>
+  <section class="blog-hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-glass-card animate-on-scroll">
+        <span class="premium-badge"><i data-lucide="sparkles" class="icon-sm"></i> VerdantPack Insights</span>
+        <h1 class="hero-title">
+          Packaging Intelligence:<br/>Sourced for the <span class="highlight-green">Sustainable</span> Edge
         </h1>
-        <p class="hero-subtitle animate-on-scroll delay-2 inline-style-ba75c9" >
-          Industry insights, sustainability guides, and business tips for eco-forward companies.
+        <p class="hero-subtitle">
+          Explore carbon-accounting tips, material deep-dives, and B-Corp guides compiled by our materials architects.
         </p>
-        <div class="hero-actions animate-on-scroll delay-3 inline-style-fa4778" >
-          <a href="#blogGrid" class="btn-primary">Browse All Posts</a>
-        </div>
-      </div>
-      <div class="hero-visual animate-on-scroll delay-4 inline-style-c451fd" >
-         <img src="../assets/images/blog-hero.png" alt="VerdantPack Insights"  loading="lazy"/ class="inline-style-882f70">
-      </div>
-    </div>
-  </section>
 
-  <section class="section featured-post-section">
-    <div class="container">
-      <div class="featured-post animate-on-scroll">
-        <div class="featured-visual">
-          <img src="../assets/images/blog-1.png" alt="Sustainability blog"  loading="lazy"/ class="inline-style-fc4f3d">
+        <div class="hero-search-wrapper">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" id="blogSearch" placeholder="Search articles by title, category, author..." aria-label="Search blogs"/>
         </div>
-        <div class="featured-content">
-          <span class="post-tag">Sustainability</span>
-          <h2><a href="blog-detail.html?post=plastic-cost">The True Cost of Plastic Packaging: A Business Case for Going Compostable</a></h2>
-          <p>Beyond the environmental impact, plastic packaging carries hidden costs that most businesses never calculate. From disposal fees to customer perception risk, we break down the full financial picture.</p>
-          <div class="post-meta">
-            <span class="post-author">By Marcus Okafor</span>
-            <span class="post-date">January 14, 2026</span>
-            <span class="post-read">8 min read</span>
-          </div>
-          <a href="blog-detail.html?post=plastic-cost" class="btn-outline inline-style-8ed927" >Read Article →</a>
+
+        <div class="hero-actions">
+          <a href="#featuredSection" class="btn-primary">Browse Articles</a>
+          <a href="#newsletterSection" class="btn-outline">Join Newsletter</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section inline-style-bcba7b" >
+  <section class="featured-section" id="featuredSection">
     <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag"><i data-lucide="award" class="icon-sm"></i> Editorial Choice</span>
+        <h2 class="section-title">Featured <span class="hero-accent">Publications</span></h2>
+        <p class="section-subtitle">Deep industry investigations and resources that help brands transition to plastic-free circular supply systems.</p>
+      </div>
+
+      <div class="featured-grid animate-on-scroll" id="featuredGrid">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="latest-section" id="latestSection">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag"><i data-lucide="clock" class="icon-sm"></i> Recent Releases</span>
+        <h2 class="section-title">Latest Industry <span class="hero-accent">Insights</span></h2>
+        <p class="section-subtitle">Weekly updates covering life-cycle engineering audits, packaging cost controls, and environmental policies.</p>
+      </div>
+
       <div class="blog-filters animate-on-scroll">
         <button class="filter-tab active" data-filter="all">All Posts</button>
         <button class="filter-tab" data-filter="sustainability">Sustainability</button>
         <button class="filter-tab" data-filter="business">Business</button>
         <button class="filter-tab" data-filter="packaging">Packaging Tech</button>
       </div>
-      <div class="blog-grid" id="blogGrid">
-        <article class="blog-card animate-on-scroll delay-1 inline-style-c19532" data-cat="sustainability" data-post="composting-labels" >
-          <div class="blog-card-img inline-style-5ab058" >
-            <img src="../assets/images/honeycomb-wrap.png" alt="Composting guide"  loading="lazy"/ class="inline-style-fc4f3d">
-          </div>
-          <div class="blog-card-body inline-style-3cb1b6" >
-            <span class="post-tag inline-style-1d6d25" >Sustainability</span>
-            <h3  class="inline-style-3b0dac">Home vs. Industrial Composting: What Your Labels Actually Mean</h3>
-            <p  class="inline-style-4f9185">Decoding the certification labels on your packaging so you can make genuinely informed choices.</p>
-            <div class="post-meta inline-style-ba8fcb" >
-              <span>Jan 10, 2026</span><span>5 min read</span>
-            </div>
-            <div  class="inline-style-56115e">
-              <a href="blog-detail.html?post=composting-labels" class="btn-outline-sm inline-style-d6167d" >Read More →</a>
-            </div>
-          </div>
-        </article>
 
-        <article class="blog-card animate-on-scroll delay-2 inline-style-c19532" data-cat="business" data-post="negotiation" >
-          <div class="blog-card-img inline-style-5ab058" >
-            <img src="../assets/images/blog-2.png" alt="Business negotiation"  loading="lazy"/ class="inline-style-fc4f3d">
-          </div>
-          <div class="blog-card-body inline-style-3cb1b6" >
-            <span class="post-tag inline-style-1d6d25" >Business</span>
-            <h3  class="inline-style-3b0dac">How to Negotiate Volume Pricing with Packaging Suppliers</h3>
-            <p  class="inline-style-4f9185">A practical guide to getting the best bulk pricing — from timing your orders to strategic quotes.</p>
-            <div class="post-meta inline-style-ba8fcb" >
-              <span>Jan 7, 2026</span><span>6 min read</span>
-            </div>
-            <div  class="inline-style-56115e">
-              <a href="blog-detail.html?post=negotiation" class="btn-outline-sm inline-style-d6167d" >Read More →</a>
-            </div>
-          </div>
-        </article>
+      <div class="blog-grid animate-on-scroll" id="blogGrid">
 
-        <article class="blog-card animate-on-scroll delay-3 inline-style-c19532" data-cat="packaging" data-post="pbat-vs-pla" >
-          <div class="blog-card-img inline-style-5ab058" >
-            <img src="../assets/images/blog-3.png" alt="Packaging science"  loading="lazy"/ class="inline-style-fc4f3d">
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section" id="newsletterSection">
+    <div class="container">
+      <div class="newsletter-glow-1"></div>
+      <div class="newsletter-glow-2"></div>
+      <div class="newsletter-card animate-on-scroll">
+        <span class="premium-badge"><i data-lucide="mail" class="icon-sm"></i> Weekly Newsletter</span>
+        <h2 class="newsletter-title">Subscribe to the <span class="hero-accent">Green Edge</span></h2>
+        <p class="newsletter-subtitle">Get carbon-offset checklists, sustainable packaging cost forecasting models, and B-Corp guides delivered straight to your inbox.</p>
+
+        <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing to VerdantPack Insights!'); this.reset();">
+          <div class="form-group">
+            <i data-lucide="mail" class="form-icon"></i>
+            <input type="email" placeholder="Enter corporate email address" required aria-label="Corporate Email Address"/>
           </div>
-          <div class="blog-card-body inline-style-3cb1b6" >
-            <span class="post-tag inline-style-1d6d25" >Packaging Tech</span>
-            <h3  class="inline-style-3b0dac">PBAT vs. PLA: Which Compostable Polymer Is Right for Your Business?</h3>
-            <p  class="inline-style-4f9185">A deep dive into the two dominant compostable materials — their properties and certifications.</p>
-            <div class="post-meta inline-style-ba8fcb" >
-              <span>Jan 3, 2026</span><span>7 min read</span>
-            </div>
-            <div  class="inline-style-56115e">
-              <a href="blog-detail.html?post=pbat-vs-pla" class="btn-outline-sm inline-style-d6167d" >Read More →</a>
-            </div>
-          </div>
-        </article>
+          <button type="submit" class="btn-primary">Subscribe Now</button>
+        </form>
+
+        <div class="newsletter-secondary">
+          <span>Looking for custom solutions?</span>
+          <a href="contact.html" class="btn-outline-sm">Speak with an Expert</a>
+        </div>
       </div>
     </div>
   </section>
 
   <div id="footer-placeholder"></div>
-  </body>
+</body>
 </html>

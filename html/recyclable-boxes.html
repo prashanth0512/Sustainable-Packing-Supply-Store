@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Corrugated Boxes — VerdantPack</title>
+  <title>Product Detail — VerdantPack</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/theme.css"/>
@@ -11,114 +11,157 @@
   <script src="../js/common.js" defer></script>
   <script src="../js/navigation-data.js" defer></script>
   <script src="../js/service-detail.js" defer></script>
-  
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
-</head>
-<body>
+</head><body>
   <div id="header-placeholder"></div>
 
-  <section class="detail-hero">
-    <div class="container">
-      <div class="breadcrumb animate-on-scroll">
-        <a href="../index.html">Home</a> <span>/</span>
-        <a href="services.html">Products</a> <span>/</span>
-        <span>Corrugated Shipping Boxes</span>
-      </div>
-      <div class="detail-grid">
-        <div class="detail-gallery animate-on-scroll">
-          <div class="gallery-main">
-            <img src="../assets/images/recyclable-boxes.png" alt="Recyclable Boxes" / class="inline-style-47299f">
-          </div>
-          <div class="gallery-thumbs">
-            <div class="thumb active"><img src="../assets/images/recyclable-boxes.png" / class="inline-style-fc4f3d"></div>
-            <div class="thumb"><img src="../assets/images/custom-boxes.png" / class="inline-style-fc4f3d"></div>
-            <div class="thumb"><img src="../assets/images/blog-2.png" / class="inline-style-fc4f3d"></div>
-          </div>
-        </div>
-        <div class="detail-info animate-on-scroll delay-2">
-          <span class="product-category-tag inline-style-02469d" ><i data-lucide="recycle" class="icon-sm"></i> 100% Recyclable</span>
-          <h1>Recyclable Corrugated Boxes</h1>
-          <div class="rating-row">
-            <span class="stars"><i data-lucide="star" class="icon-sm"></i><i data-lucide="star" class="icon-sm"></i><i data-lucide="star" class="icon-sm"></i><i data-lucide="star" class="icon-sm"></i><i data-lucide="star" class="icon-sm"></i></span>
-            <span class="rating-text">4.9 (245 reviews)</span>
-            <span class="cert-tag">FSC Certified</span>
-          </div>
-          <div class="price-row">
-            <span class="price-main">From <strong>$0.85</strong>/unit</span>
-            <span class="price-bulk">$0.55/unit at 2,000+</span>
-          </div>
-          <p class="detail-desc">Double-walled industrial strength shipping boxes made from 100% recycled post-consumer waste. Fully FSC certified, 100% biodegradable, and incredibly durable for international shipping.</p>
+  <main class="detail-container-new">
 
-          <div class="config-box animate-on-scroll delay-3 inline-style-384250" >
-            <h4>Configure Your Box</h4>
-            <div  class="inline-style-1983d5">
-              <div class="form-group">
-                <label  class="inline-style-567f1a">Dimensions</label>
-                <select class="form-input inline-style-60f1d8" >
-                  <option>8x6x4" Small</option>
-                  <option selected>12x10x4" Medium</option>
-                  <option>16x12x8" Large</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label  class="inline-style-567f1a">Flute Type</label>
-                <select class="form-input inline-style-60f1d8" >
-                  <option>E-Flute (1.5mm)</option>
-                  <option selected>B-Flute (3.0mm)</option>
-                  <option>C-Flute (4.0mm)</option>
-                </select>
-              </div>
-            </div>
-            <div class="qty-row inline-style-502b97" >
-              <div class="qty-control">
-                <button class="qty-btn" id="qtyMinus">−</button>
-                <span id="qtyDisplay">250</span>
-                <button class="qty-btn" id="qtyPlus">+</button>
-              </div>
-              <div class="qty-price">Total: <strong id="qtyTotal">$212.50</strong></div>
+    <section id="hero-section" class="sd-hero">
+      <div class="sd-hero-bg" id="heroBg"></div>
+      <div class="sd-hero-overlay"></div>
+      <div class="container sd-hero-content">
+        <span class="sd-badge animate-on-scroll" id="heroBadge">Badge</span>
+        <h1 class="sd-hero-title animate-on-scroll delay-1" id="heroTitle">Heading</h1>
+        <p class="sd-hero-desc animate-on-scroll delay-2" id="heroSubtitle">Supporting paragraph</p>
+        <div class="sd-hero-used animate-on-scroll delay-3">
+          <span>Ideal For:</span> <strong id="usedIn">Service usage</strong>
+        </div>
+        <div class="sd-hero-actions animate-on-scroll delay-4">
+          <a href="#pricing-section" class="btn-primary">View Pricing <i data-lucide="arrow-right" class="icon-sm"></i></a>
+          <a href="contact.html" class="btn-outline">Request Quote <i data-lucide="mail" class="icon-sm"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview-section" class="sd-overview animate-on-scroll">
+      <div class="container">
+        <div class="overview-grid">
+          <div class="overview-left">
+            <div class="overview-img-wrapper">
+              <img src="" alt="Overview Image" id="overviewImg" class="overview-img">
             </div>
           </div>
+          <div class="overview-right">
+            <span class="sd-subbadge" id="overviewSubbadge">Service Overview</span>
+            <h2 id="overviewHeading">Heading</h2>
+            <p id="overviewDesc" class="overview-desc">Description</p>
+            <div class="benefits-grid" id="benefitsGrid">
 
-          <div class="detail-actions">
-            <a href="login.html" class="btn-primary inline-style-4b99fd" >Add to Order</a>
-            <a href="dashboard.html" class="btn-outline">Open Dashboard</a>
-          </div>
-          <div  class="inline-style-7951f7">
-             <a href="login.html"  class="inline-style-d5946e">Volume discounts available! <u>Get Started for Free</u></a>
+            </div>
+            <div class="overview-industries">
+              <strong>Recommended Industries:</strong>
+              <div class="industries-list" id="industriesList"></div>
+            </div>
+            <div class="overview-actions">
+              <a href="contact.html" class="btn-primary">Request Customized Samples <i data-lucide="message-square" class="icon-sm"></i></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section inline-style-bcba7b" >
-    <div class="container">
-      <div class="tabs-section animate-on-scroll">
-        <div class="detail-tabs">
-          <button class="detail-tab active" data-tab="specs">Specs</button>
-          <button class="detail-tab" data-tab="eco">Material Origin</button>
+    <section id="details-section" class="sd-details animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="sd-subbadge">Product Specifications</span>
+          <h2>Technical & Environmental Integrity</h2>
+          <p>Deep-dive specifications verifying structural strength and global eco compliance standards.</p>
         </div>
-        <div class="tab-content active" id="tab-specs">
-          <table class="specs-table">
-            <tr><td>Material</td><td>100% Recycled Kraft Board (FSC Certified)</td></tr>
-            <tr><td>Burst Strength</td><td>200 lbs/sq inch (Mullen Test)</td></tr>
-            <tr><td>Edge Crush Test (ECT)</td><td>32 ECT - Standard Duty</td></tr>
-            <tr><td>Weight Capacity</td><td>Up to 15kg (Medium), 25kg (Large)</td></tr>
-            <tr><td>Glue Type</td><td>Eco-friendly Starch Based (Vegan)</td></tr>
-            <tr><td>Sustainability</td><td>100% Curbside Recyclable</td></tr>
-          </table>
-        </div>
-        <div class="tab-content" id="tab-eco">
-           <div class="cert-list">
-             <p>Our corrugated board comes from 100% post-consumer waste collected from local recycling programs. We use zero virgin timber in the core fluting of our boxes.</p>
-           </div>
+        <div class="details-grid" id="detailsGrid">
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="timeline-section" class="sd-timeline animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="sd-subbadge">Fulfillment Workflow</span>
+          <h2>Inquiry to Delivery Timeline</h2>
+          <p>Our carbon-neutral shipping operations ensure seamless and transparent delivery pipelines.</p>
+        </div>
+        <div class="timeline-wrapper">
+          <div class="timeline-line">
+            <div class="timeline-line-progress" id="timelineProgress"></div>
+          </div>
+          <div class="timeline-steps" id="timelineSteps">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing-section" class="sd-pricing animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="sd-subbadge">Transparent Cost Structure</span>
+          <h2>Flexible Purchase Scales</h2>
+          <p>From trial runs to massive enterprise custom operations, select the plan matching your velocity.</p>
+        </div>
+        <div class="pricing-grid" id="pricingGrid">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery-section" class="sd-gallery animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="sd-subbadge">Visual Showcase</span>
+          <h2>Real-World Print & Application Showcase</h2>
+          <p>Get inspired by unboxing aesthetics, structural textures, and logo prints across our portfolio.</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="faq-section" class="sd-faq animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="sd-subbadge">Got Questions?</span>
+          <h2>Product & Order Support FAQ</h2>
+          <p>Essential guidance on storage conditions, bulk logistics, custom print proofs, and return guidelines.</p>
+        </div>
+        <div class="faq-accordion" id="faqAccordion">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="related-section" class="sd-related animate-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="sd-subbadge">Cross-Product Synergy</span>
+          <h2>Alternative & Complementary Solutions</h2>
+          <p>Pair different items from our catalog to design a cohesive, plastic-free shipping standard.</p>
+        </div>
+        <div class="related-grid" id="relatedGrid">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-section" class="sd-final-cta animate-on-scroll">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-glow"></div>
+          <span class="sd-badge">B-Corp Certified Partner</span>
+          <h2>Ready to Decarbonize Your Logistics?</h2>
+          <p>Switching to sustainable packaging is the highest leverage environment choice you can make today. We make the transition fast, affordable, and high-fidelity.</p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn-primary">Order Sample Kit <i data-lucide="sparkles" class="icon-sm"></i></a>
+            <a href="login.html" class="btn-outline">Sign Up / Get Custom Quote <i data-lucide="arrow-right" class="icon-sm"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <div id="footer-placeholder"></div>
-  
 </body>
 </html>
-

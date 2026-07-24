@@ -135,7 +135,7 @@ function setupHeaderInteractions() {
 
   const path = window.location.pathname;
   const page = path.split('/').pop() || 'index.html';
-  
+
   document.querySelectorAll('.nav-link, .mobile-nav-list a, .dropdown-item').forEach(link => {
     link.classList.remove('active');
     const href = link.getAttribute('href');
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     setupSmoothNavigation();
     setupButtonFeedback();
-    
+
     if (window.lucide) {
       window.lucide.createIcons();
     }
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function setupSmoothNavigation() {
   const prefetchedLinks = new Set();
-  
+
   document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href.includes("#") || href.startsWith('mailto:') || href.startsWith('tel:') || link.target === "_blank") {
@@ -213,7 +213,7 @@ function setupSmoothNavigation() {
 
     link.addEventListener("click", function(e) {
       e.preventDefault();
-      
+
       setTimeout(() => {
         window.location.href = href;
       }, 50);
@@ -266,7 +266,7 @@ body {
 
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
-  
+
   [style*="grid-template-columns"],
   .grid, .advantage-grid, .blog-grid, .impact-grid, .lifecycle-grid, 
   .steps-grid, .split-layout, .contact-layout, .form-row,
@@ -301,9 +301,9 @@ body {
 
   h1 { font-size: 2.2rem !important; }
   h2 { font-size: 1.8rem !important; }
-  
+
   .hero { padding-top: 80px !important; min-height: auto !important; }
-  
+
   img {
     height: auto !important;
     max-height: 400px;

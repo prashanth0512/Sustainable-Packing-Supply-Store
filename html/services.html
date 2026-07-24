@@ -13,39 +13,101 @@
   <script src="../js/navigation-data.js" defer></script>
   <script src="../js/services.js" defer></script>
   <script src="../js/index.js" defer></script>
-  
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <section class="hero inline-style-87d468" >
-    <canvas id="hero-canvas"  class="inline-style-a86bef"></canvas>
-    <div class="container inline-style-63391a" >
-      <div class="hero-content inline-style-2c8922" >
-        <div class="hero-tag animate-on-scroll inline-style-1386d5" >
-          <span class="pulse-dot"></span> <i data-lucide="package" class="icon-sm"></i> All Products
+  <section class="services-hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container-inner">
+      <div class="hero-content-center animate-on-scroll">
+        <span class="eco-badge"><i data-lucide="package" class="icon-sm"></i> Our Services</span>
+        <h1 class="hero-title">Reinventing Supply Chains with <span class="highlight">Circular</span> Materials</h1>
+        <p class="hero-subtitle">B-Corp certified, carbon-neutral manufacturing and customized logistics solutions scaled for global enterprises.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary">Explore Products <i data-lucide="arrow-down" class="icon-sm"></i></a>
+          <a href="contact.html" class="btn-outline">Talk to Sales</a>
         </div>
-        <h1 class="hero-title animate-on-scroll delay-1 inline-style-4da3c8" >
-          Sustainable Packaging<br/>
-          <span class="hero-accent">for Every Need</span>
-        </h1>
-        <p class="hero-subtitle animate-on-scroll delay-2 inline-style-ba75c9" >
-          From compostable mailers to custom branded boxes — every product is third-party certified and built for bulk ordering.
-        </p>
-        <div class="hero-actions animate-on-scroll delay-3 inline-style-fa4778" >
-          <a href="#products" class="btn-primary">View Catalogue <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
-        </div>
-      </div>
-      <div class="hero-visual animate-on-scroll delay-4 inline-style-492b9f" >
-         <img src="../assets/images/sustainable_packaging_flatlay.png" alt="VerdantPack Insights"  loading="lazy"/ class="inline-style-cdc2a0">
       </div>
     </div>
   </section>
 
-  <section class="filters-section">
+  <section class="section benefits-section">
     <div class="container">
-      <div class="filters-bar animate-on-scroll">
+      <div class="benefits-layout">
+        <div class="benefits-image animate-on-scroll">
+          <img src="../assets/images/honeycomb-wrap.png" alt="VerdantPack Honeycomb Cushioning Wrap" loading="lazy">
+        </div>
+
+        <div class="benefits-content animate-on-scroll">
+          <span class="section-tag"><i data-lucide="shield-check" class="icon-sm"></i> Benefits</span>
+          <h2>Engineered for <span class="accent-text">Performance</span> and Planet</h2>
+          <p class="lead-text">We help enterprises eliminate plastic waste from their shipping lines without increasing unit procurement costs or compromising transit protection.</p>
+
+          <ul class="benefits-grid">
+            <li>
+              <div class="benefit-icon"><i data-lucide="leaf"></i></div>
+              <div class="benefit-text">
+                <h4>Certified Sustainable</h4>
+                <p>All materials are verified BPI compostable, FSC certified, or 100% recyclable.</p>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon"><i data-lucide="factory"></i></div>
+              <div class="benefit-text">
+                <h4>Bulk Manufacturing</h4>
+                <p>Industrial capacity supporting high volume automated shipping lines.</p>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon"><i data-lucide="palette"></i></div>
+              <div class="benefit-text">
+                <h4>Custom Branding</h4>
+                <p>High-resolution prints using water-based and soy-based non-toxic inks.</p>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon"><i data-lucide="truck"></i></div>
+              <div class="benefit-text">
+                <h4>Fast Local Delivery</h4>
+                <p>Decentralized warehouse nodes deliver inventory nationwide with zero downtime.</p>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon"><i data-lucide="globe"></i></div>
+              <div class="benefit-text">
+                <h4>Carbon Neutral Shipping</h4>
+                <p>Scope 3 carbon emissions offset per order through validated clean-energy programs.</p>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon"><i data-lucide="check-circle"></i></div>
+              <div class="benefit-text">
+                <h4>Quality Assurance</h4>
+                <p>Rigorous compression and humidity testing guarantees structural transit integrity.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="benefits-actions">
+            <a href="contact.html" class="btn-outline">Explore Materials <i data-lucide="arrow-right" class="icon-sm"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section products-section" id="products">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag"><i data-lucide="package" class="icon-sm"></i> Materials Catalog</span>
+        <h2 class="section-title">Premium Eco-Friendly <span class="hero-accent">Solutions</span></h2>
+        <p class="section-subtitle">Browse our selection of third-party certified, compostable, and recyclable materials customized for bulk shipments.</p>
+      </div>
+
+      <div class="filters-bar animate-on-scroll" style="margin-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 32px;">
         <div class="filter-tabs" id="filterTabs">
           <button class="filter-tab active" data-filter="all">All Products</button>
           <button class="filter-tab" data-filter="compostable"><i data-lucide="leaf" class="icon-sm"></i> Compostable</button>
@@ -63,210 +125,391 @@
           </select>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section inline-style-511cd1" id="products" >
-    <div class="container">
       <div class="products-grid">
+
         <div class="product-card animate-on-scroll" data-category="compostable" data-service="compostable">
-          <div class="product-content">
-            <span class="product-category">Compostable</span>
-            <h3>Compostable Mailer Bags</h3>
-            <p>100% home-compostable poly mailers made from a PBAT & PLA blend. Fully certified, waterproof, tear-resistant, and shelf-stable for 12 months.</p>
-            <div class="product-specs">
-              <span>Min. 500 units</span>
-              <span>6 sizes</span>
-              <span>3 colors</span>
-            </div>
-            <div class="product-price-row">
-              <span class="product-price">From $1.40/unit</span>
-              <button class="btn-primary details-btn" data-service="compostable">View Details</button>
-            </div>
-          </div>
-          <div class="product-img-wrapper">
+          <div class="product-img-container">
             <div class="product-badge">BPI Certified</div>
-            <img src="../assets/images/compostable-bags.png" alt="Compostable Mailer Bags" class="product-fluid-img" loading="lazy"/>
+            <img src="../assets/images/compostable-bags.png" alt="Compostable Mailer Bags" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <div class="service-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2zm0 0v-5c-1 0-2-1-2-2"/></svg>
+            </div>
+            <span class="product-category-tag">Compostable</span>
+            <h3>Compostable Mailer Bags</h3>
+            <p class="product-card-desc">100% home-compostable poly mailers made from a PBAT & PLA blend. Waterproof, tear-resistant, and shelf-stable for 12 months.</p>
+            <ul class="product-bullets">
+              <li><i data-lucide="check" class="icon-sm"></i> Home compostable (ASTM d6400)</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Heavy-duty 55-micron thickness</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Double-track seal strip</li>
+            </ul>
+            <div class="product-card-footer">
+              <span class="price-val">From $1.40<span class="unit">/unit</span></span>
+              <button class="btn-primary details-btn" data-service="compostable">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></button>
+            </div>
           </div>
         </div>
 
         <div class="product-card animate-on-scroll" data-category="recyclable" data-service="recyclable">
-          <div class="product-content">
-            <span class="product-category">Recyclable</span>
-            <h3>Corrugated Cardboard Boxes</h3>
-            <p>100% recycled content corrugated boxes. Double-walled for extra protection. Available in 40+ standard sizes and full custom dimensions.</p>
-            <div class="product-specs">
-              <span>Min. 100 units</span>
-              <span>40+ sizes</span>
-            </div>
-            <div class="product-price-row">
-              <span class="product-price">From $0.85/unit</span>
-              <button class="btn-primary details-btn" data-service="recyclable">View Details</button>
-            </div>
+          <div class="product-img-container">
+            <div class="product-badge accent-blue">FSC Certified</div>
+            <img src="../assets/images/recyclable-boxes.png" alt="Corrugated Cardboard Boxes" loading="lazy">
           </div>
-          <div class="product-img-wrapper">
-            <div class="product-badge inline-style-1a58e2" >FSC Certified</div>
-            <img src="../assets/images/recyclable-boxes.png" alt="Corrugated Cardboard Boxes" class="product-fluid-img" loading="lazy"/>
+          <div class="product-info-wrap">
+            <div class="service-icon-badge icon-blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package"><path d="m7.5 4.27 9 5.15M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+            </div>
+            <span class="product-category-tag">Recyclable</span>
+            <h3>Corrugated Cardboard Boxes</h3>
+            <p class="product-card-desc">100% recycled Kraft board boxes. Double-walled for structural transit protection. Available in standard and custom sizes.</p>
+            <ul class="product-bullets">
+              <li><i data-lucide="check" class="icon-sm"></i> Post-consumer recycled Kraft</li>
+              <li><i data-lucide="check" class="icon-sm"></i> 200 lbs/sq inch burst test</li>
+              <li><i data-lucide="check" class="icon-sm"></i> 100% curbside recyclable</li>
+            </ul>
+            <div class="product-card-footer">
+              <span class="price-val">From $0.85<span class="unit">/unit</span></span>
+              <button class="btn-primary details-btn" data-service="recyclable">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></button>
+            </div>
           </div>
         </div>
 
         <div class="product-card animate-on-scroll" data-category="mailers" data-service="mailers">
-          <div class="product-content">
-            <span class="product-category">Mailers</span>
-            <h3>Kraft Paper Mailers</h3>
-            <p>Expandable kraft paper mailers with self-seal adhesive. Curbside recyclable, 100% paper. Reinforced edges for heavy items.</p>
-            <div class="product-specs">
-              <span>Min. 200 units</span>
-              <span>8 sizes</span>
-            </div>
-            <div class="product-price-row">
-              <span class="product-price">From $0.28/unit</span>
-              <button class="btn-primary details-btn" data-service="mailers">View Details</button>
-            </div>
+          <div class="product-img-container">
+            <div class="product-badge accent-orange">Plastic-Free</div>
+            <img src="../assets/images/eco-mailers.png" alt="Kraft Paper Mailers" loading="lazy">
           </div>
-          <div class="product-img-wrapper">
-            <div class="product-badge inline-style-ec7823" >Plastic-Free</div>
-            <img src="../assets/images/eco-mailers.png" alt="Kraft Paper Mailers" class="product-fluid-img" loading="lazy"/>
+          <div class="product-info-wrap">
+            <div class="service-icon-badge icon-orange">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <span class="product-category-tag">Mailers</span>
+            <h3>Kraft Paper Mailers</h3>
+            <p class="product-card-desc">Expandable paper mailing bags with self-seal adhesive. Rigid borders provide drop and compression protection.</p>
+            <ul class="product-bullets">
+              <li><i data-lucide="check" class="icon-sm"></i> 100% recyclable fibers</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Expandable gusset base</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Double adhesive self-seal</li>
+            </ul>
+            <div class="product-card-footer">
+              <span class="price-val">From $0.28<span class="unit">/unit</span></span>
+              <button class="btn-primary details-btn" data-service="mailers">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></button>
+            </div>
           </div>
         </div>
 
         <div class="product-card animate-on-scroll" data-category="tape" data-service="tape">
-          <div class="product-content">
-            <span class="product-category">Tape & Labels</span>
-            <h3>Paper Gummed Tape</h3>
-            <p>Water-activated reinforced kraft paper tape. Bond creates a tamper-evident seal. Fully recyclable with the box.</p>
-            <div class="product-specs">
-              <span>Min. 36 rolls</span>
-              <span>Reinforced</span>
-            </div>
-            <div class="product-price-row">
-              <span class="product-price">From $4.20/roll</span>
-              <button class="btn-primary details-btn" data-service="tape">View Details</button>
-            </div>
+          <div class="product-img-container">
+            <div class="product-badge accent-blue">Water-Activated</div>
+            <img src="../assets/images/paper-tape.png" alt="Paper Gummed Tape" loading="lazy">
           </div>
-          <div class="product-img-wrapper">
-            <div class="product-badge inline-style-3a3372" >Water-Activated</div>
-            <img src="../assets/images/paper-tape.png" alt="Paper Gummed Tape" class="product-fluid-img" loading="lazy"/>
+          <div class="product-info-wrap">
+            <div class="service-icon-badge icon-blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.586-6.586a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></svg>
+            </div>
+            <span class="product-category-tag">Tape & Labels</span>
+            <h3>Paper Gummed Tape</h3>
+            <p class="product-card-desc">Water-activated reinforced paper tape. The fiberglass grid bond forms a completely tamper-evident, permanent seal.</p>
+            <ul class="product-bullets">
+              <li><i data-lucide="check" class="icon-sm"></i> Water-activated starch bond</li>
+              <li><i data-lucide="check" class="icon-sm"></i> High-tensile fiberglass reinforcement</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Recycles directly with cardboard</li>
+            </ul>
+            <div class="product-card-footer">
+              <span class="price-val">From $4.20<span class="unit">/roll</span></span>
+              <button class="btn-primary details-btn" data-service="tape">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></button>
+            </div>
           </div>
         </div>
 
         <div class="product-card animate-on-scroll" data-category="compostable" data-service="retail">
-          <div class="product-content">
-            <span class="product-category">Compostable</span>
-            <h3>Compostable Retail Bags</h3>
-            <p>High-quality handle bags for retail. 100% compostable, certified for home composting. Silky smooth texture.</p>
-            <div class="product-specs">
-              <span>Min. 1000 units</span>
-              <span>4 sizes</span>
-            </div>
-            <div class="product-price-row">
-              <span class="product-price">From $0.09/unit</span>
-              <button class="btn-primary details-btn" data-service="retail">View Details</button>
-            </div>
+          <div class="product-img-container">
+            <div class="product-badge">Home Compostable</div>
+            <img src="../assets/images/retail-bags.png" alt="Compostable Retail Bags" loading="lazy">
           </div>
-          <div class="product-img-wrapper">
-            <div class="product-badge inline-style-314dcd" >Home Compostable</div>
-            <img src="../assets/images/retail-bags.png" alt="Compostable Retail Bags" class="product-fluid-img" loading="lazy"/>
+          <div class="product-info-wrap">
+            <div class="service-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" x2="21" y1="6" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <span class="product-category-tag">Compostable</span>
+            <h3>Compostable Retail Bags</h3>
+            <p class="product-card-desc">Eco-friendly retail handle bags. Certified OK Compost Home. Features a silky smooth texture and premium build.</p>
+            <ul class="product-bullets">
+              <li><i data-lucide="check" class="icon-sm"></i> 100% plant-based starches</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Soft luxury feel</li>
+              <li><i data-lucide="check" class="icon-sm"></i> High-load carrying handles</li>
+            </ul>
+            <div class="product-card-footer">
+              <span class="price-val">From $0.09<span class="unit">/unit</span></span>
+              <button class="btn-primary details-btn" data-service="retail">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></button>
+            </div>
           </div>
         </div>
 
         <div class="product-card animate-on-scroll" data-category="custom" data-service="custom">
-          <div class="product-content">
-            <span class="product-category">Custom</span>
-            <h3>Custom Branded Boxes</h3>
-            <p>Full-color soy-ink printed boxes on FSC board. Our design team helps you build an unboxing experience.</p>
-            <div class="product-specs">
-              <span>Min. 250 units</span>
-              <span>Full color</span>
-            </div>
-            <div class="product-price-row">
-              <span class="product-price">From $1.40/unit</span>
-              <button class="btn-primary details-btn" data-service="custom">View Details</button>
-            </div>
+          <div class="product-img-container">
+            <div class="product-badge accent-pink">Best Seller</div>
+            <img src="../assets/images/custom-boxes.png" alt="Custom Branded Boxes" loading="lazy">
           </div>
-          <div class="product-img-wrapper">
-            <div class="product-badge inline-style-36d561" >Best Seller</div>
-            <img src="../assets/images/custom-boxes.png" alt="Custom Branded Boxes" class="product-fluid-img" loading="lazy"/>
+          <div class="product-info-wrap">
+            <div class="service-icon-badge icon-pink">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19C4.85857 19 4.47169 19.3868 4.47169 19.8586C4.47169 20.4717 4.97169 20.9717 5.58477 20.9717C6.05658 20.9717 6.44342 20.5849 6.44342 20.5849C8.07725 21.4939 9.97723 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"/><circle cx="11.5" cy="7.5" r="1.5" fill="currentColor"/><circle cx="16.5" cy="9.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="14.5" r="1.5" fill="currentColor"/></svg>
+            </div>
+            <span class="product-category-tag">Custom</span>
+            <h3>Custom Branded Boxes</h3>
+            <p class="product-card-desc">Full-color soy-ink prints on certified corrugated Kraft board. Custom layout services from our in-house engineering team.</p>
+            <ul class="product-bullets">
+              <li><i data-lucide="check" class="icon-sm"></i> Bio-based soy and water inks</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Full interior & exterior printing</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Complete size customizability</li>
+            </ul>
+            <div class="product-card-footer">
+              <span class="price-val">From $1.40<span class="unit">/unit</span></span>
+              <button class="btn-primary details-btn" data-service="custom">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></button>
+            </div>
           </div>
         </div>
 
         <div class="product-card animate-on-scroll" data-category="recyclable" data-service="inserts">
-          <div class="product-content">
-            <span class="product-category">Recyclable</span>
-            <h3>Molded Pulp Inserts</h3>
-            <p>Precision-molded pulp inserts replacing styrofoam. 100% recycled newsprint, curbside recyclable.</p>
-            <div class="product-specs">
-              <span>Min. 500 units</span>
-              <span>Shock-absorbent</span>
-            </div>
-            <div class="product-price-row">
-              <span class="product-price">From $0.65/unit</span>
-              <button class="btn-primary details-btn" data-service="inserts">View Details</button>
-            </div>
+          <div class="product-img-container">
+            <div class="product-badge accent-green">New</div>
+            <img src="../assets/images/pulp-inserts.png" alt="Molded Pulp Inserts" loading="lazy">
           </div>
-          <div class="product-img-wrapper">
-            <div class="product-badge inline-style-b121be" >New</div>
-            <img src="../assets/images/pulp-inserts.png" alt="Molded Pulp Inserts" class="product-fluid-img" loading="lazy"/>
+          <div class="product-info-wrap">
+            <div class="service-icon-badge icon-green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg>
+            </div>
+            <span class="product-category-tag">Recyclable</span>
+            <h3>Molded Pulp Inserts</h3>
+            <p class="product-card-desc">Precision-engineered inserts replacing expanded polystyrene (Styrofoam). Produced from 100% recycled newsprint pulp.</p>
+            <ul class="product-bullets">
+              <li><i data-lucide="check" class="icon-sm"></i> 100% recycled paper pulp</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Custom molded layout fits</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Highly nestable storage volumes</li>
+            </ul>
+            <div class="product-card-footer">
+              <span class="price-val">From $0.65<span class="unit">/unit</span></span>
+              <button class="btn-primary details-btn" data-service="inserts">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></button>
+            </div>
           </div>
         </div>
 
         <div class="product-card animate-on-scroll" data-category="mailers" data-service="honeycomb">
-          <div class="product-content">
-            <span class="product-category">Mailers</span>
-            <h3>Honeycomb Paper Cushion</h3>
-            <p>Wrapping paper replacement with beautiful hexagonal cushioning. 100% recycled kraft paper.</p>
-            <div class="product-specs">
-              <span>Min. 10 rolls</span>
-              <span>Expandable</span>
+          <div class="product-img-container">
+            <div class="product-badge accent-yellow">New</div>
+            <img src="../assets/images/honeycomb-wrap.png" alt="Honeycomb Paper Cushion" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <div class="service-icon-badge icon-yellow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
             </div>
-            <div class="product-price-row">
-              <span class="product-price">From $18.50/roll</span>
-              <button class="btn-primary details-btn" data-service="honeycomb">View Details</button>
+            <span class="product-category-tag">Mailers</span>
+            <h3>Honeycomb Paper Cushion</h3>
+            <p class="product-card-desc">Protective wrapping paper with expanding hexagonal cells, replacing plastic bubbles. Biodegradable and easy to apply.</p>
+            <ul class="product-bullets">
+              <li><i data-lucide="check" class="icon-sm"></i> 100% virgin FSC Kraft paper</li>
+              <li><i data-lucide="check" class="icon-sm"></i> Interlocking structures (no tape)</li>
+              <li><i data-lucide="check" class="icon-sm"></i> 3D shock absorbing layer</li>
+            </ul>
+            <div class="product-card-footer">
+              <span class="price-val">From $18.50<span class="unit">/roll</span></span>
+              <button class="btn-primary details-btn" data-service="honeycomb">Learn More <i data-lucide="arrow-right" class="icon-sm"></i></button>
             </div>
           </div>
-          <div class="product-img-wrapper">
-            <div class="product-badge inline-style-cba5bc" >New</div>
-            <img src="../assets/images/honeycomb-wrap.png" alt="Honeycomb Paper Cushion" class="product-fluid-img" loading="lazy"/>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag"><i data-lucide="image" class="icon-sm"></i> Gallery</span>
+        <h2 class="section-title">Circular Packaging in <span class="accent-text">Action</span></h2>
+        <p class="section-subtitle">See how forward-thinking brands use our certified materials to create elegant, carbon-neutral fulfillment experiences.</p>
+      </div>
+
+      <div class="gallery-grid animate-on-scroll">
+        <div class="gallery-item">
+          <img src="../assets/images/compostable-bags.png" alt="Compostable Packaging" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4>Compostable Packaging</h4>
+            <p>Certified plant-starch polymers</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../assets/images/eco-mailers.png" alt="Eco Mailers" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4>Eco Mailers</h4>
+            <p>Reinforced natural Kraft fibers</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../assets/images/recyclable-boxes.png" alt="Recyclable Boxes" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4>Recyclable Boxes</h4>
+            <p>100% post-consumer corrugated boards</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../assets/images/retail-bags.png" alt="Paper Bags" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4>Paper Retail Bags</h4>
+            <p>Home-compostable shopping handle loops</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../assets/images/modern_eco_fulfillment_center.png" alt="Shipping Process" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4>Shipping Logistics</h4>
+            <p>Electric parcel fleets & local warehousing</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../assets/images/sustainable_packaging_flatlay.png" alt="Sustainable Manufacturing" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h4>Eco-Friendly Materials</h4>
+            <p>Bio-plastics and sugarcane starches</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section faq-section inline-style-bcba7b" >
+  <section class="section faq-section">
     <div class="container">
       <div class="section-header animate-on-scroll">
         <span class="section-tag"><i data-lucide="circle-help" class="icon-sm"></i> Service FAQ</span>
-        <h2 class="section-title">Common Questions About<br/>Our Packaging Solutions</h2>
+        <h2 class="section-title">Common Questions About Our <span class="accent-text">Packaging</span></h2>
+        <p class="section-subtitle">Everything you need to know about our certifications, volume limits, and carbon neutrality.</p>
       </div>
-      <div class="faq-accordion inline-style-f384b1" id="servicesFaq" >
-        <div class="faq-item animate-on-scroll inline-style-c94cf3" >
-          <button class="faq-question inline-style-3aef38" >
-            What is the minimum order quantity for custom branding?
-            <span class="faq-icon inline-style-107e6d" >+</span>
+
+      <div class="faq-accordion-container animate-on-scroll">
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span><i data-lucide="truck" class="faq-q-icon"></i> What are your shipping and delivery timelines?</span>
+            <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer inline-style-2b9718" >
-            <p  class="inline-style-79845e">For custom branded mailers, the MOQ starts at just 500 units. For custom corrugated boxes, we can start with as few as 250 units, allowing small businesses to upgrade their unboxing experience without massive inventory commitments.</p>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>We dispatch standard in-stock catalog orders within 24-48 hours. Domestic transit times range between 2 to 5 business days, dispatched from our nearest regional micro-fulfillment center to minimize shipping mileage and Scope 3 greenhouse gas footprints.</p>
+            </div>
           </div>
         </div>
-        <div class="faq-item animate-on-scroll inline-style-c94cf3" >
-          <button class="faq-question inline-style-3aef38" >
-            How long does home composting actually take?
-            <span class="faq-icon inline-style-107e6d" >+</span>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span><i data-lucide="layers" class="faq-q-icon"></i> Do you offer volume pricing for wholesale orders?</span>
+            <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer inline-style-2b9718" >
-            <p  class="inline-style-79845e">Our BPI-certified home compostable products typically break down within 90-180 days in a healthy home compost pile. In industrial composting facilities, the process is even faster, often taking less than 60 days.</p>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Yes. Wholesale pricing scales automatically. Discount brackets begin at 1,000 units, with increased price breaks at 5,000, 10,000, and 25,000 units. Contract packaging clients enjoy automated monthly replenishment pipelines.</p>
+            </div>
           </div>
         </div>
-        <div class="faq-item animate-on-scroll inline-style-c94cf3" >
-          <button class="faq-question inline-style-3aef38" >
-            Are your recyclable boxes made from 100% recycled content?
-            <span class="faq-icon inline-style-107e6d" >+</span>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span><i data-lucide="leaf" class="faq-q-icon"></i> What raw materials are used in your compostable bags?</span>
+            <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer inline-style-2b9718" >
-            <p  class="inline-style-79845e">Yes! Our corrugated cardboard boxes are made from 100% post-consumer recycled content and are 100% recyclable at the end of their life through standard curbside recycling programs.</p>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Our compostable bags are made from a proprietary blend of PLA (polylactic acid, harvested from corn/sugarcane starches) and PBAT (a biodegradable co-polymer). They contain zero petroleum residues and break down cleanly leaving no microplastic residues.</p>
+            </div>
           </div>
         </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span><i data-lucide="dollar-sign" class="faq-q-icon"></i> Are sustainable packaging materials more expensive?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>By operating our own raw processing nodes and localizing production, we eliminate the 'green premium'. In bulk capacities, VerdantPack achieves cost parity with traditional petroleum plastics, enabling scalable sustainability without budget strain.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span><i data-lucide="palette" class="faq-q-icon"></i> Can we print our custom logo using non-toxic inks?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Absolutely. We offer complete custom branding options using water-based and soy-based non-toxic inks. These organic pigments decompose safely along with the packaging and do not impact compostability or cardboard recyclability.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span><i data-lucide="globe" class="faq-q-icon"></i> How does carbon-neutral shipping work?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Our carbon-neutral shipping covers 100% of transport-related Scope 3 emissions. We calculate carbon output per SKU and freight distance, offsetting the footprint by investing in verified reforestation and clean wind/solar projects globally.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span><i data-lucide="award" class="faq-q-icon"></i> What environmental certifications do you hold?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Our packaging catalog holds certifications from global environmental bodies, including BPI Certified Compostable, FSC Chain of Custody (for all wood fibers), OK Compost Home, and ISO 14001 certification for quality and environmental control.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span><i data-lucide="undo" class="faq-q-icon"></i> What is your returns policy for defective items?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>We pride ourselves on manufacturing reliability. If any batch fails compression, moisture-resistance, or adhesive shear tests, we offer full replacements or refunds within 30 days of shipment delivery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-cta-section animate-on-scroll">
+    <div class="container">
+      <div class="services-cta-inner">
+        <span class="eco-badge"><i data-lucide="rocket" class="icon-sm"></i> Get Started</span>
+        <h2>Accelerate Your <span class="hero-accent">Sustainability</span> Goals</h2>
+        <p>Join 18,000+ brands using circular packaging materials. Set up your enterprise replenishment portals and track offsets dynamically.</p>
+        <div class="cta-actions">
+          <a href="signup.html" class="btn-primary">Start Free Trial</a>
+          <a href="contact.html" class="btn-outline">Talk to Sales</a>
+        </div>
+        <div class="floating-glow glow-1"></div>
+        <div class="floating-glow glow-2"></div>
       </div>
     </div>
   </section>

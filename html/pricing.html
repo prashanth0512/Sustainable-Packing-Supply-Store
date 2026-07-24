@@ -3,165 +3,284 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pricing — VerdantPack</title>
+  <title>Pricing Plans — VerdantPack</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/theme.css"/>
   <link rel="stylesheet" href="../css/pricing.css"/>
-  <script src="../js/common.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
   <script src="../js/navigation-data.js" defer></script>
+  <script src="../js/common.js" defer></script>
   <script src="../js/pricing.js" defer></script>
-  <script src="../js/index.js" defer></script>
-  
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <section class="hero inline-style-87d468" >
-    <canvas id="hero-canvas"  class="inline-style-a86bef"></canvas>
-    <div class="container inline-style-63391a" >
-      <div class="hero-content inline-style-2c8922" >
-        <div class="hero-tag animate-on-scroll inline-style-1386d5" >
-          <span class="pulse-dot"></span> <i data-lucide="coins" class="icon-sm"></i> Transparent Pricing
+  <section class="p-hero">
+    <div class="p-hero-overlay"></div>
+    <div class="p-hero-glow"></div>
+    <div class="container p-hero-container">
+      <div class="p-hero-glass-card animate-on-scroll">
+        <span class="premium-badge"><i data-lucide="tag" class="icon-sm" style="margin-right: 6px;"></i> Strategic Pricing</span>
+        <h1 class="p-hero-title">Predictable Costs for <span class="hero-accent">Sustainable Growth</span></h1>
+        <p class="p-hero-subtitle">Optimize your supply chain expenses with transparent, volume-based plans designed for e-commerce brands, growing businesses, and enterprise logisticians.</p>
+        <div class="p-hero-actions">
+          <a href="#plansSection" class="btn-primary">View Packages</a>
+          <a href="#comparisonSection" class="btn-outline">Compare Volume Rates</a>
         </div>
-        <h1 class="hero-title animate-on-scroll delay-1 inline-style-4da3c8" >
-          Simple, Volume-Based<br/>
-          <span class="hero-accent">Pricing</span>
-        </h1>
-        <p class="hero-subtitle animate-on-scroll delay-2 inline-style-ba75c9" >
-          No hidden fees, no contracts. The more you order, the more you save — automatically.
-        </p>
-        <div class="billing-toggle animate-on-scroll delay-3 inline-style-9fcc7e" >
-          <button class="toggle-btn active" id="monthlyBtn">Monthly</button>
-          <button class="toggle-btn" id="annualBtn">Annual <span class="save-badge">Save 20%</span></button>
+        <div class="p-hero-trust-indicators">
+          <span><i data-lucide="shield-check" class="icon-sm"></i> No Setup Contracts</span>
+          <span class="trust-divider">|</span>
+          <span><i data-lucide="refresh-cw" class="icon-sm"></i> 100% Price Lock Match</span>
         </div>
-      </div>
-      <div class="hero-visual animate-on-scroll delay-4 inline-style-c451fd" >
-         <img src="../assets/images/verdantpack_pricing_value.png" alt="VerdantPack Pricing Value"  loading="lazy"/ class="inline-style-882f70">
       </div>
     </div>
   </section>
 
-  <section class="section pricing-section">
+  <section class="p-plans-section" id="plansSection">
     <div class="container">
-      <div class="pricing-grid">
-        <div class="pricing-card animate-on-scroll delay-1">
-          <div class="plan-name">Starter</div>
-          <div class="plan-price"><span class="price-amount" data-monthly="0" data-annual="0">Free</span></div>
-          <p class="plan-desc">For businesses just getting started with sustainable packaging.</p>
-          <ul class="plan-features">
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Access to all products</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Basic order management</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Standard pricing</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Email support</li>
-            <li><i data-lucide="x" class="icon-sm"></i> Volume discounts</li>
-            <li><i data-lucide="x" class="icon-sm"></i> Analytics dashboard</li>
-            <li><i data-lucide="x" class="icon-sm"></i> Custom branding</li>
-            <li><i data-lucide="x" class="icon-sm"></i> Dedicated account manager</li>
-          </ul>
-          <a href="login.html" class="btn-outline inline-style-0954c6" >Get Started Free</a>
-        </div>
+      <div class="section-header animate-on-scroll text-center">
+        <span class="section-tag"><i data-lucide="layers" class="icon-sm"></i> Pricing Packages</span>
+        <h2 class="section-title">Choose the Perfect <span class="accent-text">Packaging Plan</span></h2>
+        <p class="section-subtitle">Select the tier that aligns with your monthly shipment volume and custom branding requirements.</p>
+      </div>
 
-        <div class="pricing-card featured animate-on-scroll delay-2">
-          <div class="plan-badge">Most Popular</div>
-          <div class="plan-name">Business</div>
-          <div class="plan-price">
-            <span class="price-currency">$</span>
-            <span class="price-amount" data-monthly="149" data-annual="119">149</span>
-            <span class="price-period">/mo</span>
+      <div class="p-plans-grid animate-on-scroll">
+
+        <div class="p-plan-card">
+          <span class="p-plan-badge-outline">Small Businesses</span>
+          <h3 class="p-plan-name">Starter Plan</h3>
+          <p class="p-plan-desc">Best for testing market fit and initial product runs.</p>
+          <div class="p-plan-price">
+            <span class="price-amount">$29</span>
+            <span class="price-period">/order cost</span>
           </div>
-          <p class="plan-desc">For growing businesses ordering regularly. Unlock real savings.</p>
-          <ul class="plan-features">
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Everything in Starter</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Up to 20% volume discount</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Full analytics dashboard</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Smart reorder alerts</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Priority support (24hr)</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Custom branding (500+ units)</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Shipment tracking</li>
-            <li><i data-lucide="x" class="icon-sm"></i> Dedicated account manager</li>
+
+          <ul class="p-plan-features">
+            <li><i data-lucide="check" class="icon-sm"></i> Up to 100 Units</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Eco Packaging</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Standard Delivery</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Email Support</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Standard Printing</li>
           </ul>
-          <a href="login.html" class="btn-primary inline-style-0954c6" >Start Free Trial</a>
+
+          <a href="login.html" class="btn-outline" style="width: 100%; justify-content: center; margin-top: auto;">Select Starter</a>
         </div>
 
-        <div class="pricing-card animate-on-scroll delay-3">
-          <div class="plan-name">Enterprise</div>
-          <div class="plan-price"><span class="price-amount">Custom</span></div>
-          <p class="plan-desc">For large-scale operations with complex supply chain needs.</p>
-          <ul class="plan-features">
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Everything in Business</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Up to 40% volume discount</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Dedicated account manager</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Custom product development</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> SLA guarantee (99.9% uptime)</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> API access & integrations</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> Quarterly impact reports</li>
-            <li><i data-lucide="check-circle" class="icon-sm"></i> White-label dashboard</li>
+        <div class="p-plan-card featured">
+          <span class="p-plan-badge-popular">Most Popular</span>
+          <h3 class="p-plan-name">Business Plan</h3>
+          <p class="p-plan-desc">Best for scaling brands with custom design specs.</p>
+          <div class="p-plan-price">
+            <span class="price-amount">$199</span>
+            <span class="price-period">/order cost</span>
+          </div>
+
+          <ul class="p-plan-features">
+            <li><i data-lucide="check" class="icon-sm"></i> Up to 1000 Units</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Better Pricing</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Priority Production</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Custom Branding</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Premium Materials</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Faster Delivery</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Priority Support</li>
           </ul>
-          <a href="contact.html" class="btn-outline inline-style-0954c6" >Contact Sales</a>
+
+          <a href="login.html" class="btn-primary" style="width: 100%; justify-content: center; margin-top: auto;">Select Business</a>
+        </div>
+
+        <div class="p-plan-card">
+          <span class="p-plan-badge-outline">Large Organizations</span>
+          <h3 class="p-plan-name">Enterprise Plan</h3>
+          <p class="p-plan-desc">Best for volume distribution and B-Corp logistics.</p>
+          <div class="p-plan-price">
+            <span class="price-amount">Custom</span>
+            <span class="price-period">quotation</span>
+          </div>
+
+          <ul class="p-plan-features">
+            <li><i data-lucide="check" class="icon-sm"></i> Unlimited Orders</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Custom Sizing</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Dedicated Manager</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Premium Packaging</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Carbon Neutral Shipping</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Priority Manufacturing</li>
+            <li><i data-lucide="check" class="icon-sm"></i> Custom Solutions</li>
+          </ul>
+
+          <a href="contact.html" class="btn-outline" style="width: 100%; justify-content: center; margin-top: auto;">Contact Sales</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section volume-section inline-style-bcba7b" id="volume" >
+  <section class="p-comparison-section" id="comparisonSection">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="section-tag"><i data-lucide="bar-chart-2" class="icon-sm"></i> Volume Pricing</span>
-        <h2 class="section-title">The More You Order,<br/>The More You Save</h2>
+      <div class="section-header animate-on-scroll text-center">
+        <span class="section-tag"><i data-lucide="table" class="icon-sm"></i> Rate Sheet</span>
+        <h2 class="section-title">Bulk Order vs <span class="hero-accent">Single Unit</span> Pricing</h2>
+        <p class="section-subtitle">Choose the pricing model that best fits your business shipping frequency.</p>
       </div>
-      <div class="volume-table-wrap animate-on-scroll delay-1">
-        <table class="volume-table">
+
+      <div class="p-table-scroll-hint">
+        <i data-lucide="arrow-left-right" class="icon-sm"></i> Scroll horizontally to view full rate sheet
+      </div>
+
+      <div class="p-table-wrapper animate-on-scroll">
+        <table class="p-comparison-table">
           <thead>
             <tr>
-              <th>Order Volume</th>
-              <th>Mailers (per unit)</th>
-              <th>Boxes (per unit)</th>
-              <th>Retail Bags (per unit)</th>
-              <th>Discount</th>
+              <th>Product</th>
+              <th>Single Unit Price</th>
+              <th>100+ Units</th>
+              <th>500+ Units</th>
+              <th>1000+ Units</th>
+              <th>Custom Quote</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>500 – 1,999</td><td>$0.22</td><td>$0.85</td><td>$0.09</td><td>Standard</td></tr>
-            <tr><td>2,000 – 4,999</td><td>$0.19</td><td>$0.74</td><td>$0.08</td><td class="discount-cell">10% off</td></tr>
-            <tr><td>5,000 – 9,999</td><td>$0.16</td><td>$0.65</td><td>$0.07</td><td class="discount-cell">20% off</td></tr>
-            <tr><td>10,000 – 24,999</td><td>$0.14</td><td>$0.58</td><td>$0.06</td><td class="discount-cell">28% off</td></tr>
-            <tr><td>25,000+</td><td>$0.12</td><td>$0.50</td><td>$0.05</td><td class="discount-cell best-discount">40% off</td></tr>
+            <tr>
+              <td><strong>Compostable Bags</strong></td>
+              <td>$0.15</td>
+              <td>$0.12</td>
+              <td>$0.10</td>
+              <td class="highlight-cell">$0.08</td>
+              <td><a href="contact.html" class="p-table-link">Get Quote</a></td>
+            </tr>
+            <tr>
+              <td><strong>Paper Bags</strong></td>
+              <td>$0.12</td>
+              <td>$0.09</td>
+              <td>$0.07</td>
+              <td class="highlight-cell">$0.06</td>
+              <td><a href="contact.html" class="p-table-link">Get Quote</a></td>
+            </tr>
+            <tr>
+              <td><strong>Mailer Boxes</strong></td>
+              <td>$0.95</td>
+              <td>$0.85</td>
+              <td>$0.75</td>
+              <td class="highlight-cell">$0.65</td>
+              <td><a href="contact.html" class="p-table-link">Get Quote</a></td>
+            </tr>
+            <tr>
+              <td><strong>Corrugated Boxes</strong></td>
+              <td>$1.10</td>
+              <td>$0.95</td>
+              <td>$0.85</td>
+              <td class="highlight-cell">$0.75</td>
+              <td><a href="contact.html" class="p-table-link">Get Quote</a></td>
+            </tr>
+            <tr>
+              <td><strong>Eco Mailers</strong></td>
+              <td>$0.35</td>
+              <td>$0.28</td>
+              <td>$0.24</td>
+              <td class="highlight-cell">$0.20</td>
+              <td><a href="contact.html" class="p-table-link">Get Quote</a></td>
+            </tr>
+            <tr>
+              <td><strong>Protective Packaging</strong></td>
+              <td>$22.00</td>
+              <td>$18.50</td>
+              <td>$15.00</td>
+              <td class="highlight-cell">$12.50</td>
+              <td><a href="contact.html" class="p-table-link">Get Quote</a></td>
+            </tr>
+            <tr>
+              <td><strong>Shipping Labels</strong></td>
+              <td>$0.05</td>
+              <td>$0.04</td>
+              <td>$0.03</td>
+              <td class="highlight-cell">$0.02</td>
+              <td><a href="contact.html" class="p-table-link">Get Quote</a></td>
+            </tr>
+            <tr>
+              <td><strong>Custom Printed Packaging</strong></td>
+              <td>$2.50</td>
+              <td>$1.80</td>
+              <td>$1.40</td>
+              <td class="highlight-cell">$0.95</td>
+              <td><a href="contact.html" class="p-table-link">Get Quote</a></td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
-  <section class="section faq-section">
+  <section class="p-value-section" id="valueSection">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="section-tag"><i data-lucide="circle-help" class="icon-sm"></i> FAQ</span>
-        <h2 class="section-title">Pricing Questions Answered</h2>
+      <div class="section-header animate-on-scroll text-center" style="margin-bottom: 48px;">
+        <span class="section-tag"><i data-lucide="gift" class="icon-sm"></i> Added Value</span>
+        <h2 class="section-title">Bulk Order <span class="hero-accent">Benefits</span></h2>
+        <p class="section-subtitle">Included free of charge with all high-volume supply contracts.</p>
       </div>
-      <div class="faq-accordion animate-on-scroll delay-1" id="pricingFaq">
-        <div class="faq-item-acc">
-          <button class="faq-question">Is there a free trial for the Business plan?</button>
-          <div class="faq-answer"><p>Yes! Every Business plan comes with a 14-day free trial — no credit card required. Cancel anytime before the trial ends.</p></div>
+
+      <div class="p-benefits-grid animate-on-scroll">
+        <div class="p-benefit-card">
+          <i data-lucide="trending-down" class="icon-md"></i>
+          <h4>Lower Cost Per Unit</h4>
+          <p>Unlocks margins with up to 40% volume pricing tiers calculated dynamically.</p>
         </div>
-        <div class="faq-item-acc">
-          <button class="faq-question">How are volume discounts calculated?</button>
-          <div class="faq-answer"><p>Discounts are applied automatically based on the total units per order line. Mix and match product types in a single order to hit higher tiers faster.</p></div>
+        <div class="p-benefit-card">
+          <i data-lucide="zap" class="icon-md"></i>
+          <h4>Faster Manufacturing</h4>
+          <p>Schedules priority run times on extruders and slotters to prevent supply gaps.</p>
         </div>
-        <div class="faq-item-acc">
-          <button class="faq-question">Can I upgrade or downgrade my plan?</button>
-          <div class="faq-answer"><p>Absolutely. Plans are month-to-month. You can upgrade instantly and downgrade at the end of your current billing cycle.</p></div>
+        <div class="p-benefit-card">
+          <i data-lucide="palette" class="icon-md"></i>
+          <h4>Free Design Support</h4>
+          <p>Pairs you with structural template packaging designers at zero additional cost.</p>
         </div>
-        <div class="faq-item-acc">
-          <button class="faq-question">Are there setup fees or hidden costs?</button>
-          <div class="faq-answer"><p>None. The price you see is the price you pay. Custom branding setup fees are a one-time cost shown transparently during checkout.</p></div>
+        <div class="p-benefit-card">
+          <i data-lucide="user-check" class="icon-md"></i>
+          <h4>Dedicated Account Manager</h4>
+          <p>Single communication line to align schedules, transit loads, and warehouse routing.</p>
+        </div>
+        <div class="p-benefit-card">
+          <i data-lucide="truck" class="icon-md"></i>
+          <h4>Priority Delivery</h4>
+          <p>Fulfill through local eco-hubs using ground carrier loops to save emissions.</p>
+        </div>
+        <div class="p-benefit-card">
+          <i data-lucide="sparkles" class="icon-md"></i>
+          <h4>Custom Branding</h4>
+          <p>Print CMYK or Pantone layers with non-toxic, safe water-activated soy inks.</p>
+        </div>
+        <div class="p-benefit-card">
+          <i data-lucide="file-bar-chart" class="icon-md"></i>
+          <h4>Sustainability Reports</h4>
+          <p>Recycled metrics certifications and carbon-neutral transit offsets reports provided.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-final-cta-section">
+    <div class="p-cta-glow-1"></div>
+    <div class="p-cta-glow-2"></div>
+    <div class="container">
+      <div class="p-cta-card animate-on-scroll">
+        <span class="premium-badge" style="margin-inline: auto;"><i data-lucide="leaf" class="icon-sm" style="margin-right: 6px;"></i> Clean Future</span>
+        <h2>Optimize Packaging <span class="hero-accent">Budgets Today</span></h2>
+        <p>Whether you require stock home-compostable mailers or custom-printed corrugated configurations, we guarantee volume price protection.</p>
+
+        <div class="p-cta-actions">
+          <a href="#plansSection" class="btn-primary">Select Package Plan</a>
+          <a href="contact.html" class="btn-outline">Talk to Eco Advisor</a>
+        </div>
+
+        <div class="p-cta-trust-indicators" style="margin-top: 24px;">
+          <span><i data-lucide="check" class="icon-sm"></i> Certified B-Corp</span>
+          <span class="trust-divider">|</span>
+          <span><i data-lucide="clock" class="icon-sm"></i> Fast Dispatch</span>
         </div>
       </div>
     </div>
   </section>
 
   <div id="footer-placeholder"></div>
-  </body>
+</body>
 </html>

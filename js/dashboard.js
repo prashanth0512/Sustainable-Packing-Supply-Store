@@ -66,13 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
       p.classList.remove('active');
       p.style.display = 'none'; 
     });
-    
+
     const activePane = document.getElementById('tab-' + tabId);
     if (activePane) {
       activePane.classList.add('active');
       activePane.style.display = 'block'; 
-      
-      if (tabId === 'overview' || tabId === 'analytics') {
+
+      if (tabId === 'overview' || tabId === 'analytics' || tabId === 'impact') {
         setTimeout(initCharts, 50);
       }
     }
@@ -102,14 +102,103 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reorder-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      btn.textContent = '<i data-lucide="check-circle" class="icon-sm"></i> Added';
+      btn.innerHTML = '<i data-lucide="check-circle" class="icon-sm"></i> Triggered';
       btn.classList.add('success-state');
+      if (window.lucide) window.lucide.createIcons();
       setTimeout(() => {
-        btn.textContent = 'Reorder';
+        btn.textContent = 'Quick Order';
         btn.classList.remove('success-state');
       }, 2000);
     });
   });
+
+  const calcProduct = document.getElementById('calcProductSelect');
+  const calcQtyInput = document.getElementById('calcQuantityInput');
+  const calcQtySlider = document.getElementById('calcQuantitySlider');
+  const calcCost = document.getElementById('calcEstimatedCost');
+  const calcTag = document.getElementById('calcDiscountTag');
+
+  function updateCalculator() {
+    if (!calcProduct || !calcQtyInput || !calcCost) return;
+    const qty = parseInt(calcQtyInput.value) || 0;
+    const unitPrice = parseFloat(calcProduct.options[calcProduct.selectedIndex].getAttribute('data-price')) || 0;
+
+    let discount = 0;
+    if (qty >= 25000) {
+      discount = 0.40;
+    } else if (qty >= 5000) {
+      discount = 0.20;
+    } else if (qty >= 1000) {
+      discount = 0.10;
+    } else if (qty >= 500) {
+      discount = 0.05;
+    }
+
+    const total = qty * unitPrice * (1 - discount);
+    calcCost.textContent = '$' + total.toFixed(2);
+    if (calcTag) {
+      if (discount > 0) {
+        calcTag.textContent = `Volume discount: ${(discount * 100)}% Off applied`;
+        calcTag.style.color = '#3d8b37';
+      } else {
+        calcTag.textContent = 'Standard rate (No discount applied below 500 units)';
+        calcTag.style.color = 'var(--text-muted)';
+      }
+    }
+  }
+
+  calcQtyInput?.addEventListener('input', () => {
+    if (calcQtySlider) calcQtySlider.value = calcQtyInput.value;
+    updateCalculator();
+  });
+
+  calcQtySlider?.addEventListener('input', () => {
+    if (calcQtyInput) calcQtyInput.value = calcQtySlider.value;
+    updateCalculator();
+  });
+
+  calcProduct?.addEventListener('change', updateCalculator);
+  updateCalculator();
+
+  const ordersSearch = document.getElementById('ordersSearchInput');
+  const ordersStatus = document.getElementById('ordersStatusFilter');
+  const ordersSort = document.getElementById('ordersSortOrder');
+  const ordersTableBody = document.querySelector('#ordersTable tbody');
+
+  function filterOrdersTable() {
+    if (!ordersTableBody) return;
+    const searchVal = ordersSearch?.value.toLowerCase() || '';
+    const statusVal = ordersStatus?.value || 'all';
+    const rows = Array.from(ordersTableBody.querySelectorAll('tr'));
+
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      const status = row.getAttribute('data-status') || '';
+
+      const matchSearch = text.includes(searchVal);
+      const matchStatus = statusVal === 'all' || status === statusVal;
+
+      if (matchSearch && matchStatus) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const sortVal = ordersSort?.value;
+    if (sortVal) {
+      const sortedRows = rows.sort((a, b) => {
+        const idA = a.querySelector('.order-id')?.textContent || '';
+        const idB = b.querySelector('.order-id')?.textContent || '';
+        return sortVal === 'newest' ? idB.localeCompare(idA) : idA.localeCompare(idB);
+      });
+      sortedRows.forEach(row => ordersTableBody.appendChild(row));
+    }
+  }
+
+  ordersSearch?.addEventListener('input', filterOrdersTable);
+  ordersStatus?.addEventListener('change', filterOrdersTable);
+  ordersSort?.addEventListener('change', filterOrdersTable);
 
   initCharts();
 
@@ -120,6 +209,15 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { bar.style.width = w; }, 100);
     });
   }, 400);
+
+  const runLucide = () => {
+    if (window.lucide) {
+      window.lucide.createIcons();
+    } else {
+      setTimeout(runLucide, 50);
+    }
+  };
+  runLucide();
 });
 
 function initCharts() {
@@ -141,6 +239,109 @@ function initCharts() {
           data: [3200, 4100, 3800, 5200, 4900, 6820],
           borderColor: '#3d8b37',
           backgroundColor: 'rgba(61, 139, 55, 0.1)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: textColor } },
+          y: { grid: { color: borderColor }, ticks: { color: textColor } }
+        }
+      }
+    });
+  }
+
+  const revenueCanvas = document.getElementById('revenueChart');
+  if (revenueCanvas) {
+    charts.revenue = new Chart(revenueCanvas.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
+        datasets: [{
+          label: 'Revenue ($)',
+          data: [5000, 7200, 6800, 9400, 8900, 14280],
+          borderColor: '#7ab648',
+          backgroundColor: 'rgba(122, 182, 72, 0.15)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: textColor } },
+          y: { grid: { color: borderColor }, ticks: { color: textColor } }
+        }
+      }
+    });
+  }
+
+  const analyticsRevenueCanvas = document.getElementById('analyticsRevenueChart');
+  if (analyticsRevenueCanvas) {
+    charts.analyticsRevenue = new Chart(analyticsRevenueCanvas.getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
+        datasets: [
+          {
+            label: 'Mailers',
+            data: [2200, 3100, 2900, 4000, 3800, 6000],
+            backgroundColor: '#7ab648',
+            borderRadius: 6
+          },
+          {
+            label: 'Boxes',
+            data: [1800, 2500, 2300, 3200, 2900, 5100],
+            backgroundColor: '#3d8b37',
+            borderRadius: 6
+          },
+          {
+            label: 'Tape & Misc',
+            data: [1000, 1600, 1600, 2200, 2200, 3180],
+            backgroundColor: '#a5d6a7',
+            borderRadius: 6
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+            labels: { color: textColor, boxWidth: 12, padding: 16, font: { size: 11 } }
+          }
+        },
+        scales: {
+          x: { stacked: false, grid: { display: false }, ticks: { color: textColor } },
+          y: {
+            stacked: false,
+            grid: { color: borderColor },
+            ticks: { color: textColor, callback: v => '$' + v.toLocaleString() }
+          }
+        }
+      }
+    });
+  }
+
+  const profitCanvas = document.getElementById('profitChart');
+  if (profitCanvas) {
+    charts.profit = new Chart(profitCanvas.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
+        datasets: [{
+          label: 'Profit',
+          data: [1500, 2400, 2200, 3100, 2900, 4890],
+          borderColor: '#2e7d32',
+          backgroundColor: 'rgba(46, 125, 50, 0.1)',
           fill: true,
           tension: 0.4
         }]
@@ -186,6 +387,31 @@ function initCharts() {
   const barCanvas = document.getElementById('barChart');
   if (barCanvas) {
     charts.bar = new Chart(barCanvas.getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Impact (kg CO2)',
+          data: [120, 150, 180, 210, 250, 300],
+          backgroundColor: '#3d8b37',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: textColor } },
+          y: { grid: { color: borderColor }, ticks: { color: textColor } }
+        }
+      }
+    });
+  }
+
+  const overviewBarCanvas = document.getElementById('overviewBarChart');
+  if (overviewBarCanvas) {
+    charts.overviewBar = new Chart(overviewBarCanvas.getContext('2d'), {
       type: 'bar',
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],

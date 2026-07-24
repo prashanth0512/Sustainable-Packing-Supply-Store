@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     question.addEventListener('click', (e) => {
       e.stopPropagation();
       const isOpen = item.classList.contains('active');
-      
+
       faqItems.forEach(otherItem => {
         otherItem.classList.remove('active');
         otherItem.querySelector('.faq-answer').style.maxHeight = '0';

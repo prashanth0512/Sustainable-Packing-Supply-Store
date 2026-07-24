@@ -3,117 +3,274 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact — VerdantPack</title>
+  <title>Contact Us — VerdantPack</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/theme.css"/>
   <link rel="stylesheet" href="../css/contact.css"/>
   <script src="../js/navigation-data.js" defer></script>
   <script src="../js/common.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js" defer></script>
   <script src="../js/contact.js" defer></script>
-  <script src="../js/index.js" defer></script>
-  
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <section class="hero inline-style-0a7949" >
-    <canvas id="hero-canvas"  class="inline-style-a86bef"></canvas>
-    <div class="container hero-container inline-style-4dad77" >
-      <div class="hero-content animate-on-scroll">
-        <span class="hero-tag"><span class="pulse-dot"></span> Get in Touch</span>
-        <h1 class="hero-title inline-style-34ec72" >Let's Build Your<br/><span class="hero-accent">Circular Future</span></h1>
-        <p class="hero-subtitle inline-style-a5a602" >Have questions about compostable materials or enterprise volume rates? Our environmental consultants are available for immediate strategy sessions.</p>
-        <div class="hero-actions inline-style-fa4778" >
-          <a href="#contact-flow" class="btn-primary">Start Conversation</a>
+  <section class="c-hero">
+    <div class="c-hero-overlay"></div>
+    <div class="c-hero-glow"></div>
+    <div class="container c-hero-container">
+      <div class="c-hero-glass-card animate-on-scroll">
+        <span class="premium-badge"><i data-lucide="mail" class="icon-sm" style="margin-right: 6px;"></i> Contact Center</span>
+        <h1 class="c-hero-title">Let's Design Your <span class="c-hero-highlight">Sustainable Future</span></h1>
+        <p class="c-hero-subtitle">Have questions about compostable bioplastics, volume container pricing, or ESG packaging transitions? Our consultants are ready to co-design your strategy.</p>
+        <div class="c-hero-actions">
+          <a href="#contactFormSection" class="btn-primary">Start Strategy Call</a>
+          <a href="#presenceSection" class="btn-outline">Find Global Hubs</a>
         </div>
-      </div>
-      <div class="hero-visual animate-on-scroll delay-2 inline-style-c79bab" >
-        <img src="../assets/images/unboxing_satisfaction_moments.png" alt="VerdantPack Experience" / class="inline-style-fc4f3d">
+        <div class="c-hero-trust-indicators">
+          <span><i data-lucide="clock" class="icon-sm"></i> 4-Hour Response Guarantee</span>
+          <span class="trust-divider">|</span>
+          <span><i data-lucide="shield-check" class="icon-sm"></i> B-Corp Certified Audits</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section inline-style-bcba7b" id="contact-flow" >
+  <section class="c-info-section">
     <div class="container">
-      <div class="contact-layout">
-        <div class="contact-form-card animate-on-scroll inline-style-444537" >
-          <h2  class="inline-style-4d06b8">Project Inquiry Form</h2>
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label  class="inline-style-18d98a">Full Name</label>
-                <input type="text" placeholder="Alex Chen" required class="form-input inline-style-6d5673" />
-              </div>
-              <div class="form-group">
-                <label  class="inline-style-18d98a">Company Website</label>
-                <input type="url" placeholder="https://company.com" class="form-input inline-style-6d5673" />
-              </div>
-            </div>
-            <div class="form-group inline-style-37d30b" >
-              <label  class="inline-style-18d98a">Work Email</label>
-              <input type="email" placeholder="alex@company.com" required class="form-input inline-style-6d5673" />
-            </div>
-            <div class="form-group inline-style-4d06b8" >
-              <label  class="inline-style-18d98a">How can we help?</label>
-              <textarea placeholder="Describe your packaging goals..." rows="5" required class="form-input form-textarea inline-style-6d5673" ></textarea>
-            </div>
-            <button type="submit" class="btn-primary inline-style-d6167d" >Send Secure Inquiry →</button>
-          </form>
-          <div class="form-success inline-style-15c4de" id="formSuccess" >
-            <div  class="inline-style-f2ebdc"><i data-lucide="package" class="icon-sm"></i></div>
-            <h3>Inquiry Received</h3>
-            <p>A specialist will reach out within 4 business hours.</p>
-          </div>
+      <div class="section-header animate-on-scroll text-center">
+        <span class="section-tag"><i data-lucide="message-square" class="icon-sm"></i> Get In Touch</span>
+        <h2 class="section-title">Connect With Our <span class="accent-text">Packaging Experts</span></h2>
+        <p class="section-subtitle">We manage regional eco-hubs worldwide to guarantee fast assistance and low shipping footprints.</p>
+      </div>
+
+      <div class="c-info-grid animate-on-scroll">
+
+        <div class="c-info-card">
+          <div class="c-info-icon-wrapper"><i data-lucide="map-pin" class="icon-md"></i></div>
+          <h3>Office Address</h3>
+          <p>Ayyappa Society, 100 Feet Rd</p>
+          <p>Madhapur, Hyderabad, TS - 500081</p>
         </div>
 
-        <div class="address-sidebar animate-on-scroll delay-2">
-          <div class="info-card inline-style-3592e4" >
-             <span  class="inline-style-2ee9a9"><i data-lucide="map-pin" class="icon-sm"></i></span>
-             <h4  class="inline-style-d51702">Main Studio</h4>
-             <p  class="inline-style-e634e6">Ayyappa Society, 100 Feet Rd</p>
-             <p  class="inline-style-f4415a">Madhapur, Hyderabad 500081</p>
-          </div>
-          <div class="info-card inline-style-c29b59" >
-             <span  class="inline-style-2ee9a9"><i data-lucide="mail" class="icon-sm"></i>️</span>
-             <h4  class="inline-style-d51702">Quick Contact</h4>
-             <p  class="inline-style-e634e6">hello@verdantpack.com</p>
-             <p  class="inline-style-f4415a">Mon-Fri, 9am - 6pm PST</p>
-          </div>
+        <div class="c-info-card">
+          <div class="c-info-icon-wrapper"><i data-lucide="phone" class="icon-md"></i></div>
+          <h3>Phone Number</h3>
+          <p>+91 (040) 4829-1992</p>
+          <p>Toll Free: 1-800-VERDANT</p>
+        </div>
+
+        <div class="c-info-card">
+          <div class="c-info-icon-wrapper"><i data-lucide="mail" class="icon-md"></i></div>
+          <h3>Email Address</h3>
+          <p>hello@verdantpack.com</p>
+          <p>partners@verdantpack.com</p>
+        </div>
+
+        <div class="c-info-card">
+          <div class="c-info-icon-wrapper"><i data-lucide="clock" class="icon-md"></i></div>
+          <h3>Business Hours</h3>
+          <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+          <p>Saturday: 10:00 AM - 2:00 PM</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="map-section animate-on-scroll inline-style-9b8f31" >
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.287739502742!2d78.388537575165!3d17.445944583452654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9158f201b205%3A0x11bbe7be77ad4414!2sAyyappa%20Society%20Main%20Rd%2C%20Madhapur%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1711867123456!5m2!1sen!2sin" width="100%" height="100%"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="inline-style-cbdc21"></iframe>
-  </section>
-  <section class="section faq-section inline-style-8d1df9" >
-    <div class="container inline-style-10efee" >
-      <div class="section-header animate-on-scroll inline-style-13076d" >
-        <span class="section-tag inline-style-be517b" ><i data-lucide="circle-help" class="icon-sm"></i> FAQ</span>
-        <h2 class="section-title">Support & Guidelines</h2>
+  <section class="c-form-section" id="contactFormSection">
+    <div class="container">
+      <div class="section-header animate-on-scroll text-center" style="margin-bottom: 48px;">
+        <span class="section-tag"><i data-lucide="headset" class="icon-sm"></i> Contact Experts</span>
+        <h2 class="section-title">Start Your <span class="hero-accent">Sustainable Journey</span></h2>
+        <p class="section-subtitle">Get custom engineering advice, volume pricing, and material test reports.</p>
       </div>
-      <div class="faq-accordion inline-style-fcf402" >
-        <div class="faq-item-acc animate-on-scroll inline-style-080c32" >
-          <button class="faq-trigger inline-style-526129" >
-            What is the minimum order quantity (MOQ)?
-            <span class="faq-plus">+</span>
-          </button>
-          <div class="faq-content-acc inline-style-0314b8" >
-            Standard compostable mailers start at 500 units, while custom-printed corrugated boxes typically require 250 units per design.
+
+      <div class="c-form-grid">
+
+        <div class="c-form-card animate-on-scroll">
+          <form class="c-contact-form" id="contactForm">
+            <h3 class="c-form-heading">Send a <span class="hero-accent">Strategic Inquiry</span></h3>
+            <p class="c-form-desc">Provide your packaging parameters below, and our materials engineers will review designs for you.</p>
+
+            <div class="c-form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Alex Chen" required class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <input type="text" id="companyName" placeholder="Bloom Skincare Ltd" required class="form-input"/>
+              </div>
+            </div>
+
+            <div class="c-form-row">
+              <div class="form-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" placeholder="alex@bloomskincare.com" required class="form-input"/>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="+1 (555) 019-2831" required class="form-input"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="serviceRequired">Service Required</label>
+              <select id="serviceRequired" required class="form-input">
+                <option value="" disabled selected>Select packaging service</option>
+                <option value="compostable-mailers">Compostable Mailer Bags</option>
+                <option value="recyclable-boxes">Recycled Corrugated Boxes</option>
+                <option value="paper-tapes">Water-Activated Paper Tape</option>
+                <option value="retail-bags">Compostable Retail shopper Bags</option>
+                <option value="custom-packaging">Custom Branded Solutions</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" rows="5" placeholder="Describe your container volumes, weight profiles, and dimensions..." required class="form-input form-textarea"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Submit Strategic Inquiry</button>
+          </form>
+
+          <div class="form-success text-center" id="formSuccess" style="display: none; padding: 48px 24px;">
+            <div class="success-icon-wrapper" style="font-size: 4rem; color: #8ed44e; margin-bottom: 20px;"><i data-lucide="check-circle" class="icon-lg"></i></div>
+            <h3 style="color: #ffffff; font-weight: 800; font-size: 1.5rem; margin-bottom: 12px;">Inquiry Received Securely</h3>
+            <p style="color: rgba(255,255,255,0.88); font-size: 0.95rem; line-height: 1.6;">Thank you for initiating your circular supply journey. A regional materials consultant has been assigned to your case and will call or email you within 4 business hours.</p>
           </div>
         </div>
-        <div class="faq-item-acc animate-on-scroll delay-1 inline-style-080c32" >
-          <button class="faq-trigger inline-style-526129" >
-            How fast is your global fulfillment?
-            <span class="faq-plus">+</span>
-          </button>
-          <div class="faq-content-acc inline-style-0314b8" >
-            In-stock items ship within 48 hours. Enterprise orders distributed through our decentralized hub network usually arrive within 3-5 business days globally.
-          </div>
+
+        <div class="c-support-card animate-on-scroll delay-2">
+          <span class="premium-badge"><i data-lucide="shield-check" class="icon-sm" style="margin-right: 6px;"></i> Quick Support</span>
+          <h3>Why Connect with <span class="hero-accent">VerdantPack</span>?</h3>
+          <p class="support-intro">Our engineering help desk bridges the gap between premium B2B custom shipping supplies and verified environmental compliance.</p>
+
+          <ul class="support-points-list">
+            <li>
+              <i data-lucide="shield-check" class="icon-sm text-accent"></i>
+              <div>
+                <strong>4-Hour Response SLA</strong>
+                <p>We review and assign corporate cases within 4 hours during weekdays.</p>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="users" class="icon-sm text-accent"></i>
+              <div>
+                <strong>Dedicated Specialist Assign</strong>
+                <p>You get direct access to a single account executive from proofing to delivery.</p>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="leaf" class="icon-sm text-accent"></i>
+              <div>
+                <strong>Free Materials Consultation</strong>
+                <p>We test item size fits, weights, and transit stress profiles at zero cost.</p>
+              </div>
+            </li>
+            <li>
+              <i data-lucide="help-circle" class="icon-sm text-accent"></i>
+              <div>
+                <strong>Live Dispatch Center Assistance</strong>
+                <p>Get real-time tracking updates, custom plate checks, and volume price locks.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="pricing.html" class="btn-primary" style="width: 100%; justify-content: center;">View Bulk Pricing Plans</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-presence-section" id="presenceSection">
+    <div class="container">
+      <div class="section-header animate-on-scroll text-center">
+        <span class="section-tag"><i data-lucide="globe" class="icon-sm"></i> Global Presence</span>
+        <h2 class="section-title">Visit Our <span class="accent-text">Global Headquarters</span></h2>
+        <p class="section-subtitle">Drop by our Hyderabad headquarters or coordinate physical samples inspection at our worldwide packaging network.</p>
+      </div>
+
+      <div class="c-map-wrapper animate-on-scroll">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.287739502742!2d78.388537575165!3d17.445944583452654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9158f201b205%3A0x11bbe7be77ad4414!2sAyyappa%20Society%20Main%20Rd%2C%20Madhapur%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1711867123456!5m2!1sen!2sin" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border: 0;"></iframe>
+      </div>
+
+      <div class="c-map-details-grid animate-on-scroll">
+        <div class="detail-card">
+          <i data-lucide="map-pin" class="icon-sm"></i>
+          <strong>Office Address</strong>
+          <p>Ayyappa Society, Madhapur, Hyderabad, Telangana - 500081</p>
+        </div>
+        <div class="detail-card">
+          <i data-lucide="clock" class="icon-sm"></i>
+          <strong>Working Hours</strong>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM (IST)</p>
+        </div>
+        <div class="detail-card">
+          <i data-lucide="car" class="icon-sm"></i>
+          <strong>Parking Availability</strong>
+          <p>Free Visitor Basements Parking Level 1 & Level 2</p>
+        </div>
+        <div class="detail-card">
+          <i data-lucide="compass" class="icon-sm"></i>
+          <strong>Nearby Landmark</strong>
+          <p>Located near Ayyappa Society Main Circle, Madhapur</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-why-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll text-center">
+        <span class="section-tag"><i data-lucide="check" class="icon-sm"></i> Why Choose Us</span>
+        <h2 class="section-title">Why Businesses <span class="accent-text">Trust VerdantPack</span></h2>
+        <p class="section-subtitle">We partner with over 150 B-Corps and online brands to make sustainable shipping painless.</p>
+      </div>
+
+      <div class="c-why-grid animate-on-scroll">
+
+        <div class="c-why-card">
+          <div class="c-why-icon-wrapper"><i data-lucide="leaf" class="icon-md"></i></div>
+          <h3><span class="accent-text">Eco-Friendly</span> Expertise</h3>
+          <p>All materials are certified by global standards (FSC, BPI, TUV Austria) and tested for backyard composting speed.</p>
+        </div>
+
+        <div class="c-why-card">
+          <div class="c-why-icon-wrapper"><i data-lucide="zap" class="icon-md"></i></div>
+          <h3><span class="accent-text">Fast</span> Response</h3>
+          <p>Our dedicated operations team answers strategy, custom layout, and bulk pricing questions in under 4 hours.</p>
+        </div>
+
+        <div class="c-why-card">
+          <div class="c-why-icon-wrapper"><i data-lucide="package" class="icon-md"></i></div>
+          <h3><span class="accent-text">Reliable</span> Specialists</h3>
+          <p>From molded paper inserts to water-activated adhesives, we create fit-for-purpose box structures.</p>
+        </div>
+
+        <div class="c-why-card">
+          <div class="c-why-icon-wrapper"><i data-lucide="heart" class="icon-md"></i></div>
+          <h3><span class="accent-text">Dedicated</span> Support</h3>
+          <p>Get a single assigned B2B procurement coordinator to manage scheduling runs, warehouse deliveries, and reorders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-final-cta-section">
+    <div class="c-cta-glow-1"></div>
+    <div class="c-cta-glow-2"></div>
+    <div class="container">
+      <div class="c-cta-card animate-on-scroll">
+        <span class="premium-badge" style="margin-inline: auto;"><i data-lucide="sparkles" class="icon-sm" style="margin-right: 6px;"></i> Next Steps</span>
+        <h2>Ready to Transition to <span class="hero-accent">Circular Operations</span>?</h2>
+        <p>Coordinate a free eco audit of your fulfillment table sizes and shipping parameters with our engineering team today.</p>
+
+        <div class="c-cta-actions">
+          <a href="#contactFormSection" class="btn-primary">Schedule Custom Audit</a>
+          <a href="services.html" class="btn-outline">Explore Product Line</a>
         </div>
       </div>
     </div>
