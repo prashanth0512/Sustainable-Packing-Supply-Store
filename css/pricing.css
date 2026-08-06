@@ -558,9 +558,9 @@
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
-  background: rgba(142, 212, 78, 0.15) !important;
-  color: #8ed44e !important;
-  border: 1px solid rgba(142, 212, 78, 0.4) !important;
+  background: rgba(196, 154, 108, 0.15) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(196, 154, 108, 0.4) !important;
   padding: 6px 18px !important;
   border-radius: 30px !important;
   font-size: 0.82rem !important;
@@ -664,19 +664,19 @@
 .p-plan-card.featured {
   background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
   color: #ffffff !important;
-  border: 2px solid #8ed44e !important;
+  border: 2px solid var(--accent2) !important;
   border-radius: 24px !important;
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35), 0 0 24px rgba(142, 212, 78, 0.2) !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35), 0 0 24px rgba(196, 154, 108, 0.2) !important;
   transform: scale(1.03) !important;
 }
 
 .p-plan-card.featured:hover {
   transform: scale(1.03) translateY(-6px) !important;
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(142, 212, 78, 0.3) !important;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(196, 154, 108, 0.3) !important;
 }
 
 .p-plan-badge-popular {
-  background: linear-gradient(135deg, #7ab648, #3d8b37) !important;
+  background: var(--accent) !important;
   color: #ffffff !important;
   font-size: 0.76rem !important;
   font-weight: 800 !important;
@@ -697,7 +697,7 @@
 }
 
 .p-plan-card.featured .p-plan-price .price-amount {
-  color: #8ed44e !important;
+  color: var(--accent2) !important;
   font-size: 2.6rem !important;
 }
 
@@ -710,7 +710,7 @@
 }
 
 .p-plan-card.featured .p-plan-features li i {
-  color: #8ed44e !important;
+  color: var(--accent2) !important;
 }
 
 .p-comparison-section {
@@ -746,7 +746,7 @@
   -webkit-overflow-scrolling: touch !important;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3) !important;
   scrollbar-width: thin;
-  scrollbar-color: rgba(142, 212, 78, 0.5) rgba(255, 255, 255, 0.05);
+  scrollbar-color: rgba(196, 154, 108, 0.5) rgba(255, 255, 255, 0.05);
 }
 
 .p-table-wrapper::-webkit-scrollbar {
@@ -759,12 +759,12 @@
 }
 
 .p-table-wrapper::-webkit-scrollbar-thumb {
-  background: rgba(142, 212, 78, 0.4);
+  background: rgba(196, 154, 108, 0.4);
   border-radius: 10px;
 }
 
 .p-table-wrapper::-webkit-scrollbar-thumb:hover {
-  background: rgba(142, 212, 78, 0.8);
+  background: rgba(196, 154, 108, 0.8);
 }
 
 .p-table-scroll-hint {
@@ -774,9 +774,9 @@
   gap: 8px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #8ed44e;
-  background: rgba(142, 212, 78, 0.12);
-  border: 1px solid rgba(142, 212, 78, 0.3);
+  color: var(--accent2);
+  background: rgba(196, 154, 108, 0.12);
+  border: 1px solid rgba(196, 154, 108, 0.3);
   border-radius: 20px;
   padding: 8px 18px;
   margin: 28px auto 0;
@@ -829,15 +829,15 @@
 }
 
 .p-comparison-table .highlight-cell {
-  color: #8ed44e !important;
+  color: var(--accent2) !important;
   font-weight: 800 !important;
-  background: rgba(142, 212, 78, 0.15) !important;
+  background: rgba(196, 154, 108, 0.15) !important;
 }
 
 .p-table-link {
-  color: #8ed44e !important;
-  border: 1px solid rgba(142, 212, 78, 0.4) !important;
-  background: rgba(142, 212, 78, 0.1) !important;
+  color: var(--accent2) !important;
+  border: 1px solid rgba(196, 154, 108, 0.4) !important;
+  background: rgba(196, 154, 108, 0.1) !important;
   padding: 4px 14px !important;
   border-radius: 14px !important;
   font-size: 0.8rem !important;
@@ -847,8 +847,8 @@
 }
 
 .p-table-link:hover {
-  background: #8ed44e !important;
-  color: #102e11 !important;
+  background: var(--accent2) !important;
+  color: #ffffff !important;
 }
 
 .p-value-section {
@@ -864,7 +864,7 @@
 }
 
 .p-value-section .section-title .hero-accent {
-  color: #2e7d32 !important;
+  color: var(--accent) !important;
 }
 
 .p-value-section .section-subtitle {
@@ -872,9 +872,9 @@
 }
 
 .p-value-section .section-tag {
-  background: rgba(46, 125, 50, 0.08) !important;
-  color: #2e7d32 !important;
-  border: 1px solid rgba(46, 125, 50, 0.25) !important;
+  background: rgba(196, 154, 108, 0.08) !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(196, 154, 108, 0.25) !important;
 }
 
 .p-benefits-grid {
@@ -895,13 +895,13 @@
 
 .p-benefit-card:hover {
   transform: translateY(-6px) !important;
-  border-color: #2e7d32 !important;
-  box-shadow: 0 14px 32px rgba(46, 125, 50, 0.12) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 14px 32px rgba(196, 154, 108, 0.12) !important;
 }
 
 .p-benefit-card i,
 .p-benefit-card svg {
-  color: #2e7d32 !important;
+  color: var(--accent) !important;
   margin-bottom: 14px !important;
 }
 
@@ -951,7 +951,7 @@
 }
 
 .hero-accent {
-  color: #8ed44e !important;
+  color: var(--accent2) !important;
 }
 
 .accent-text {
@@ -959,13 +959,13 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #7ab648 0%, #3d8b37 100%) !important;
+  background: var(--accent) !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 28px !important;
   padding: 12px 26px !important;
   font-weight: 700 !important;
-  box-shadow: 0 6px 18px rgba(61, 139, 55, 0.3) !important;
+  box-shadow: 0 6px 18px rgba(196, 154, 108, 0.3) !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -974,14 +974,15 @@
 
 .btn-primary:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 10px 24px rgba(61, 139, 55, 0.45) !important;
+  background: var(--accent-hover) !important;
+  box-shadow: 0 10px 24px rgba(196, 154, 108, 0.45) !important;
   color: #ffffff !important;
 }
 
 .btn-outline {
   background: transparent !important;
-  border: 2px solid #8ed44e !important;
-  color: #8ed44e !important;
+  border: 2px solid var(--accent2) !important;
+  color: var(--accent2) !important;
   border-radius: 28px !important;
   padding: 12px 26px !important;
   font-weight: 700 !important;
@@ -992,10 +993,10 @@
 }
 
 .btn-outline:hover {
-  background: #8ed44e !important;
-  color: #102e11 !important;
+  background: var(--accent2) !important;
+  color: #ffffff !important;
   transform: translateY(-2px) !important;
-  border-color: #8ed44e !important;
+  border-color: var(--accent2) !important;
 }
 
 /* Dark theme overrides for Added Value / Benefits section */
@@ -1009,7 +1010,7 @@
 }
 
 [data-theme="dark"] .p-value-section .section-title .hero-accent {
-  color: #8ed44e !important;
+  color: #C49A6C !important;
 }
 
 [data-theme="dark"] .p-value-section .section-subtitle {
@@ -1017,9 +1018,9 @@
 }
 
 [data-theme="dark"] .p-value-section .section-tag {
-  background: rgba(142, 212, 78, 0.16) !important;
-  color: #8ed44e !important;
-  border-color: rgba(142, 212, 78, 0.35) !important;
+  background: rgba(196, 154, 108, 0.16) !important;
+  color: #C49A6C !important;
+  border-color: rgba(196, 154, 108, 0.35) !important;
 }
 
 [data-theme="dark"] .p-benefit-card {
@@ -1031,13 +1032,13 @@
 
 [data-theme="dark"] .p-benefit-card:hover {
   background: #192d1c !important;
-  border-color: #8ed44e !important;
+  border-color: #C49A6C !important;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6) !important;
 }
 
 [data-theme="dark"] .p-benefit-card i,
 [data-theme="dark"] .p-benefit-card svg {
-  color: #8ed44e !important;
+  color: #C49A6C !important;
 }
 
 [data-theme="dark"] .p-benefit-card h4 {

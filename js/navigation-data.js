@@ -4,11 +4,7 @@ const HEADER_CONTENT = `
     <div class="nav-left">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <svg width="32" height="32" viewBox="-2 -2 36 40" fill="none" style="overflow: visible;">
-            <path d="M16 2L4 8v8c0 7.732 5.04 14.96 12 16.928C23.96 30.96 28 23.732 28 16V8L16 2z" fill="var(--accent)" opacity="0.2"/>
-            <path d="M16 2L4 8v8c0 7.732 5.04 14.96 12 16.928C23.96 30.96 28 23.732 28 16V8L16 2z" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
-            <path d="M11 16l3 3 7-7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img src="assets/images/logo.png" alt="VerdantPack Logo" width="32" height="32" style="object-fit: contain; border-radius: 50%;" />
         </div>
         <span class="logo-text">Verdant<span class="logo-accent">Pack</span></span>
       </a>
@@ -77,11 +73,7 @@ const FOOTER_CONTENT = `
     <div class="footer-brand">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <svg width="28" height="28" viewBox="-2 -2 36 40" fill="none" style="overflow: visible;">
-            <path d="M16 2L4 8v8c0 7.732 5.04 14.96 12 16.928C23.96 30.96 28 23.732 28 16V8L16 2z" fill="var(--accent)" opacity="0.2"/>
-            <path d="M16 2L4 8v8c0 7.732 5.04 14.96 12 16.928C23.96 30.96 28 23.732 28 16V8L16 2z" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
-            <path d="M11 16l3 3 7-7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img src="assets/images/logo.png" alt="VerdantPack Logo" width="28" height="28" style="object-fit: contain; border-radius: 50%;" />
         </div>
         <span class="logo-text">Verdant<span class="logo-accent">Pack</span></span>
       </a>

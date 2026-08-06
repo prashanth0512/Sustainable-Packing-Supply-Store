@@ -830,9 +830,9 @@
   align-self: center !important;
   justify-content: center !important;
   width: fit-content !important;
-  background: rgba(142, 212, 78, 0.2) !important;
-  color: #8ed44e !important;
-  border: 1px solid rgba(142, 212, 78, 0.35) !important;
+  background: rgba(196, 154, 108, 0.2) !important;
+  color: var(--accent2) !important;
+  border: 1px solid rgba(196, 154, 108, 0.35) !important;
   font-size: 0.76rem !important;
   font-weight: 700 !important;
   padding: 4px 14px !important;
@@ -858,14 +858,14 @@
 }
 
 .timeline-dot {
-  background: linear-gradient(135deg, #7ab648, #3d8b37) !important;
+  background: var(--accent) !important;
   color: #ffffff !important;
   border: 3px solid #102e11 !important;
-  box-shadow: 0 0 15px rgba(142, 212, 78, 0.4) !important;
+  box-shadow: 0 0 15px rgba(196, 154, 108, 0.4) !important;
 }
 
 .timeline-line-animated {
-  background: linear-gradient(180deg, #7ab648 0%, #3d8b37 100%) !important;
+  background: var(--accent) !important;
 }
 
 .team-section {
@@ -1016,7 +1016,7 @@
   width: 52px !important;
   height: 52px !important;
   border-radius: 50% !important;
-  border: 2px solid #8ed44e !important;
+  border: 2px solid var(--accent2) !important;
   object-fit: cover !important;
 }
 
@@ -1049,19 +1049,23 @@
 }
 
 .about-cta-section {
-  background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
+  background: #ffffff !important;
   padding: 80px 0 !important;
 }
 
+[data-theme="dark"] .about-cta-section {
+  background: var(--bg) !important;
+}
+
 .about-cta-inner {
-  background: rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: linear-gradient(135deg, #112d12 0%, #215323 100%) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 32px !important;
   padding: 64px 40px !important;
   text-align: center !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35) !important;
+  box-shadow: 0 20px 48px rgba(17, 45, 18, 0.18) !important;
 }
 
 .about-cta-inner h2 {
@@ -1080,7 +1084,7 @@
 }
 
 .hero-accent {
-  color: #8ed44e !important;
+  color: var(--accent2) !important;
 }
 
 .accent-text {
@@ -1088,13 +1092,13 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #7ab648 0%, #3d8b37 100%) !important;
+  background: var(--accent) !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 28px !important;
   padding: 12px 26px !important;
   font-weight: 700 !important;
-  box-shadow: 0 6px 18px rgba(61, 139, 55, 0.3) !important;
+  box-shadow: 0 6px 18px rgba(196, 154, 108, 0.3) !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -1103,14 +1107,15 @@
 
 .btn-primary:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 10px 24px rgba(61, 139, 55, 0.45) !important;
+  background: var(--accent-hover) !important;
+  box-shadow: 0 10px 24px rgba(196, 154, 108, 0.45) !important;
   color: #ffffff !important;
 }
 
 .btn-outline {
   background: transparent !important;
-  border: 2px solid #8ed44e !important;
-  color: #8ed44e !important;
+  border: 2px solid var(--accent2) !important;
+  color: var(--accent2) !important;
   border-radius: 28px !important;
   padding: 12px 26px !important;
   font-weight: 700 !important;
@@ -1121,10 +1126,10 @@
 }
 
 .btn-outline:hover {
-  background: #8ed44e !important;
-  color: #102e11 !important;
+  background: var(--accent2) !important;
+  color: #ffffff !important;
   transform: translateY(-2px) !important;
-  border-color: #8ed44e !important;
+  border-color: var(--accent2) !important;
 }
 
 [data-theme="dark"] .purpose-section,
@@ -1142,7 +1147,7 @@
 [data-theme="dark"] .purpose-card:hover,
 [data-theme="dark"] .team-card:hover {
   background: #192d1c !important;
-  border-color: #8ed44e !important;
+  border-color: #C49A6C !important;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6) !important;
 }
 
@@ -1163,23 +1168,23 @@
 [data-theme="dark"] .accent-text,
 [data-theme="dark"] .hero-accent,
 [data-theme="dark"] .team-role {
-  color: #8ed44e !important;
+  color: #C49A6C !important;
 }
 
 [data-theme="dark"] .purpose-points .point-icon {
-  background: rgba(142, 212, 78, 0.16) !important;
-  color: #8ed44e !important;
-  border-color: rgba(142, 212, 78, 0.35) !important;
+  background: rgba(196, 154, 108, 0.16) !important;
+  color: #C49A6C !important;
+  border-color: rgba(196, 154, 108, 0.35) !important;
 }
 
 [data-theme="dark"] .purpose-points li:hover .point-icon {
-  background: #8ed44e !important;
-  color: #0c1a0e !important;
+  background: #C49A6C !important;
+  color: #ffffff !important;
 }
 
 [data-theme="dark"] .team-photo-wrapper {
-  border-color: #8ed44e !important;
-  box-shadow: 0 6px 20px rgba(142, 212, 78, 0.25) !important;
+  border-color: #C49A6C !important;
+  box-shadow: 0 6px 20px rgba(196, 154, 108, 0.25) !important;
 }
 
 [data-theme="dark"] .team-social a {
@@ -1189,29 +1194,29 @@
 }
 
 [data-theme="dark"] .team-social a:hover {
-  background: #8ed44e !important;
-  color: #0c1a0e !important;
-  border-color: #8ed44e !important;
+  background: #C49A6C !important;
+  color: #ffffff !important;
+  border-color: #C49A6C !important;
 }
 
 [data-theme="dark"] .purpose-content .section-tag,
 [data-theme="dark"] .team-section .section-tag {
-  background: rgba(142, 212, 78, 0.16) !important;
-  color: #8ed44e !important;
-  border-color: rgba(142, 212, 78, 0.35) !important;
+  background: rgba(196, 154, 108, 0.16) !important;
+  color: #C49A6C !important;
+  border-color: rgba(196, 154, 108, 0.35) !important;
 }
 
 [data-theme="dark"] .purpose-actions .btn-outline {
-  background: rgba(142, 212, 78, 0.15) !important;
-  color: #8ed44e !important;
-  border: 1px solid rgba(142, 212, 78, 0.45) !important;
+  background: rgba(196, 154, 108, 0.15) !important;
+  color: #C49A6C !important;
+  border: 1px solid rgba(196, 154, 108, 0.45) !important;
 }
 
 [data-theme="dark"] .purpose-actions .btn-outline:hover {
-  background: #8ed44e !important;
-  color: #081a0a !important;
-  border-color: #8ed44e !important;
-  box-shadow: 0 6px 20px rgba(142, 212, 78, 0.4) !important;
+  background: #C49A6C !important;
+  color: #ffffff !important;
+  border-color: #C49A6C !important;
+  box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4) !important;
 }
 
 @media (max-width: 1024px) {
@@ -1335,5 +1340,82 @@
   .about-cta-inner .btn-outline {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Mission and Vision Section */
+.mission-vision-section {
+  background: #ffffff;
+  padding: 80px 24px;
+}
+
+[data-theme="dark"] .mission-vision-section {
+  background: var(--bg);
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.mission-vision-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 45px 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+}
+
+.mission-vision-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.mission-icon, .vision-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius);
+  background: var(--accent-light);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.mission-vision-card:hover .mission-icon,
+.mission-vision-card:hover .vision-icon {
+  background: var(--accent);
+  color: #ffffff;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.mission-vision-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.mission-vision-card p {
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 0.96rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .mission-vision-card {
+    padding: 32px 24px;
   }
 }

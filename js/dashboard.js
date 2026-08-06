@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (calcTag) {
       if (discount > 0) {
         calcTag.textContent = `Volume discount: ${(discount * 100)}% Off applied`;
-        calcTag.style.color = '#3d8b37';
+        calcTag.style.color = 'var(--accent)';
       } else {
         calcTag.textContent = 'Standard rate (No discount applied below 500 units)';
         calcTag.style.color = 'var(--text-muted)';
@@ -237,8 +237,8 @@ function initCharts() {
         datasets: [{
           label: 'Orders',
           data: [3200, 4100, 3800, 5200, 4900, 6820],
-          borderColor: '#3d8b37',
-          backgroundColor: 'rgba(61, 139, 55, 0.1)',
+          borderColor: '#C49A6C',
+          backgroundColor: 'rgba(196, 154, 108, 0.15)',
           fill: true,
           tension: 0.4
         }]
@@ -264,8 +264,8 @@ function initCharts() {
         datasets: [{
           label: 'Revenue ($)',
           data: [5000, 7200, 6800, 9400, 8900, 14280],
-          borderColor: '#7ab648',
-          backgroundColor: 'rgba(122, 182, 72, 0.15)',
+          borderColor: '#8B5E3C',
+          backgroundColor: 'rgba(139, 94, 60, 0.15)',
           fill: true,
           tension: 0.4
         }]
@@ -292,19 +292,19 @@ function initCharts() {
           {
             label: 'Mailers',
             data: [2200, 3100, 2900, 4000, 3800, 6000],
-            backgroundColor: '#7ab648',
+            backgroundColor: '#C49A6C',
             borderRadius: 6
           },
           {
             label: 'Boxes',
             data: [1800, 2500, 2300, 3200, 2900, 5100],
-            backgroundColor: '#3d8b37',
+            backgroundColor: '#8B5E3C',
             borderRadius: 6
           },
           {
             label: 'Tape & Misc',
             data: [1000, 1600, 1600, 2200, 2200, 3180],
-            backgroundColor: '#a5d6a7',
+            backgroundColor: '#D4B088',
             borderRadius: 6
           }
         ]
@@ -340,8 +340,8 @@ function initCharts() {
         datasets: [{
           label: 'Profit',
           data: [1500, 2400, 2200, 3100, 2900, 4890],
-          borderColor: '#2e7d32',
-          backgroundColor: 'rgba(46, 125, 50, 0.1)',
+          borderColor: '#C49A6C',
+          backgroundColor: 'rgba(196, 154, 108, 0.1)',
           fill: true,
           tension: 0.4
         }]
@@ -366,7 +366,7 @@ function initCharts() {
         labels: ['Bags', 'Boxes', 'Mailers', 'Tape'],
         datasets: [{
           data: [45, 25, 20, 10],
-          backgroundColor: ['#3d8b37', '#7ab648', '#a5d6a7', '#e8f5e3'],
+          backgroundColor: ['#C49A6C', '#8B5E3C', '#D4B088', '#F4ECE2'],
           borderWidth: 0
         }]
       },
@@ -393,7 +393,7 @@ function initCharts() {
         datasets: [{
           label: 'Impact (kg CO2)',
           data: [120, 150, 180, 210, 250, 300],
-          backgroundColor: '#3d8b37',
+          backgroundColor: '#C49A6C',
           borderRadius: 6
         }]
       },
@@ -418,7 +418,7 @@ function initCharts() {
         datasets: [{
           label: 'Impact (kg CO2)',
           data: [120, 150, 180, 210, 250, 300],
-          backgroundColor: '#3d8b37',
+          backgroundColor: '#C49A6C',
           borderRadius: 6
         }]
       },

@@ -1128,7 +1128,7 @@
 .sustainability-promise-section .section-tag {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
-  color: #8ed44e;
+  color: var(--accent2);
 }
 
 .promise-grid {
@@ -1163,8 +1163,8 @@
   width: 60px;
   height: 60px;
   border-radius: 16px;
-  background: rgba(142, 212, 78, 0.15);
-  color: #8ed44e;
+  background: rgba(196, 154, 108, 0.15);
+  color: var(--accent2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1179,8 +1179,8 @@
 
 .promise-card:hover .promise-icon-wrapper {
   transform: scale(1.1) rotate(5deg);
-  background: #8ed44e;
-  color: #102e11;
+  background: var(--accent2);
+  color: #ffffff;
 }
 
 .promise-card h3 {
@@ -1210,32 +1210,29 @@
 }
 
 .promise-action .btn-primary:hover {
-  background: #8ed44e;
-  color: #102e11;
-  box-shadow: 0 8px 24px rgba(142, 212, 78, 0.3);
+  background: var(--accent2);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(196, 154, 108, 0.3);
 }
 
 .cta-banner {
-  background: radial-gradient(circle at 50% -20%, rgba(142, 212, 78, 0.22), transparent 60%), linear-gradient(135deg, #0d230e 0%, #173f19 100%);
+  background: #ffffff;
   padding: 100px 24px;
   margin: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
 }
 
+[data-theme="dark"] .cta-banner {
+  background: var(--bg);
+}
+
 .cta-banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M9 24h1v1H9v-1zm0 2h1v1H9v-1z' fill='%238ed44e' fill-opacity='0.03'/%3E%3C/svg%3E");
-  opacity: 0.4;
-  pointer-events: none;
+  display: none;
 }
 
 .cta-inner {
-  max-width: 900px;
+  max-width: 1000px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -1244,6 +1241,11 @@
   gap: 28px;
   position: relative;
   z-index: 2;
+  background: linear-gradient(135deg, #a37c53 0%, #59402a 100%);
+  border-radius: var(--radius-lg);
+  padding: 60px 40px;
+  box-shadow: 0 20px 48px rgba(89, 64, 42, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .cta-inner h2 {
@@ -1256,11 +1258,17 @@
 }
 
 .cta-inner p {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.15rem;
   max-width: 600px;
   margin-inline: auto;
   margin-bottom: 8px;
+}
+
+.cta-inner .accent-text {
+  color: #a4e46c !important;
+  -webkit-text-fill-color: #a4e46c !important;
+  text-shadow: 0 0 10px rgba(164, 228, 108, 0.3) !important;
 }
 
 .cta-actions {
@@ -1272,7 +1280,7 @@
 
 .cta-actions .btn-primary {
   background: #fff;
-  color: #102e11 !important;
+  color: #59402a !important;
   font-weight: 700;
   border-radius: 30px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
@@ -1280,9 +1288,9 @@
 }
 
 .cta-actions .btn-primary:hover {
-  background: #8ed44e;
-  color: #102e11 !important;
-  box-shadow: 0 8px 24px rgba(142, 212, 78, 0.35);
+  background: var(--accent2);
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(196, 154, 108, 0.35);
   transform: translateY(-2px);
 }
 
@@ -1675,8 +1683,8 @@
   .promise-card:hover .promise-icon-wrapper,
   .promise-card:active .promise-icon-wrapper {
     transform: scale(1.1) rotate(5deg) !important;
-    background: #8ed44e !important;
-    color: #102e11 !important;
+    background: var(--accent2) !important;
+    color: #ffffff !important;
   }
 
   .testimonial-card:hover,
@@ -2142,8 +2150,7 @@
 
 .manufacturing-section,
 .lifecycle-section,
-.sustainability-promise-section,
-.cta-banner {
+.sustainability-promise-section {
   background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
   color: #ffffff !important;
   position: relative;
@@ -2152,8 +2159,7 @@
 
 .manufacturing-section::before,
 .lifecycle-section::before,
-.sustainability-promise-section::before,
-.cta-banner::before {
+.sustainability-promise-section::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -2164,8 +2170,7 @@
 
 .manufacturing-section .container,
 .lifecycle-section .container,
-.sustainability-promise-section .container,
-.cta-banner .container {
+.sustainability-promise-section .container {
   position: relative;
   z-index: 1;
 }
@@ -2180,11 +2185,10 @@
 .hero-accent,
 .manufacturing-section .accent-text,
 .lifecycle-section .accent-text,
-.sustainability-promise-section .accent-text,
-.cta-banner .accent-text {
-  color: #8ed44e !important;
-  -webkit-text-fill-color: #8ed44e !important;
-  text-shadow: 0 0 16px rgba(142, 212, 78, 0.4) !important;
+.sustainability-promise-section .accent-text {
+  color: var(--accent2) !important;
+  -webkit-text-fill-color: var(--accent2) !important;
+  text-shadow: 0 0 16px rgba(196, 154, 108, 0.4) !important;
   font-weight: 800 !important;
 }
 
@@ -2198,21 +2202,19 @@
 
 .hero-redesign .hero-tag {
   background: rgba(255, 255, 255, 0.12) !important;
-  color: #8ed44e !important;
+  color: #ffffff !important;
   border-color: rgba(255, 255, 255, 0.22) !important;
 }
 
 .manufacturing-section .section-title,
 .lifecycle-section .section-title,
-.sustainability-promise-section .section-title,
-.cta-banner h2 {
+.sustainability-promise-section .section-title {
   color: #ffffff !important;
 }
 
 .manufacturing-section .section-subtitle,
 .lifecycle-section .section-subtitle,
-.sustainability-promise-section .section-subtitle,
-.cta-banner p {
+.sustainability-promise-section .section-subtitle {
   color: rgba(255, 255, 255, 0.88) !important;
 }
 
@@ -2221,11 +2223,11 @@
 .sustainability-promise-section .section-tag {
   background: rgba(255, 255, 255, 0.12) !important;
   border-color: rgba(255, 255, 255, 0.22) !important;
-  color: #8ed44e !important;
+  color: #ffffff !important;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #7ab648 0%, #3d8b37 100%) !important;
+  background: var(--accent) !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 50px !important;
@@ -2279,8 +2281,7 @@
 .hero-redesign .btn-outline,
 .manufacturing-section .btn-outline,
 .lifecycle-section .btn-outline,
-.sustainability-promise-section .btn-outline,
-.cta-banner .btn-outline {
+.sustainability-promise-section .btn-outline {
   background: rgba(255, 255, 255, 0.12) !important;
   border-color: rgba(255, 255, 255, 0.7) !important;
   color: #ffffff !important;
@@ -2289,25 +2290,22 @@
 .hero-redesign .btn-outline:hover,
 .manufacturing-section .btn-outline:hover,
 .lifecycle-section .btn-outline:hover,
-.sustainability-promise-section .btn-outline:hover,
-.cta-banner .btn-outline:hover {
+.sustainability-promise-section .btn-outline:hover {
   background: #ffffff !important;
   color: #0d260e !important;
   border-color: #ffffff !important;
 }
 
-.sustainability-promise-section .promise-action .btn-primary,
-.cta-actions .btn-primary {
+.sustainability-promise-section .promise-action .btn-primary {
   background: #ffffff !important;
   color: #102e11 !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
 }
 
-.sustainability-promise-section .promise-action .btn-primary:hover,
-.cta-actions .btn-primary:hover {
-  background: #8ed44e !important;
-  color: #102e11 !important;
-  box-shadow: 0 12px 28px rgba(142, 212, 78, 0.4) !important;
+.sustainability-promise-section .promise-action .btn-primary:hover {
+  background: var(--accent2) !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(196, 154, 108, 0.4) !important;
 }
 
 .feature-card,
@@ -2413,7 +2411,7 @@
   max-height: 44px !important;
   aspect-ratio: 1 / 1 !important;
   border-radius: 50% !important;
-  background: linear-gradient(135deg, #7ab648, #3d8b37) !important;
+  background: var(--accent) !important;
   color: #ffffff !important;
   display: flex !important;
   align-items: center !important;
@@ -2454,7 +2452,7 @@
 }
 
 .manufacturing-section .step-num {
-  background: linear-gradient(135deg, #7ab648, #3d8b37) !important;
+  background: var(--accent) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   font-weight: 800 !important;
@@ -2462,15 +2460,15 @@
 
 .manufacturing-section .mfg-card-icon,
 .sustainability-promise-section .promise-icon-wrapper {
-  background: rgba(142, 212, 78, 0.18) !important;
-  color: #8ed44e !important;
-  border: 1px solid rgba(142, 212, 78, 0.3) !important;
+  background: rgba(196, 154, 108, 0.18) !important;
+  color: var(--accent2) !important;
+  border: 1px solid rgba(196, 154, 108, 0.3) !important;
 }
 
 .manufacturing-section .mfg-feature-card:hover .mfg-card-icon,
 .sustainability-promise-section .promise-card:hover .promise-icon-wrapper {
-  background: #8ed44e !important;
-  color: #102e11 !important;
+  background: var(--accent2) !important;
+  color: #ffffff !important;
   transform: scale(1.1) rotate(4deg) !important;
 }
 
@@ -2527,7 +2525,7 @@
 [data-theme="dark"] .testimonial-card:hover,
 [data-theme="dark"] .cert-card:hover {
   background: #192d1c !important;
-  border-color: #8ed44e !important;
+  border-color: #C49A6C !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
 }
 
@@ -2556,9 +2554,9 @@
   align-items: center !important;
   justify-content: center !important;
   padding: 12px 24px !important;
-  background: rgba(142, 212, 78, 0.18) !important;
-  color: #8ed44e !important;
-  border: 1px solid rgba(142, 212, 78, 0.45) !important;
+  background: rgba(196, 154, 108, 0.18) !important;
+  color: #C49A6C !important;
+  border: 1px solid rgba(196, 154, 108, 0.45) !important;
   border-radius: 30px !important;
   font-weight: 700 !important;
   font-size: 0.9rem !important;
@@ -2574,10 +2572,10 @@
 [data-theme="dark"] .advantage-card a:hover,
 [data-theme="dark"] .advantage-btn:hover,
 [data-theme="dark"] .inline-style-6f24e5:hover {
-  background: #8ed44e !important;
-  color: #081a0a !important;
-  border-color: #8ed44e !important;
-  box-shadow: 0 6px 20px rgba(142, 212, 78, 0.45) !important;
+  background: #C49A6C !important;
+  color: #ffffff !important;
+  border-color: #C49A6C !important;
+  box-shadow: 0 6px 20px rgba(196, 154, 108, 0.45) !important;
   transform: translateY(-2px) !important;
 }
 

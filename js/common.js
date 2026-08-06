@@ -105,6 +105,18 @@ function fixLinks(container, isRoot) {
       }
     }
   });
+
+  const imgs = container.querySelectorAll('img');
+  imgs.forEach(img => {
+    let src = img.getAttribute('src');
+    if (!src || src.startsWith('http') || src.startsWith('data:')) return;
+    src = src.replace('../', '');
+    if (!isRoot) {
+      img.setAttribute('src', '../' + src);
+    } else {
+      img.setAttribute('src', src);
+    }
+  });
 }
 
 function setupHeaderInteractions() {

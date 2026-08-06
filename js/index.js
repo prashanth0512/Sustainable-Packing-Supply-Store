@@ -152,14 +152,14 @@
       if (n > 0.44) {
         let r, g, b;
         if (n < 0.47) {
-          r = 222; g = 208; b = 180;
+          r = 212; g = 196; b = 158;
         } else if (n > 0.61) {
-          r = 141; g = 110; b = 99;
+          r = 115; g = 95; b = 75;
         } else {
           const tGreen = (n - 0.47) / 0.14;
-          r = Math.floor(76 * (1 - tGreen) + 34 * tGreen);
-          g = Math.floor(175 * (1 - tGreen) + 85 * tGreen);
-          b = Math.floor(80 * (1 - tGreen) + 30 * tGreen);
+          r = Math.floor(45 * (1 - tGreen) + 30 * tGreen);
+          g = Math.floor(140 * (1 - tGreen) + 100 * tGreen);
+          b = Math.floor(65 * (1 - tGreen) + 40 * tGreen);
         }
         data[idx] = r;
         data[idx+1] = g;
@@ -167,9 +167,9 @@
         data[idx+3] = 255;
       } else {
         const depth = n / 0.44;
-        data[idx] = Math.floor(13 * depth);
-        data[idx+1] = Math.floor(35 * depth + 144 * (1 - depth));
-        data[idx+2] = Math.floor(80 * depth + 242 * (1 - depth));
+        data[idx] = Math.floor(35 * depth + 20 * (1 - depth));
+        data[idx+1] = Math.floor(115 * depth + 80 * (1 - depth));
+        data[idx+2] = Math.floor(190 * depth + 140 * (1 - depth));
         data[idx+3] = 255;
       }
     }
@@ -177,17 +177,236 @@
   eCtx.putImageData(imgData, 0, 0);
 
   const earthTexture = new THREE.CanvasTexture(earthCanvas);
-  const earthGeo = new THREE.SphereGeometry(1.7, 64, 64);
+  // 1. HALF GLOBE (True Hemisphere Bowl - Enlarged Big Globe)
+  const halfEarthGeo = new THREE.SphereGeometry(2.15, 54, 28, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2);
   const earthMat = new THREE.MeshStandardMaterial({ 
     map: earthTexture, 
-    roughness: 0.8,
-    metalness: 0.05 
+    roughness: 0.7,
+    metalness: 0.05,
+    flatShading: true,
+    side: THREE.DoubleSide
   });
-  const earth = new THREE.Mesh(earthGeo, earthMat);
-  earth.position.set(0, 0.4, -0.6);
+  const earth = new THREE.Mesh(halfEarthGeo, earthMat);
+  earth.position.set(0, 0.20, -0.6);
   earth.castShadow = true;
   earth.receiveShadow = true;
   earthGroup.add(earth);
+
+  // 2. FLAT TOP CIRCULAR LAND CAP (Enlarged Top Land Surface of Half Globe)
+  const topCapGeo = new THREE.CircleGeometry(2.14, 54);
+  const topCapMat = new THREE.MeshStandardMaterial({ 
+    color: 0x2e7d32, 
+    roughness: 0.85,
+    side: THREE.DoubleSide,
+    flatShading: true
+  });
+  const topCap = new THREE.Mesh(topCapGeo, topCapMat);
+  topCap.rotation.x = -Math.PI / 2;
+  topCap.position.copy(earth.position);
+  topCap.receiveShadow = true;
+  earthGroup.add(topCap);
+
+  // Glowing white border ring around top rim of enlarged half globe
+  const rimGeo = new THREE.TorusGeometry(2.15, 0.035, 8, 64);
+  const rimMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.85 });
+  const rim = new THREE.Mesh(rimGeo, rimMat);
+  rim.position.copy(earth.position);
+  rim.rotation.x = Math.PI / 2;
+  earthGroup.add(rim);
+
+  // ----------------------------------------------------
+  // SPREADING HARDWOOD TREE & SCATTERED SMALL TREES ON TOP LAND
+  // ----------------------------------------------------
+  const treeGroup = new THREE.Group();
+
+  const trunkMat = new THREE.MeshStandardMaterial({ 
+    color: 0x5c3d2e, 
+    roughness: 0.85,
+    flatShading: true 
+  });
+  const darkWoodMat = new THREE.MeshStandardMaterial({ color: 0x3d271d, roughness: 0.9, flatShading: true });
+
+  // Main thick organic trunk
+  const mainTrunkGeo = new THREE.CylinderGeometry(0.18, 0.35, 1.1, 10);
+  const mainTrunk = new THREE.Mesh(mainTrunkGeo, trunkMat);
+  mainTrunk.position.set(0, 0.55, 0);
+  mainTrunk.castShadow = true;
+  mainTrunk.receiveShadow = true;
+  treeGroup.add(mainTrunk);
+
+  // Flared organic roots
+  const rootCount = 8;
+  for (let i = 0; i < rootCount; i++) {
+    const angle = (i / rootCount) * Math.PI * 2;
+    const rGeo = new THREE.CylinderGeometry(0.04, 0.13, 0.7, 7);
+    const root = new THREE.Mesh(rGeo, darkWoodMat);
+    root.position.set(Math.cos(angle) * 0.32, 0.06, Math.sin(angle) * 0.32);
+    root.rotation.z = Math.cos(angle) * 0.52;
+    root.rotation.x = Math.sin(angle) * 0.52;
+    root.rotation.y = angle;
+    root.castShadow = true;
+    treeGroup.add(root);
+  }
+
+  // Spreading Wooden Branch Network
+  const boughMaterial = trunkMat;
+  const primaryBoughs = [
+    { pos: [0.28, 1.05, 0.18], rot: [0.35, 0.4, -0.45], radTop: 0.11, radBot: 0.17, len: 0.75 },
+    { pos: [-0.32, 1.10, -0.15], rot: [-0.4, -0.5, 0.52], radTop: 0.12, radBot: 0.18, len: 0.80 },
+    { pos: [0.15, 1.15, -0.32], rot: [-0.55, 0.7, -0.35], radTop: 0.10, radBot: 0.16, len: 0.72 },
+    { pos: [-0.22, 1.02, 0.28], rot: [0.45, -0.65, 0.40], radTop: 0.11, radBot: 0.17, len: 0.70 },
+    { pos: [0, 1.22, 0], rot: [0.1, 0.2, -0.1], radTop: 0.13, radBot: 0.18, len: 0.65 }
+  ];
+
+  primaryBoughs.forEach(b => {
+    const geo = new THREE.CylinderGeometry(b.radTop, b.radBot, b.len, 8);
+    const mesh = new THREE.Mesh(geo, boughMaterial);
+    mesh.position.set(b.pos[0], b.pos[1], b.pos[2]);
+    mesh.rotation.set(b.rot[0], b.rot[1], b.rot[2]);
+    mesh.castShadow = true;
+    treeGroup.add(mesh);
+  });
+
+  const secondaryBranches = [
+    { pos: [0.55, 1.35, 0.35], rot: [0.4, 0.8, -0.3], radTop: 0.05, radBot: 0.10, len: 0.55 },
+    { pos: [-0.62, 1.40, -0.30], rot: [-0.5, -0.7, 0.4], radTop: 0.06, radBot: 0.11, len: 0.58 },
+    { pos: [0.35, 1.45, -0.58], rot: [-0.6, 1.1, -0.2], radTop: 0.05, radBot: 0.09, len: 0.52 },
+    { pos: [-0.48, 1.32, 0.52], rot: [0.5, -0.9, 0.3], radTop: 0.05, radBot: 0.10, len: 0.50 },
+    { pos: [0.15, 1.55, 0.20], rot: [0.2, 0.3, -0.2], radTop: 0.06, radBot: 0.11, len: 0.50 }
+  ];
+
+  secondaryBranches.forEach(b => {
+    const geo = new THREE.CylinderGeometry(b.radTop, b.radBot, b.len, 7);
+    const mesh = new THREE.Mesh(geo, boughMaterial);
+    mesh.position.set(b.pos[0], b.pos[1], b.pos[2]);
+    mesh.rotation.set(b.rot[0], b.rot[1], b.rot[2]);
+    mesh.castShadow = true;
+    treeGroup.add(mesh);
+  });
+
+  const foliageMats = [
+    new THREE.MeshStandardMaterial({ color: 0x1b4332, roughness: 0.65, flatShading: true }),
+    new THREE.MeshStandardMaterial({ color: 0x2d6a4f, roughness: 0.65, flatShading: true }),
+    new THREE.MeshStandardMaterial({ color: 0x2a7625, roughness: 0.70, flatShading: true }),
+    new THREE.MeshStandardMaterial({ color: 0x38b000, roughness: 0.70, flatShading: true }),
+    new THREE.MeshStandardMaterial({ color: 0x52b788, roughness: 0.75, flatShading: true }),
+    new THREE.MeshStandardMaterial({ color: 0x70e000, roughness: 0.75, flatShading: true })
+  ];
+
+  const yellowFruitMat = new THREE.MeshStandardMaterial({ color: 0xffd000, roughness: 0.3, metalness: 0.1, flatShading: true });
+
+  const foliageTufts = [
+    { pos: [0, 1.70, 0], r: 0.62, matIdx: 3 },
+    { pos: [0.35, 1.60, 0.30], r: 0.54, matIdx: 2 },
+    { pos: [-0.40, 1.62, -0.28], r: 0.56, matIdx: 1 },
+    { pos: [0.28, 1.78, -0.38], r: 0.50, matIdx: 4 },
+    { pos: [-0.32, 1.75, 0.35], r: 0.52, matIdx: 3 },
+
+    { pos: [0.75, 1.45, 0.45], r: 0.48, matIdx: 3 },
+    { pos: [-0.80, 1.50, -0.42], r: 0.50, matIdx: 1 },
+    { pos: [0.48, 1.52, -0.72], r: 0.46, matIdx: 4 },
+    { pos: [-0.62, 1.42, 0.68], r: 0.48, matIdx: 2 },
+
+    { pos: [0.95, 1.25, 0.20], r: 0.42, matIdx: 2 },
+    { pos: [-0.98, 1.28, -0.15], r: 0.44, matIdx: 0 },
+    { pos: [0.22, 1.35, 0.85], r: 0.40, matIdx: 4 },
+    { pos: [-0.28, 1.38, -0.88], r: 0.42, matIdx: 3 },
+
+    { pos: [0.12, 1.98, 0.10], r: 0.42, matIdx: 5 },
+    { pos: [-0.18, 1.92, -0.12], r: 0.40, matIdx: 4 },
+    { pos: [0.45, 1.72, -0.20], r: 0.38, matIdx: 3 },
+    { pos: [-0.48, 1.70, 0.22], r: 0.39, matIdx: 2 },
+
+    { pos: [0.35, 1.20, 0.15], r: 0.36, matIdx: 1 },
+    { pos: [-0.38, 1.22, -0.12], r: 0.38, matIdx: 0 },
+    { pos: [0.15, 1.25, -0.35], r: 0.34, matIdx: 2 },
+    { pos: [-0.18, 1.18, 0.32], r: 0.35, matIdx: 1 }
+  ];
+
+  foliageTufts.forEach(t => {
+    const geo = new THREE.DodecahedronGeometry(t.r, 1);
+    const mesh = new THREE.Mesh(geo, foliageMats[t.matIdx]);
+    mesh.position.set(t.pos[0], t.pos[1], t.pos[2]);
+    mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    treeGroup.add(mesh);
+  });
+
+  // ----------------------------------------------------
+  // SMALL TREES & SAPLINGS POPULATING THE TOP FLAT LAND SURFACE
+  // ----------------------------------------------------
+  const miniTrunkGeo = new THREE.CylinderGeometry(0.025, 0.045, 0.28, 6);
+  const miniLollipopGeo = new THREE.IcosahedronGeometry(0.18, 1);
+  const miniConeGeo1 = new THREE.ConeGeometry(0.16, 0.22, 5);
+  const miniConeGeo2 = new THREE.ConeGeometry(0.11, 0.16, 5);
+  const miniFruitGeo = new THREE.SphereGeometry(0.03, 4, 4);
+
+  const smallTreeConfigs = [
+    { pos: [1.15, 0, 0.75], type: 'lollipop', matIdx: 3, scale: 0.9 },
+    { pos: [-1.22, 0, -0.68], type: 'pine', matIdx: 1, scale: 0.85 },
+    { pos: [1.35, 0, -0.55], type: 'blossom', matIdx: 4, scale: 0.95 },
+    { pos: [-1.05, 0, 0.95], type: 'lollipop', matIdx: 2, scale: 0.8 },
+    { pos: [0.65, 0, 1.40], type: 'pine', matIdx: 0, scale: 0.9 },
+    { pos: [-0.70, 0, -1.35], type: 'lollipop', matIdx: 5, scale: 0.85 },
+    { pos: [1.45, 0, 0.15], type: 'blossom', matIdx: 3, scale: 0.9 },
+    { pos: [-1.40, 0, 0.25], type: 'pine', matIdx: 1, scale: 0.95 },
+    { pos: [0.20, 0, -1.50], type: 'lollipop', matIdx: 4, scale: 0.8 },
+    { pos: [-0.35, 0, 1.55], type: 'blossom', matIdx: 2, scale: 0.9 },
+    { pos: [0.90, 0, -1.15], type: 'bush', matIdx: 3, scale: 1.0 },
+    { pos: [-0.95, 0, 1.20], type: 'bush', matIdx: 5, scale: 1.0 }
+  ];
+
+  smallTreeConfigs.forEach(st => {
+    const stGroup = new THREE.Group();
+
+    if (st.type === 'bush') {
+      const bMesh = new THREE.Mesh(miniLollipopGeo, foliageMats[st.matIdx]);
+      bMesh.position.y = 0.08;
+      bMesh.scale.set(1.1, 0.6, 1.1);
+      bMesh.castShadow = true;
+      stGroup.add(bMesh);
+    } else {
+      const tr = new THREE.Mesh(miniTrunkGeo, trunkMat);
+      tr.position.y = 0.14;
+      tr.castShadow = true;
+      stGroup.add(tr);
+
+      if (st.type === 'lollipop' || st.type === 'blossom') {
+        const fol = new THREE.Mesh(miniLollipopGeo, foliageMats[st.matIdx]);
+        fol.position.y = 0.32;
+        fol.castShadow = true;
+        stGroup.add(fol);
+
+        if (st.type === 'blossom') {
+          for (let f = 0; f < 4; f++) {
+            const fruit = new THREE.Mesh(miniFruitGeo, yellowFruitMat);
+            const fa = (f / 4) * Math.PI * 2;
+            fruit.position.set(Math.cos(fa) * 0.15, 0.32 + Math.sin(fa) * 0.06, Math.sin(fa) * 0.15);
+            stGroup.add(fruit);
+          }
+        }
+      } else if (st.type === 'pine') {
+        const c1 = new THREE.Mesh(miniConeGeo1, foliageMats[st.matIdx]);
+        c1.position.y = 0.28;
+        c1.castShadow = true;
+        stGroup.add(c1);
+
+        const c2 = new THREE.Mesh(miniConeGeo2, foliageMats[(st.matIdx + 1) % foliageMats.length]);
+        c2.position.y = 0.42;
+        c2.castShadow = true;
+        stGroup.add(c2);
+      }
+    }
+
+    stGroup.position.set(st.pos[0], st.pos[1], st.pos[2]);
+    stGroup.rotation.y = Math.random() * Math.PI * 2;
+    stGroup.scale.set(st.scale, st.scale, st.scale);
+    treeGroup.add(stGroup);
+  });
+
+  treeGroup.position.copy(earth.position);
+  earthGroup.add(treeGroup);
 
   const cloudsCanvas = document.createElement('canvas');
   cloudsCanvas.width = 512;
@@ -200,12 +419,13 @@
     cCtx.fill();
   }
   const cloudsTexture = new THREE.CanvasTexture(cloudsCanvas);
-  const cloudsGeo = new THREE.SphereGeometry(1.73, 32, 32);
+  const cloudsGeo = new THREE.IcosahedronGeometry(1.73, 4);
   const cloudsMat = new THREE.MeshStandardMaterial({
     map: cloudsTexture,
     transparent: true,
-    opacity: 0.65,
-    blending: THREE.AdditiveBlending
+    opacity: 0.55,
+    blending: THREE.AdditiveBlending,
+    flatShading: true
   });
   const clouds = new THREE.Mesh(cloudsGeo, cloudsMat);
   clouds.position.copy(earth.position);
@@ -213,9 +433,9 @@
 
   const glowGeo = new THREE.SphereGeometry(1.85, 32, 32);
   const glowMat = new THREE.MeshBasicMaterial({
-    color: 0xa2e06b,
+    color: 0x52b788,
     transparent: true,
-    opacity: 0.08,
+    opacity: 0.12,
     side: THREE.BackSide
   });
   const atmosphere = new THREE.Mesh(glowGeo, glowMat);
@@ -236,32 +456,42 @@
   });
 
   const recycleLogoCanvas = document.createElement('canvas');
-  recycleLogoCanvas.width = 128;
-  recycleLogoCanvas.height = 128;
+  recycleLogoCanvas.width = 256;
+  recycleLogoCanvas.height = 256;
   const rlCtx = recycleLogoCanvas.getContext('2d');
   rlCtx.fillStyle = '#d2b48c';
-  rlCtx.fillRect(0, 0, 128, 128);
+  rlCtx.fillRect(0, 0, 256, 256);
+  rlCtx.fillStyle = '#2a7625';
+  rlCtx.beginPath();
+  rlCtx.arc(128, 128, 72, 0, Math.PI * 2);
+  rlCtx.fill();
   rlCtx.fillStyle = '#ffffff';
-  rlCtx.font = 'bold 84px "Arial"';
+  rlCtx.font = '96px sans-serif';
   rlCtx.textAlign = 'center';
   rlCtx.textBaseline = 'middle';
-  rlCtx.fillText('♻️', 64, 64);
+  rlCtx.fillText('♻', 128, 128);
+
   const recycleLogoTexture = new THREE.CanvasTexture(recycleLogoCanvas);
-  const logoMat = new THREE.MeshStandardMaterial({ map: recycleLogoTexture, roughness: 0.9 });
+  const logoMat = new THREE.MeshStandardMaterial({ map: recycleLogoTexture, roughness: 0.8 });
 
   const paperWhiteLogoCanvas = document.createElement('canvas');
-  paperWhiteLogoCanvas.width = 128;
-  paperWhiteLogoCanvas.height = 128;
+  paperWhiteLogoCanvas.width = 256;
+  paperWhiteLogoCanvas.height = 256;
   const pwlCtx = paperWhiteLogoCanvas.getContext('2d');
   pwlCtx.fillStyle = '#e8e4db';
-  pwlCtx.fillRect(0, 0, 128, 128);
+  pwlCtx.fillRect(0, 0, 256, 256);
+  pwlCtx.fillStyle = '#2a7625';
+  pwlCtx.beginPath();
+  pwlCtx.arc(128, 128, 72, 0, Math.PI * 2);
+  pwlCtx.fill();
   pwlCtx.fillStyle = '#ffffff';
-  pwlCtx.font = 'bold 84px "Arial"';
+  pwlCtx.font = '96px sans-serif';
   pwlCtx.textAlign = 'center';
   pwlCtx.textBaseline = 'middle';
-  pwlCtx.fillText('♻️', 64, 64);
+  pwlCtx.fillText('♻', 128, 128);
+
   const whiteLogoTexture = new THREE.CanvasTexture(paperWhiteLogoCanvas);
-  const whiteLogoMat = new THREE.MeshStandardMaterial({ map: whiteLogoTexture, roughness: 0.8 });
+  const whiteLogoMat = new THREE.MeshStandardMaterial({ map: whiteLogoTexture, roughness: 0.7 });
 
   const boxLogoMats = [kraftMat, kraftMat, kraftMat, kraftMat, logoMat, kraftMat];
   const paperLogoMats = [paperWhiteMat, paperWhiteMat, paperWhiteMat, paperWhiteMat, whiteLogoMat, paperWhiteMat];
@@ -393,9 +623,9 @@
   pSpriteCanvas.width = 64; pSpriteCanvas.height = 64;
   const pCtx = pSpriteCanvas.getContext('2d');
   const gradient = pCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
-  gradient.addColorStop(0, 'rgba(142, 212, 78, 0.9)');
-  gradient.addColorStop(0.3, 'rgba(142, 212, 78, 0.5)');
-  gradient.addColorStop(1, 'rgba(142, 212, 78, 0)');
+  gradient.addColorStop(0, 'rgba(196, 154, 108, 0.9)');
+  gradient.addColorStop(0.3, 'rgba(196, 154, 108, 0.5)');
+  gradient.addColorStop(1, 'rgba(196, 154, 108, 0)');
   pCtx.fillStyle = gradient;
   pCtx.fillRect(0, 0, 64, 64);
 
@@ -644,16 +874,16 @@ if (impactStats) counterObserver.observe(impactStats);
     if (progress >= 0.6 && progress < 0.8) {
       const laserY = (Math.sin(sceneProgress * Math.PI * 3) * 0.35 + 0.5) * height;
       const laserGrad = ctx.createLinearGradient(0, laserY - 15, 0, laserY + 15);
-      laserGrad.addColorStop(0, 'rgba(122, 182, 72, 0)');
-      laserGrad.addColorStop(0.5, 'rgba(142, 212, 78, 0.85)');
-      laserGrad.addColorStop(1, 'rgba(122, 182, 72, 0)');
+      laserGrad.addColorStop(0, 'rgba(196, 154, 108, 0)');
+      laserGrad.addColorStop(0.5, 'rgba(196, 154, 108, 0.85)');
+      laserGrad.addColorStop(1, 'rgba(196, 154, 108, 0)');
 
       ctx.fillStyle = laserGrad;
       ctx.fillRect(-width / 2, laserY - 15 - height / 2, width, 30);
 
-      ctx.strokeStyle = '#8ed44e';
+      ctx.strokeStyle = '#C49A6C';
       ctx.lineWidth = 2;
-      ctx.shadowColor = '#8ed44e';
+      ctx.shadowColor = '#C49A6C';
       ctx.shadowBlur = 15;
       ctx.beginPath();
       ctx.moveTo(-width / 2, laserY - height / 2);
@@ -681,7 +911,7 @@ if (impactStats) counterObserver.observe(impactStats);
       ctx.translate(p.x, p.y);
       ctx.rotate(p.rotation);
 
-      ctx.fillStyle = '#7ab648';
+      ctx.fillStyle = '#C49A6C';
       ctx.beginPath();
       ctx.ellipse(0, 0, p.size, p.size / 2, Math.PI / 4, 0, Math.PI * 2);
       ctx.fill();
@@ -690,7 +920,7 @@ if (impactStats) counterObserver.observe(impactStats);
 
     const lightX = (Math.sin(timestamp * 0.0008) * 0.5 + 0.5) * width;
     const radialGlow = ctx.createRadialGradient(lightX, 0, 10, lightX, height * 0.8, width * 0.7);
-    radialGlow.addColorStop(0, 'rgba(142, 212, 78, 0.08)');
+    radialGlow.addColorStop(0, 'rgba(196, 154, 108, 0.08)');
     radialGlow.addColorStop(1, 'rgba(0, 0, 0, 0)');
     ctx.fillStyle = radialGlow;
     ctx.fillRect(0, 0, width, height);

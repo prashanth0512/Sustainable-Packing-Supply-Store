@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard — VerdantPack</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/theme.css"/>
   <link rel="stylesheet" href="../css/dashboard.css"/>
-  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg"/>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
   <script src="../js/common.js" defer></script>
   <script src="../js/navigation-data.js" defer></script>
@@ -19,11 +20,7 @@
   <aside class="dash-sidebar" id="dashSidebar">
     <div class="dash-logo">
       <a href="../index.html" class="logo">
-        <svg width="28" height="28" viewBox="-2 -2 36 40" fill="none" style="overflow: visible;">
-          <path d="M16 2L4 8v8c0 7.732 5.04 14.96 12 16.928C23.96 30.96 28 23.732 28 16V8L16 2z" fill="var(--accent)" opacity="0.2"/>
-          <path d="M16 2L4 8v8c0 7.732 5.04 14.96 12 16.928C23.96 30.96 28 23.732 28 16V8L16 2z" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
-          <path d="M11 16l3 3 7-7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="../assets/images/logo.png" alt="VerdantPack Logo" width="28" height="28" style="object-fit: contain; border-radius: 50%; margin-right: 8px;" />
         <span class="logo-text">Verdant<span class="logo-accent">Pack</span></span>
       </a>
     </div>
@@ -87,7 +84,7 @@
 
         <div class="dash-welcome card-section">
           <div>
-            <h1>Good morning, Jamie <i data-lucide="leaf" class="icon-sm" style="color: var(--accent);"></i></h1>
+            <h1>Good morning, Jamie <span class="hero-accent">Rivera</span> <i data-lucide="leaf" class="icon-sm" style="color: var(--accent);"></i></h1>
             <p>Your B-Corp packaging dashboard is verified carbon-neutral. We have 2 reorders flagged and 1 shipment in transit.</p>
           </div>
           <div class="welcome-actions-group">
@@ -102,7 +99,7 @@
 
         <div class="stats-grid-8 card-section">
           <div class="stat-card">
-            <div class="stat-card-icon" style="background:#e8f5e3; color:#3d8b37;"><i data-lucide="trending-up" class="icon-sm"></i></div>
+            <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="trending-up" class="icon-sm"></i></div>
             <div class="stat-info">
               <p>Total Revenue</p>
               <h3>$14,280</h3>
@@ -126,7 +123,7 @@
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-icon" style="background:#e8f5e3; color:#3d8b37;"><i data-lucide="globe" class="icon-sm"></i></div>
+            <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="globe" class="icon-sm"></i></div>
             <div class="stat-info">
               <p>Carbon Saved</p>
               <h3>840kg</h3>
@@ -150,7 +147,7 @@
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-icon" style="background:#e8f5e3; color:#3d8b37;"><i data-lucide="dollar-sign" class="icon-sm"></i></div>
+            <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="dollar-sign" class="icon-sm"></i></div>
             <div class="stat-info">
               <p>Net Profit</p>
               <h3>$4,890</h3>
@@ -326,7 +323,7 @@
             <div class="dash-card">
               <div class="card-header">
                 <h3>AI Sustainability Insights</h3>
-                <span class="card-badge" style="background: rgba(122, 182, 72, 0.15); color: var(--accent);">Active</span>
+                <span class="card-badge" style="background: rgba(196, 154, 108, 0.15); color: var(--accent);">Active</span>
               </div>
               <ul class="insights-list" style="padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.82rem;">
                 <li style="display: flex; gap: 10px; align-items: flex-start; color: var(--text-muted);">
@@ -391,7 +388,7 @@
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-icon" style="background:#e8f5e3; color:#3d8b37;"><i data-lucide="check-circle" class="icon-sm"></i></div>
+            <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="check-circle" class="icon-sm"></i></div>
             <div class="stat-info">
               <p>Delivered Parcels</p>
               <h3>151 Orders</h3>
@@ -533,7 +530,7 @@
         <div class="dash-card card-section" style="margin-bottom: 24px; border-left: 4px solid var(--accent);">
           <div class="card-header">
             <h3>AI Smart Replenishment Suggestions</h3>
-            <span class="card-badge" style="background: rgba(122, 182, 72, 0.15); color: var(--accent);">Calculated</span>
+            <span class="card-badge" style="background: rgba(196, 154, 108, 0.15); color: var(--accent);">Calculated</span>
           </div>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Based on your shipping rates of 450 units/week, we recommend reordering mailers 5 days before your stock runs out to avoid line disruption.</p>
           <button class="btn-outline-sm" onclick="alert('Auto-replenish settings enabled!');">Approve Suggestion Schedule</button>
@@ -587,7 +584,7 @@
 
         <div class="stats-grid card-section">
           <div class="stat-card">
-            <div class="stat-card-icon" style="background:#e8f5e3; color:#3d8b37;"><i data-lucide="truck" class="icon-sm"></i></div>
+            <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="truck" class="icon-sm"></i></div>
             <div class="stat-info">
               <p>In Transit</p>
               <h3>1 Order</h3>
@@ -870,7 +867,7 @@
 
         <div class="stats-grid card-section">
           <div class="stat-card">
-            <div class="stat-card-icon" style="background:#e8f5e3; color:#3d8b37;"><i data-lucide="leaf" class="icon-sm"></i></div>
+            <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="leaf" class="icon-sm"></i></div>
             <div class="stat-info">
               <p>Carbon Offsets</p>
               <h3>840 kg</h3>
