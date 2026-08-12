@@ -177,7 +177,7 @@
   eCtx.putImageData(imgData, 0, 0);
 
   const earthTexture = new THREE.CanvasTexture(earthCanvas);
-  // 1. HALF GLOBE (True Hemisphere Bowl - Enlarged Big Globe)
+
   const halfEarthGeo = new THREE.SphereGeometry(2.15, 54, 28, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2);
   const earthMat = new THREE.MeshStandardMaterial({ 
     map: earthTexture, 
@@ -192,7 +192,6 @@
   earth.receiveShadow = true;
   earthGroup.add(earth);
 
-  // 2. FLAT TOP CIRCULAR LAND CAP (Enlarged Top Land Surface of Half Globe)
   const topCapGeo = new THREE.CircleGeometry(2.14, 54);
   const topCapMat = new THREE.MeshStandardMaterial({ 
     color: 0x2e7d32, 
@@ -206,7 +205,6 @@
   topCap.receiveShadow = true;
   earthGroup.add(topCap);
 
-  // Glowing white border ring around top rim of enlarged half globe
   const rimGeo = new THREE.TorusGeometry(2.15, 0.035, 8, 64);
   const rimMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.85 });
   const rim = new THREE.Mesh(rimGeo, rimMat);
@@ -214,9 +212,6 @@
   rim.rotation.x = Math.PI / 2;
   earthGroup.add(rim);
 
-  // ----------------------------------------------------
-  // SPREADING HARDWOOD TREE & SCATTERED SMALL TREES ON TOP LAND
-  // ----------------------------------------------------
   const treeGroup = new THREE.Group();
 
   const trunkMat = new THREE.MeshStandardMaterial({ 
@@ -226,7 +221,6 @@
   });
   const darkWoodMat = new THREE.MeshStandardMaterial({ color: 0x3d271d, roughness: 0.9, flatShading: true });
 
-  // Main thick organic trunk
   const mainTrunkGeo = new THREE.CylinderGeometry(0.18, 0.35, 1.1, 10);
   const mainTrunk = new THREE.Mesh(mainTrunkGeo, trunkMat);
   mainTrunk.position.set(0, 0.55, 0);
@@ -234,7 +228,6 @@
   mainTrunk.receiveShadow = true;
   treeGroup.add(mainTrunk);
 
-  // Flared organic roots
   const rootCount = 8;
   for (let i = 0; i < rootCount; i++) {
     const angle = (i / rootCount) * Math.PI * 2;
@@ -248,7 +241,6 @@
     treeGroup.add(root);
   }
 
-  // Spreading Wooden Branch Network
   const boughMaterial = trunkMat;
   const primaryBoughs = [
     { pos: [0.28, 1.05, 0.18], rot: [0.35, 0.4, -0.45], radTop: 0.11, radBot: 0.17, len: 0.75 },
@@ -333,9 +325,6 @@
     treeGroup.add(mesh);
   });
 
-  // ----------------------------------------------------
-  // SMALL TREES & SAPLINGS POPULATING THE TOP FLAT LAND SURFACE
-  // ----------------------------------------------------
   const miniTrunkGeo = new THREE.CylinderGeometry(0.025, 0.045, 0.28, 6);
   const miniLollipopGeo = new THREE.IcosahedronGeometry(0.18, 1);
   const miniConeGeo1 = new THREE.ConeGeometry(0.16, 0.22, 5);

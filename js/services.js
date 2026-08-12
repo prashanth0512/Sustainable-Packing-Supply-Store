@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cards.forEach(card => {
         const cat = card.dataset.category;
         if (filter === 'all' || cat === filter) {
-          card.style.display = 'grid';
+          card.style.display = 'flex';
           card.style.animation = 'fadeInUp 0.4s ease forwards';
         } else {
           card.style.display = 'none';

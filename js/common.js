@@ -1,4 +1,4 @@
-(function(){try{var t=localStorage.getItem('vp-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);var d=localStorage.getItem('vp-dir')||'ltr';document.documentElement.setAttribute('dir',d);}catch(e){}})();
+(function(){try{var t=localStorage.getItem('vp-theme')||'light';document.documentElement.setAttribute('data-theme',t);var d=localStorage.getItem('vp-dir')||'ltr';document.documentElement.setAttribute('dir',d);}catch(e){}})();
 
 const THEME_KEY = 'vp-theme';
 const DIR_KEY = 'vp-dir';
@@ -27,8 +27,7 @@ function updateDirButtonLabel(dir) {
 
 function initTheme() {
   const saved = localStorage.getItem(THEME_KEY);
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = saved || (prefersDark ? 'dark' : 'light');
+  const theme = saved || 'light';
   document.documentElement.setAttribute('data-theme', theme);
   window.dispatchEvent(new CustomEvent('theme-changed', { detail: { theme } }));
 }

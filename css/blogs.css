@@ -1,5 +1,3 @@
-
-
 .blog-hero {
   height: 90vh;
   min-height: 600px;
@@ -164,12 +162,12 @@
 
 .hero-actions .btn-primary {
   background: var(--accent2);
-  color: #1a2417;
+  color: #ffffff !important;
 }
 
 .hero-actions .btn-primary:hover {
-  background: #ffffff;
-  color: var(--accent);
+  background: #ffffff !important;
+  color: var(--accent) !important;
 }
 
 .hero-actions .btn-outline {
@@ -508,7 +506,7 @@
 }
 
 .newsletter-section {
-  background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
+  background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   padding: 90px 0 !important;
   position: relative !important;
   overflow: hidden !important;
@@ -638,8 +636,8 @@
 }
 
 .newsletter-secondary .btn-outline-sm {
-  border: 1px solid var(--accent2) !important;
-  color: var(--accent2) !important;
+  border: 1.5px solid #ffffff !important;
+  color: #ffffff !important;
   padding: 8px 20px;
   border-radius: 20px;
   font-weight: 600;
@@ -654,9 +652,9 @@
 }
 
 .newsletter-secondary .btn-outline-sm:hover {
-  background: var(--accent2) !important;
-  color: #ffffff !important;
-  border-color: var(--accent2) !important;
+  background: #ffffff !important;
+  color: #1a2417 !important;
+  border-color: #ffffff !important;
 }
 
 @media (max-width: 1024px) {
@@ -725,12 +723,10 @@
   }
 }
 
-/* Hero Badge Color Override */
 .blog-hero .premium-badge {
   color: #ffffff !important;
 }
 
-/* Highlighted words font styling */
 .hero-accent, .accent-text, .highlight, .highlight-green, .highlight-keyword {
   font-family: 'Playfair Display', Georgia, serif !important;
   font-style: italic !important;
@@ -738,4 +734,11 @@
   text-transform: none !important;
   letter-spacing: normal !important;
   color: var(--accent) !important;
+}
+
+.newsletter-card .hero-accent,
+.newsletter-card .highlight-green,
+.newsletter-card .accent-text,
+.newsletter-card .highlight {
+  color: #E8C8A2 !important;
 }

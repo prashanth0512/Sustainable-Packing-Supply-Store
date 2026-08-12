@@ -4,7 +4,7 @@ const HEADER_CONTENT = `
     <div class="nav-left">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <img src="assets/images/logo.png" alt="VerdantPack Logo" width="32" height="32" style="object-fit: contain; border-radius: 50%;" />
+          <img src="assets/images/logo.png" alt="VerdantPack Logo" width="46" height="46" style="object-fit: contain; border-radius: 50%;" />
         </div>
         <span class="logo-text">Verdant<span class="logo-accent">Pack</span></span>
       </a>
@@ -73,7 +73,7 @@ const FOOTER_CONTENT = `
     <div class="footer-brand">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <img src="assets/images/logo.png" alt="VerdantPack Logo" width="28" height="28" style="object-fit: contain; border-radius: 50%;" />
+          <img src="assets/images/logo.png" alt="VerdantPack Logo" width="40" height="40" style="object-fit: contain; border-radius: 50%;" />
         </div>
         <span class="logo-text">Verdant<span class="logo-accent">Pack</span></span>
       </a>

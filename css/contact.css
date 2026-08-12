@@ -1,5 +1,3 @@
-
-
 .c-hero {
   height: 90vh;
   min-height: 600px;
@@ -90,7 +88,7 @@
 }
 
 .c-hero-highlight {
-  color: var(--accent2);
+  color: var(--accent-light-highlight) !important;
 }
 
 .c-hero-subtitle {
@@ -109,13 +107,13 @@
 }
 
 .c-hero-actions .btn-primary {
-  background: var(--accent2);
-  color: #1a2417;
+  background: var(--green-primary);
+  color: #ffffff !important;
 }
 
 .c-hero-actions .btn-primary:hover {
-  background: #ffffff;
-  color: var(--accent);
+  background: var(--green-primary-hover);
+  color: #ffffff !important;
 }
 
 .c-hero-actions .btn-outline {
@@ -163,9 +161,9 @@
 }
 
 .c-info-section .section-tag {
-  background: rgba(196, 154, 108, 0.08) !important;
-  color: var(--accent) !important;
-  border: 1px solid rgba(196, 154, 108, 0.25) !important;
+  background: rgba(37, 89, 51, 0.08) !important;
+  color: var(--green-primary) !important;
+  border: 1px solid rgba(37, 89, 51, 0.2) !important;
 }
 
 .c-info-section .section-title {
@@ -175,7 +173,14 @@
 }
 
 .c-info-section .accent-text {
-  color: var(--accent) !important;
+  color: #7A4522 !important;
+  font-weight: 800 !important;
+}
+
+.c-info-section .hero-accent,
+.c-info-section .highlight-green,
+.c-info-section .highlight {
+  color: #7A4522 !important;
   font-weight: 800 !important;
 }
 
@@ -207,21 +212,27 @@
 
 .c-info-card:hover {
   transform: translateY(-6px) !important;
-  border-color: var(--accent) !important;
-  box-shadow: 0 14px 32px rgba(196, 154, 108, 0.12) !important;
+  border-color: #C49A6C !important;
+  box-shadow: 0 14px 32px rgba(196, 154, 108, 0.18) !important;
 }
 
 .c-info-icon-wrapper {
   width: 64px !important;
   height: 64px !important;
   border-radius: 50% !important;
-  background: rgba(196, 154, 108, 0.08) !important;
-  color: var(--accent) !important;
+  background: rgba(196, 154, 108, 0.15) !important;
+  color: #C49A6C !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   margin-bottom: 20px !important;
   transition: transform 0.3s ease !important;
+}
+
+.c-info-icon-wrapper i,
+.c-info-icon-wrapper svg {
+  color: #C49A6C !important;
+  stroke: #C49A6C !important;
 }
 
 .c-info-card:hover .c-info-icon-wrapper {
@@ -233,6 +244,13 @@
   font-weight: 700 !important;
   margin-bottom: 12px !important;
   color: #102e11 !important;
+}
+
+.c-info-card .accent-text,
+.c-info-card .hero-accent,
+.c-info-card .highlight,
+.c-info-card .highlight-green {
+  color: #C49A6C !important;
 }
 
 .c-info-card p {
@@ -248,7 +266,7 @@
 
 .c-form-section {
   padding: 90px 0 !important;
-  background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
+  background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   color: #ffffff !important;
   position: relative !important;
   overflow: hidden !important;
@@ -267,7 +285,7 @@
 }
 
 .c-form-section .hero-accent {
-  color: var(--accent2) !important;
+  color: #E8C8A2 !important;
 }
 
 .c-form-section .section-subtitle {
@@ -358,7 +376,7 @@
 
 select.form-input {
   appearance: none !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238ed44e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2342B068' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
   background-repeat: no-repeat !important;
   background-position: right 18px center !important;
   padding-right: 44px !important;
@@ -413,15 +431,21 @@ select.form-input option {
 }
 
 .c-support-card .premium-badge {
-  background: rgba(196, 154, 108, 0.18) !important;
-  color: var(--accent2) !important;
-  border: 1px solid rgba(196, 154, 108, 0.35) !important;
+  background: rgba(196, 154, 108, 0.2) !important;
+  color: #E8C8A2 !important;
+  border: 1px solid rgba(232, 200, 162, 0.4) !important;
   padding: 6px 14px !important;
   border-radius: 20px !important;
   font-size: 0.8rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   width: fit-content !important;
+}
+
+.c-support-card .premium-badge i,
+.c-support-card .premium-badge svg {
+  color: #E8C8A2 !important;
+  stroke: #E8C8A2 !important;
 }
 
 .c-support-card h3 {
@@ -454,10 +478,12 @@ select.form-input option {
 }
 
 .support-points-list li svg,
+.support-points-list li i,
 .support-points-list li .text-accent {
   flex-shrink: 0 !important;
   margin-top: 3px !important;
-  color: var(--accent2) !important;
+  color: #E8C8A2 !important;
+  stroke: #E8C8A2 !important;
 }
 
 .support-points-list strong {
@@ -487,9 +513,9 @@ select.form-input option {
 }
 
 .c-presence-section .section-tag {
-  background: rgba(196, 154, 108, 0.08) !important;
-  color: var(--accent) !important;
-  border: 1px solid rgba(196, 154, 108, 0.25) !important;
+  background: rgba(37, 89, 51, 0.08) !important;
+  color: var(--green-primary) !important;
+  border: 1px solid rgba(37, 89, 51, 0.2) !important;
 }
 
 .c-presence-section .section-title {
@@ -581,9 +607,9 @@ select.form-input option {
 }
 
 .c-why-section .section-tag {
-  background: rgba(196, 154, 108, 0.08) !important;
-  color: var(--accent) !important;
-  border: 1px solid rgba(196, 154, 108, 0.25) !important;
+  background: rgba(37, 89, 51, 0.08) !important;
+  color: var(--green-primary) !important;
+  border: 1px solid rgba(37, 89, 51, 0.2) !important;
 }
 
 .c-why-section .section-title {
@@ -662,7 +688,7 @@ select.form-input option {
 
 .c-final-cta-section {
   padding: 90px 0 !important;
-  background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
+  background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   position: relative !important;
   overflow: hidden !important;
 }
@@ -694,8 +720,10 @@ select.form-input option {
   line-height: 1.25 !important;
 }
 
-.c-cta-card .hero-accent {
-  color: var(--accent2) !important;
+.c-cta-card .hero-accent,
+.c-cta-card .accent-text,
+.c-cta-card .highlight {
+  color: #E8C8A2 !important;
 }
 
 .c-cta-card p {
@@ -733,8 +761,8 @@ select.form-input option {
 
 .c-cta-actions .btn-outline {
   background: transparent !important;
-  border: 2px solid var(--accent2) !important;
-  color: var(--accent2) !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
   border-radius: 28px !important;
   padding: 12px 28px !important;
   font-weight: 700 !important;
@@ -742,8 +770,9 @@ select.form-input option {
 }
 
 .c-cta-actions .btn-outline:hover {
-  background: var(--accent2) !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: #1a2417 !important;
+  border-color: #ffffff !important;
   transform: translateY(-2px) !important;
 }
 
@@ -956,7 +985,6 @@ html[data-theme="dark"] .c-why-icon-wrapper,
   }
 }
 
-/* Contact Badges Styling */
 .c-hero-glass-card .premium-badge,
 .c-hero .premium-badge,
 .c-cta-card .premium-badge {
@@ -979,7 +1007,6 @@ html[data-theme="dark"] .c-why-icon-wrapper,
   margin-inline: auto !important;
 }
 
-/* Highlighted words font styling */
 .hero-accent, .accent-text, .highlight, .c-hero-highlight {
   font-family: 'Playfair Display', Georgia, serif !important;
   font-style: italic !important;

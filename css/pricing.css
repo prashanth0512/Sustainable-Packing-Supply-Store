@@ -1,5 +1,3 @@
-
-
 .p-hero {
   height: 90vh;
   min-height: 600px;
@@ -89,8 +87,14 @@
   color: #ffffff;
 }
 
-.p-hero-highlight {
-  color: var(--accent2);
+.p-hero-highlight,
+.p-hero-title .hero-accent,
+.p-hero .hero-accent,
+.p-hero .accent-text {
+  color: var(--accent-light-highlight) !important;
+  -webkit-text-fill-color: var(--accent-light-highlight) !important;
+  text-shadow: 0 0 16px rgba(232, 200, 162, 0.35) !important;
+  font-weight: 800 !important;
 }
 
 .p-hero-subtitle {
@@ -109,24 +113,38 @@
 }
 
 .p-hero-actions .btn-primary {
-  background: var(--accent2);
-  color: #1a2417;
+  background: var(--accent);
+  color: #ffffff !important;
+  border: none;
 }
 
 .p-hero-actions .btn-primary:hover {
-  background: #ffffff;
-  color: var(--accent);
+  background: var(--accent-hover);
+  color: #ffffff !important;
 }
 
+:root .p-hero-actions .btn-outline,
+:root:not([data-theme="dark"]) .p-hero-actions .btn-outline,
 .p-hero-actions .btn-outline {
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #ffffff;
+  border: 1.5px solid #ffffff !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  font-weight: 700 !important;
+  border-radius: 30px !important;
+  padding: 12px 26px !important;
+  transition: all var(--transition) !important;
 }
 
+:root .p-hero-actions .btn-outline:hover,
+:root:not([data-theme="dark"]) .p-hero-actions .btn-outline:hover,
 .p-hero-actions .btn-outline:hover {
-  border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: #ffffff !important;
+  color: var(--green-primary) !important;
+  -webkit-text-fill-color: var(--green-primary) !important;
+  border-color: #ffffff !important;
+  transform: translateY(-2px) !important;
 }
 
 .p-hero-trust-indicators {
@@ -323,21 +341,33 @@
 }
 
 .p-comparison-table .highlight-cell {
-  background: var(--accent-light);
-  color: var(--accent);
-  font-weight: 700;
+  background: rgba(232, 200, 162, 0.18) !important;
+  color: var(--accent-light-highlight) !important;
+  -webkit-text-fill-color: var(--accent-light-highlight) !important;
+  font-weight: 800 !important;
 }
 
 .p-table-link {
-  color: var(--accent);
-  font-weight: 700;
-  text-decoration: none;
-  transition: color var(--transition);
+  color: var(--accent-light-highlight) !important;
+  -webkit-text-fill-color: var(--accent-light-highlight) !important;
+  border: 1.5px solid var(--accent-light-highlight) !important;
+  border-color: var(--accent-light-highlight) !important;
+  background: rgba(232, 200, 162, 0.15) !important;
+  padding: 6px 16px !important;
+  border-radius: 20px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all var(--transition) !important;
 }
 
 .p-table-link:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
+  background: var(--accent-light-highlight) !important;
+  color: #102e11 !important;
+  -webkit-text-fill-color: #102e11 !important;
+  border-color: var(--accent-light-highlight) !important;
+  transform: translateY(-1px) !important;
 }
 
 .p-benefits-grid {
@@ -662,7 +692,7 @@
 }
 
 .p-plan-card.featured {
-  background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
+  background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   color: #ffffff !important;
   border: 2px solid var(--accent2) !important;
   border-radius: 24px !important;
@@ -714,7 +744,7 @@
 }
 
 .p-comparison-section {
-  background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
+  background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   color: #ffffff !important;
   padding: 90px 0 !important;
   position: relative !important;
@@ -828,27 +858,42 @@
   font-weight: 700 !important;
 }
 
-.p-comparison-table .highlight-cell {
-  color: var(--accent2) !important;
+:root .p-comparison-section .hero-accent,
+:root:not([data-theme="dark"]) .p-comparison-section .hero-accent,
+.p-comparison-section .hero-accent,
+.p-comparison-section .accent-text {
+  color: var(--accent-light-highlight) !important;
+  -webkit-text-fill-color: var(--accent-light-highlight) !important;
+  text-shadow: 0 0 16px rgba(232, 200, 162, 0.35) !important;
   font-weight: 800 !important;
-  background: rgba(196, 154, 108, 0.15) !important;
+}
+
+.p-comparison-table .highlight-cell {
+  color: var(--accent-light-highlight) !important;
+  -webkit-text-fill-color: var(--accent-light-highlight) !important;
+  font-weight: 800 !important;
+  background: rgba(232, 200, 162, 0.18) !important;
 }
 
 .p-table-link {
-  color: var(--accent2) !important;
-  border: 1px solid rgba(196, 154, 108, 0.4) !important;
-  background: rgba(196, 154, 108, 0.1) !important;
-  padding: 4px 14px !important;
-  border-radius: 14px !important;
-  font-size: 0.8rem !important;
+  color: var(--accent-light-highlight) !important;
+  -webkit-text-fill-color: var(--accent-light-highlight) !important;
+  border: 1.5px solid var(--accent-light-highlight) !important;
+  border-color: var(--accent-light-highlight) !important;
+  background: rgba(232, 200, 162, 0.15) !important;
+  padding: 6px 16px !important;
+  border-radius: 18px !important;
+  font-size: 0.82rem !important;
   font-weight: 700 !important;
   transition: all 0.2s ease !important;
   display: inline-block !important;
 }
 
 .p-table-link:hover {
-  background: var(--accent2) !important;
-  color: #ffffff !important;
+  background: var(--accent-light-highlight) !important;
+  color: #102e11 !important;
+  -webkit-text-fill-color: #102e11 !important;
+  border-color: var(--accent-light-highlight) !important;
 }
 
 .p-value-section {
@@ -872,9 +917,9 @@
 }
 
 .p-value-section .section-tag {
-  background: rgba(196, 154, 108, 0.08) !important;
-  color: var(--accent) !important;
-  border: 1px solid rgba(196, 154, 108, 0.25) !important;
+  background: rgba(37, 89, 51, 0.08) !important;
+  color: var(--green-primary) !important;
+  border: 1px solid rgba(37, 89, 51, 0.2) !important;
 }
 
 .p-benefits-grid {
@@ -920,7 +965,7 @@
 }
 
 .p-final-cta-section {
-  background: linear-gradient(135deg, #102e11 0%, #1c4e1e 100%) !important;
+  background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   padding: 80px 0 !important;
 }
 
@@ -950,8 +995,15 @@
   line-height: 1.6 !important;
 }
 
+:root .p-cta-card .hero-accent,
+:root:not([data-theme="dark"]) .p-cta-card .hero-accent,
+.p-cta-card .hero-accent,
+.p-cta-card .accent-text,
 .hero-accent {
-  color: var(--accent2) !important;
+  color: var(--accent-light-highlight) !important;
+  -webkit-text-fill-color: var(--accent-light-highlight) !important;
+  text-shadow: 0 0 16px rgba(232, 200, 162, 0.35) !important;
+  font-weight: 800 !important;
 }
 
 .accent-text {
@@ -999,7 +1051,6 @@
   border-color: var(--accent2) !important;
 }
 
-/* Dark theme overrides for Added Value / Benefits section */
 [data-theme="dark"] .p-value-section {
   background: #061007 !important;
   color: #ffffff !important;

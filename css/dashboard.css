@@ -1,5 +1,3 @@
-
-
 .dashboard-body {
   margin: 0 !important;
   padding: 0 !important;
@@ -1115,7 +1113,6 @@ input:checked + .slider:before {
   }
 }
 
-/* Dark theme overrides for Dashboard components */
 [data-theme="dark"] .stat-card-icon {
   background: rgba(255, 255, 255, 0.08) !important;
   color: var(--text) !important;
