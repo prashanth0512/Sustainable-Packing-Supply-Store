@@ -1047,10 +1047,58 @@ input:checked + .slider:before {
     margin-top: 4px !important;
   }
 
+  .tab-pane#tab-reorder .reorder-item,
+  .reorder-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    padding: 18px !important;
+  }
+
+  .tab-pane#tab-reorder .reorder-info,
   .reorder-info {
     flex-direction: column !important;
     text-align: center !important;
     align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .tab-pane#tab-reorder .reorder-btn,
+  .tab-pane#tab-reorder .urgent-btn,
+  .tab-pane#tab-reorder .btn-primary-sm,
+  .tab-pane#tab-reorder .btn-outline-sm,
+  .tab-pane#tab-reorder button,
+  .reorder-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-inline: auto !important;
+    width: auto !important;
+    min-width: 180px !important;
+    max-width: 100% !important;
+  }
+
+  .tab-pane#tab-reorder .p-plan-card {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .tab-pane#tab-reorder .dash-card {
+    text-align: center !important;
+  }
+
+  .tab-pane#tab-reorder .dash-card .card-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
     gap: 8px !important;
   }
 
@@ -1085,14 +1133,24 @@ input:checked + .slider:before {
   }
   .reorder-item {
     flex-direction: column !important;
-    align-items: stretch !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
     gap: 12px !important;
   }
+  .tab-pane#tab-reorder .reorder-btn,
+  .tab-pane#tab-reorder .urgent-btn,
+  .tab-pane#tab-reorder .btn-primary-sm,
+  .tab-pane#tab-reorder .btn-outline-sm,
+  .tab-pane#tab-reorder button,
   .reorder-btn {
     width: 100% !important;
+    max-width: 280px !important;
     justify-content: center !important;
-    display: flex !important;
+    display: inline-flex !important;
     align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
   }
   .welcome-btn-row {
     flex-direction: column !important;

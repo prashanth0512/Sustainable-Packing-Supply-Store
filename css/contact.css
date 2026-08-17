@@ -107,24 +107,44 @@
 }
 
 .c-hero-actions .btn-primary {
-  background: var(--green-primary);
+  background: var(--accent) !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: 1.5px solid var(--accent) !important;
+  box-shadow: 0 6px 18px rgba(122, 69, 34, 0.45) !important;
+  border-radius: 30px !important;
+  padding: 12px 28px !important;
+  font-weight: 700 !important;
 }
 
 .c-hero-actions .btn-primary:hover {
-  background: var(--green-primary-hover);
+  background: var(--accent-hover) !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: var(--accent-hover) !important;
+  box-shadow: 0 10px 24px rgba(122, 69, 34, 0.55) !important;
+  transform: translateY(-2px);
 }
 
 .c-hero-actions .btn-outline {
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 700 !important;
+  border-radius: 30px !important;
+  padding: 12px 28px !important;
+  transition: all var(--transition) !important;
 }
 
 .c-hero-actions .btn-outline:hover {
-  border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  border-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-2px);
 }
 
 .c-hero-trust-indicators {
@@ -744,26 +764,31 @@ select.form-input option {
 .c-cta-actions .btn-primary {
   background: var(--accent) !important;
   color: #ffffff !important;
-  border: none !important;
-  border-radius: 28px !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: 1.5px solid var(--accent) !important;
+  border-radius: 30px !important;
   padding: 12px 28px !important;
   font-weight: 700 !important;
-  box-shadow: 0 6px 18px rgba(196, 154, 108, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(122, 69, 34, 0.45) !important;
   transition: all 0.3s ease !important;
 }
 
 .c-cta-actions .btn-primary:hover {
   transform: translateY(-2px) !important;
   background: var(--accent-hover) !important;
-  box-shadow: 0 10px 24px rgba(196, 154, 108, 0.5) !important;
+  border-color: var(--accent-hover) !important;
+  box-shadow: 0 10px 24px rgba(122, 69, 34, 0.55) !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .c-cta-actions .btn-outline {
-  background: transparent !important;
-  border: 2px solid #ffffff !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
   color: #ffffff !important;
-  border-radius: 28px !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-radius: 30px !important;
   padding: 12px 28px !important;
   font-weight: 700 !important;
   transition: all 0.3s ease !important;
@@ -771,9 +796,71 @@ select.form-input option {
 
 .c-cta-actions .btn-outline:hover {
   background: #ffffff !important;
-  color: #1a2417 !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
   border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
   transform: translateY(-2px) !important;
+}
+
+/* Dark Mode Hero & CTA Button Overrides */
+html[data-theme="dark"] .c-hero-actions .btn-primary,
+.dark-mode .c-hero-actions .btn-primary,
+html[data-theme="dark"] .c-cta-actions .btn-primary,
+.dark-mode .c-cta-actions .btn-primary,
+[data-theme="dark"] .c-hero-actions .btn-primary,
+[data-theme="dark"] .c-cta-actions .btn-primary,
+[data-theme="dark"] .c-hero-glass-card .btn-primary,
+[data-theme="dark"] .c-cta-card .btn-primary {
+  background: #E8C8A2 !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
+  border: 1.5px solid #E8C8A2 !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="dark"] .c-hero-actions .btn-primary:hover,
+.dark-mode .c-hero-actions .btn-primary:hover,
+html[data-theme="dark"] .c-cta-actions .btn-primary:hover,
+.dark-mode .c-cta-actions .btn-primary:hover,
+[data-theme="dark"] .c-hero-actions .btn-primary:hover,
+[data-theme="dark"] .c-cta-actions .btn-primary:hover,
+[data-theme="dark"] .c-hero-glass-card .btn-primary:hover,
+[data-theme="dark"] .c-cta-card .btn-primary:hover {
+  background: #F0D4B4 !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
+  border-color: #F0D4B4 !important;
+}
+
+html[data-theme="dark"] .c-hero-actions .btn-outline,
+.dark-mode .c-hero-actions .btn-outline,
+html[data-theme="dark"] .c-cta-actions .btn-outline,
+.dark-mode .c-cta-actions .btn-outline,
+[data-theme="dark"] .c-hero-actions .btn-outline,
+[data-theme="dark"] .c-cta-actions .btn-outline,
+[data-theme="dark"] .c-hero-glass-card .btn-outline,
+[data-theme="dark"] .c-cta-card .btn-outline {
+  background: rgba(232, 200, 162, 0.1) !important;
+  border: 2px solid #E8C8A2 !important;
+  border-color: #E8C8A2 !important;
+  color: #E8C8A2 !important;
+  -webkit-text-fill-color: #E8C8A2 !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .c-hero-actions .btn-outline:hover,
+.dark-mode .c-hero-actions .btn-outline:hover,
+html[data-theme="dark"] .c-cta-actions .btn-outline:hover,
+.dark-mode .c-cta-actions .btn-outline:hover,
+[data-theme="dark"] .c-hero-actions .btn-outline:hover,
+[data-theme="dark"] .c-cta-actions .btn-outline:hover,
+[data-theme="dark"] .c-hero-glass-card .btn-outline:hover,
+[data-theme="dark"] .c-cta-card .btn-outline:hover {
+  background: #E8C8A2 !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
+  border-color: #E8C8A2 !important;
 }
 
 html[data-theme="dark"] .c-info-section,

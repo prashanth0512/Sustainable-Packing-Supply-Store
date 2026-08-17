@@ -184,9 +184,6 @@
   border-color: #ffffff !important;
   transform: translateY(-2px) !important;
 }
-.sd-hero-actions .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
 
 .sd-overview {
   padding: 100px 0;
@@ -1511,27 +1508,37 @@
 }
 
 .sd-final-cta .btn-primary,
-.sd-cta-card .btn-primary {
+.sd-cta-card .btn-primary,
+.cta-card .btn-primary {
   background: var(--accent) !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   font-weight: 800 !important;
   border: 1.5px solid var(--accent) !important;
   box-shadow: 0 6px 18px rgba(122, 69, 34, 0.45) !important;
 }
 
 .sd-final-cta .btn-outline,
-.sd-cta-card .btn-outline {
-  background: rgba(232, 200, 162, 0.12) !important;
-  border: 1.5px solid rgba(232, 200, 162, 0.65) !important;
-  color: var(--accent-light-highlight) !important;
+.sd-cta-card .btn-outline,
+.cta-card .btn-outline,
+.cta-actions .btn-outline {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   font-weight: 700 !important;
 }
 
 .sd-final-cta .btn-outline:hover,
-.sd-cta-card .btn-outline:hover {
-  background: var(--accent-light-highlight) !important;
-  color: #102e11 !important;
-  border-color: var(--accent-light-highlight) !important;
+.sd-cta-card .btn-outline:hover,
+.cta-card .btn-outline:hover,
+.cta-actions .btn-outline:hover {
+  background: #ffffff !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 .btn-primary {

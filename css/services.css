@@ -258,6 +258,8 @@
   gap: 12px !important;
   flex-wrap: wrap !important;
   width: 100% !important;
+  text-align: center !important;
+  margin-inline: auto !important;
 }
 
 .filter-tabs {
@@ -267,6 +269,7 @@
   gap: 12px !important;
   flex-wrap: wrap !important;
   width: auto !important;
+  text-align: center !important;
 }
 
 .filter-tab {
@@ -275,6 +278,7 @@
   border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
   background: rgba(255, 255, 255, 0.08) !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   font-size: 0.88rem !important;
   font-weight: 600 !important;
   cursor: pointer !important;
@@ -282,7 +286,9 @@
   white-space: nowrap !important;
   display: inline-flex !important;
   align-items: center !important;
+  justify-content: center !important;
   gap: 8px !important;
+  text-align: center !important;
 }
 
 .filter-tab i,
@@ -302,7 +308,7 @@
 .filter-tab.active,
 .filter-tab.active:hover {
   background: var(--accent) !important;
-  border-color: #ffffff !important;
+  border-color: var(--accent) !important;
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
   font-weight: 800 !important;
@@ -310,7 +316,11 @@
 }
 
 .filter-tab.active i,
-.filter-tab.active svg,
+.filter-tab.active svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
 .filter-tab:hover i,
 .filter-tab:hover svg {
   color: #ffffff !important;
@@ -320,19 +330,26 @@
 .filter-sort {
   display: inline-flex !important;
   align-items: center !important;
+  justify-content: center !important;
   min-width: 170px !important;
+  text-align: center !important;
+  margin: 0 auto !important;
 }
 
 .sort-select {
-  padding: 10px 20px !important;
+  padding: 10px 24px !important;
   border-radius: 30px !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
-  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   font-size: 0.88rem !important;
   font-weight: 600 !important;
   cursor: pointer !important;
   outline: none !important;
+  text-align: center !important;
+  text-align-last: center !important;
+  margin: 0 auto !important;
   transition: all var(--transition) !important;
 }
 
@@ -1429,22 +1446,27 @@
 .services-cta-inner .btn-primary {
   background: var(--accent) !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   font-weight: 800 !important;
   border: 1.5px solid var(--accent) !important;
   box-shadow: 0 6px 18px rgba(122, 69, 34, 0.45) !important;
 }
 
 .services-cta-inner .btn-outline {
-  background: rgba(232, 200, 162, 0.12) !important;
-  border: 1.5px solid rgba(232, 200, 162, 0.65) !important;
-  color: var(--accent-light-highlight) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   font-weight: 700 !important;
 }
 
 .services-cta-inner .btn-outline:hover {
-  background: var(--accent-light-highlight) !important;
-  color: #102e11 !important;
-  border-color: var(--accent-light-highlight) !important;
+  background: #ffffff !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 .btn-primary {
@@ -1550,10 +1572,10 @@
   box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4) !important;
 }
 
-.hero-accent, .accent-text, .highlight {
+.hero-accent.accent-text, .highlight {
   font-family: 'Playfair Display', Georgia, serif !important;
   font-style: italic !important;
   font-weight: 600 !important;
   text-transform: none !important;
-}  letter-spacing: normal !important;
+  letter-spacing: normal !important;
 }

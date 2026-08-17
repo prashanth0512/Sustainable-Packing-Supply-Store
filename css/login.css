@@ -566,14 +566,49 @@ input::-webkit-credentials-auto-fill-button {
   stroke: #E8C8A2 !important;
 }
 
-.auth-brand-panel .logo-text {
+/* Brand Panel Logo (Dark Green Panel Background in Both Modes) */
+.auth-brand-panel .logo-text,
+.brand-panel-logo .logo-text {
   color: #52C478 !important;
+  -webkit-text-fill-color: #52C478 !important;
+  font-weight: 800 !important;
 }
 
-.logo-accent,
-.logo-text .logo-accent,
-.auth-brand-panel .logo-accent {
+.auth-brand-panel .logo-accent,
+.auth-brand-panel .logo-text .logo-accent,
+.brand-panel-logo .logo-accent,
+.brand-panel-logo .logo-text .logo-accent {
   color: #E8C8A2 !important;
+  -webkit-text-fill-color: #E8C8A2 !important;
+  font-weight: 800 !important;
+}
+
+/* Auth Card Header Logo (In Form Panel: Light Mode) */
+:root:not([data-theme="dark"]) .auth-card-header .logo-text {
+  color: #255933 !important;
+  -webkit-text-fill-color: #255933 !important;
+  font-weight: 800 !important;
+}
+
+:root:not([data-theme="dark"]) .auth-card-header .logo-accent,
+:root:not([data-theme="dark"]) .auth-card-header .logo-text .logo-accent {
+  color: #63361A !important; /* Thick Rich Brown */
+  -webkit-text-fill-color: #63361A !important;
+  font-weight: 800 !important;
+}
+
+/* Auth Card Header Logo (In Form Panel: Dark Mode) */
+[data-theme="dark"] .auth-card-header .logo-text {
+  color: #52C478 !important;
+  -webkit-text-fill-color: #52C478 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="dark"] .auth-card-header .logo-accent,
+[data-theme="dark"] .auth-card-header .logo-text .logo-accent {
+  color: #E8C8A2 !important;
+  -webkit-text-fill-color: #E8C8A2 !important;
+  font-weight: 800 !important;
 }
 
 [data-theme="dark"] .hero-accent,

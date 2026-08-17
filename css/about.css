@@ -65,6 +65,56 @@
   flex-wrap: wrap;
 }
 
+/* Explicit Button Contrast Fixes for About Hero & CTA Sections */
+.about-hero .btn-primary,
+.about-cta-section .btn-primary,
+.about-cta-inner .btn-primary {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: 1.5px solid var(--accent) !important;
+  box-shadow: 0 6px 18px rgba(122, 69, 34, 0.4) !important;
+}
+
+.about-hero .btn-primary:hover,
+.about-cta-section .btn-primary:hover,
+.about-cta-inner .btn-primary:hover {
+  background: var(--accent-hover) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: var(--accent-hover) !important;
+  box-shadow: 0 10px 24px rgba(122, 69, 34, 0.55) !important;
+  transform: translateY(-2px);
+}
+
+.about-hero .btn-outline,
+.about-hero .hero-actions .btn-outline,
+.about-cta-section .btn-outline,
+.about-cta-inner .btn-outline,
+.about-cta-inner .cta-actions .btn-outline {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  font-weight: 700 !important;
+  border-radius: 30px !important;
+  transition: all var(--transition) !important;
+}
+
+.about-hero .btn-outline:hover,
+.about-hero .hero-actions .btn-outline:hover,
+.about-cta-section .btn-outline:hover,
+.about-cta-inner .btn-outline:hover,
+.about-cta-inner .cta-actions .btn-outline:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
 .hero-visual {
   display: flex;
   justify-content: center;

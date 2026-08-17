@@ -163,22 +163,26 @@
 .hero-actions .btn-primary {
   background: var(--accent2);
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .hero-actions .btn-primary:hover {
   background: #ffffff !important;
-  color: var(--accent) !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
 }
 
 .hero-actions .btn-outline {
   border-color: rgba(255, 255, 255, 0.4);
-  color: #ffffff;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .hero-actions .btn-outline:hover {
-  border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  border-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
 }
 
 .section-header {

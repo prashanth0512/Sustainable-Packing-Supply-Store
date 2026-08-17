@@ -119,8 +119,9 @@
 }
 
 .p-hero-actions .btn-primary:hover {
-  background: var(--accent-hover);
+  background: var(--green-primary-hover) !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 :root .p-hero-actions .btn-outline,
@@ -1118,4 +1119,133 @@
   .p-benefits-grid {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* Rate Sheet Table Scroll Hint Badge (Hidden on Laptop/Desktop, Visible on Mobile Only) */
+.p-table-scroll-hint {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 850px) {
+  .p-table-scroll-hint {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+    border-radius: 30px !important;
+    padding: 8px 20px !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    margin: 0 auto 24px auto !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    height: auto !important;
+  }
+
+  .p-table-scroll-hint i,
+  .p-table-scroll-hint svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+
+  [data-theme="dark"] .p-table-scroll-hint,
+  html[data-theme="dark"] .p-table-scroll-hint {
+    background: #E8C8A2 !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    border-color: #E8C8A2 !important;
+    font-weight: 700 !important;
+  }
+
+  [data-theme="dark"] .p-table-scroll-hint i,
+  [data-theme="dark"] .p-table-scroll-hint svg,
+  html[data-theme="dark"] .p-table-scroll-hint i,
+  html[data-theme="dark"] .p-table-scroll-hint svg {
+    color: #000000 !important;
+    stroke: #000000 !important;
+  }
+}
+
+/* Pricing CTA Banner Card Button Text Contrast Fix */
+.p-final-cta-section {
+  background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
+  padding: 80px 0 !important;
+}
+
+.p-cta-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 32px !important;
+  padding: 64px 40px !important;
+  text-align: center !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35) !important;
+}
+
+.p-cta-card h2 {
+  color: #ffffff !important;
+  font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
+  font-weight: 800 !important;
+  margin-bottom: 16px !important;
+}
+
+.p-cta-card p {
+  color: rgba(255, 255, 255, 0.88) !important;
+  max-width: 640px !important;
+  margin: 0 auto 32px auto !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+}
+
+.p-cta-actions .btn-primary {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 800 !important;
+  border: 1.5px solid var(--accent) !important;
+  box-shadow: 0 6px 18px rgba(122, 69, 34, 0.45) !important;
+}
+
+.p-cta-actions .btn-primary:hover {
+  background: var(--accent-hover) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: var(--accent-hover) !important;
+  box-shadow: 0 10px 24px rgba(122, 69, 34, 0.55) !important;
+  transform: translateY(-2px);
+}
+
+.p-cta-actions .btn-outline,
+.p-cta-card .btn-outline {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 700 !important;
+  border-radius: 30px !important;
+  transition: all var(--transition) !important;
+}
+
+.p-cta-actions .btn-outline:hover,
+.p-cta-card .btn-outline:hover {
+  background: #ffffff !important;
+  color: #121613 !important;
+  -webkit-text-fill-color: #121613 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+.p-cta-trust-indicators span {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important;
 }
