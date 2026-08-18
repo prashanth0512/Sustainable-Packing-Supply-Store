@@ -16,7 +16,6 @@
   <script src="../js/dashboard.js" defer></script>
 </head>
 <body class="dashboard-body">
-
   <aside class="dash-sidebar" id="dashSidebar">
     <div class="dash-logo">
       <a href="../index.html" class="logo">
@@ -53,9 +52,7 @@
       <a href="pricing.html" class="upgrade-btn">Upgrade</a>
     </div>
   </aside>
-
   <div class="dash-main">
-
     <header class="dash-topbar">
       <div class="dash-topbar-left">
         <button class="sidebar-toggle" id="sidebarToggle"><i data-lucide="menu" class="icon-sm"></i></button>
@@ -77,11 +74,8 @@
         <div class="dash-avatar" id="profileBtn" style="cursor:pointer;">JR</div>
       </div>
     </header>
-
     <div class="dash-content">
-
       <div class="tab-pane active" id="tab-overview">
-
         <div class="dash-welcome card-section">
           <div>
             <h1>Good morning, Jamie <span class="hero-accent">Rivera</span> <i data-lucide="leaf" class="icon-sm" style="color: var(--accent);"></i></h1>
@@ -96,7 +90,6 @@
             </div>
           </div>
         </div>
-
         <div class="stats-grid-8 card-section">
           <div class="stat-card">
             <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="trending-up" class="icon-sm"></i></div>
@@ -163,7 +156,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-grid-3 card-section">
           <div class="dash-card chart-card">
             <div class="card-header">
@@ -187,7 +179,6 @@
             <div class="chart-area"><canvas id="overviewBarChart"></canvas></div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header">
             <h3>Recent Corporate Orders</h3>
@@ -242,11 +233,8 @@
             </table>
           </div>
         </div>
-
         <div class="dash-grid card-section">
-
           <div style="display: flex; flex-direction: column; gap: 20px;">
-
             <div class="dash-card">
               <div class="card-header">
                 <h3>Inventory Stock Levels</h3>
@@ -282,7 +270,6 @@
                 </div>
               </div>
             </div>
-
             <div class="dash-card">
               <div class="card-header">
                 <h3>Top Performing SKUs</h3>
@@ -317,9 +304,7 @@
               </div>
             </div>
           </div>
-
           <div style="display: flex; flex-direction: column; gap: 20px;">
-
             <div class="dash-card">
               <div class="card-header">
                 <h3>AI Sustainability Insights</h3>
@@ -342,7 +327,6 @@
                 </li>
               </ul>
             </div>
-
             <div class="dash-card">
               <div class="card-header">
                 <h3>Logistics Timeline & Tasks</h3>
@@ -367,9 +351,7 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-orders">
-
         <div class="stats-grid card-section">
           <div class="stat-card">
             <div class="stat-card-icon" style="background:#e3f2fd; color:#2196f3;"><i data-lucide="shopping-bag" class="icon-sm"></i></div>
@@ -396,7 +378,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px; padding: 20px;">
           <div class="filters-container-row" style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
             <div style="display: flex; gap: 12px; flex-wrap: wrap; flex: 1;">
@@ -415,7 +396,6 @@
             <button class="btn-primary-sm" onclick="alert('Filtering applied successfully!')">Apply Filters</button>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="orders-table-wrap">
             <table class="orders-table" id="ordersTable">
@@ -473,7 +453,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section">
           <div class="card-header"><h3>Recent Orders Logistics Log</h3></div>
           <div class="timeline-list" style="display: flex; flex-direction: column; gap: 16px; font-size: 0.82rem;">
@@ -494,13 +473,11 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-reorder">
         <div class="dash-welcome">
           <h1>Smart Reorder Center</h1>
           <p>Configure automated threshold triggers to ensure fulfillment tables never run out of inventory.</p>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header"><h3>Frequently Ordered Materials</h3></div>
           <div class="dash-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
@@ -526,7 +503,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px; border-left: 4px solid var(--accent);">
           <div class="card-header">
             <h3>AI Smart Replenishment Suggestions</h3>
@@ -535,7 +511,6 @@
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Based on your shipping rates of 450 units/week, we recommend reordering mailers 5 days before your stock runs out to avoid line disruption.</p>
           <button class="btn-outline-sm" onclick="alert('Auto-replenish settings enabled!');">Approve Suggestion Schedule</button>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header">
             <h3>Critical Stock Level Alerts</h3>
@@ -554,7 +529,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section">
           <div class="card-header"><h3>Active Auto-Reorder Card Configuration</h3></div>
           <div class="dash-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
@@ -575,13 +549,11 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-shipments">
         <div class="dash-welcome">
           <h1>Logistics & Shipments</h1>
           <p>Track courier performance, delivery stages, and carbon offsets for active shipments.</p>
         </div>
-
         <div class="stats-grid card-section">
           <div class="stat-card">
             <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="truck" class="icon-sm"></i></div>
@@ -608,44 +580,35 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header">
             <h3>Live Progress: #VP-8819</h3>
             <span class="card-badge">Est. Arrival Jan 16, 2026</span>
           </div>
-
           <div class="ship-tracker">
-
             <div class="ship-line ship-line-left  ship-line-done"></div>
             <div class="ship-line ship-line-right ship-line-pending"></div>
-
             <div class="ship-step">
               <span class="ship-circle ship-done">
                 <i data-lucide="check" style="width:14px;height:14px;"></i>
               </span>
               <p class="ship-label">Fulfillment</p>
             </div>
-
             <div class="ship-step">
               <span class="ship-circle ship-done">
                 <i data-lucide="check" style="width:14px;height:14px;"></i>
               </span>
               <p class="ship-label">Sorting Hub</p>
             </div>
-
             <div class="ship-step">
               <span class="ship-circle ship-pending">3</span>
               <p class="ship-label ship-label-muted">Out for Delivery</p>
             </div>
           </div>
-
           <div style="background:var(--bg2); padding:16px; border-radius:12px; font-size:0.85rem; color:var(--text-muted); margin-top:8px;">
             <strong>Current status:</strong> In Transit. Departed sorting facility in Madhapur, Hyderabad, TS.
           </div>
-
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header"><h3>Active Carrier Tracking Matrix</h3></div>
           <div class="orders-table-wrap">
@@ -678,7 +641,6 @@
             </table>
           </div>
         </div>
-
         <div class="dash-grid card-section">
           <div class="dash-card">
             <h3>Courier Success Rate</h3>
@@ -692,10 +654,8 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-discounts">
         <div class="dash-welcome">
-
           <div>
             <h1>Volume Discount Tiers</h1>
             <p>Unlock cheaper unit packaging rates as your monthly orders scale.</p>
@@ -708,11 +668,9 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px; padding: 32px;">
           <h3>Interactive Pricing Calculator</h3>
           <p style="color:var(--text-muted); font-size:0.875rem; margin-bottom:24px;">Estimate order costs and volume discounts instantly.</p>
-
           <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
             <div style="display:flex; flex-direction:column; gap:16px;">
               <div>
@@ -729,7 +687,6 @@
                 <input type="range" id="calcQuantitySlider" min="100" max="10000" step="100" value="1000" style="width: 100%; margin-top: 12px; accent-color: var(--accent);"/>
               </div>
             </div>
-
             <div style="background:var(--bg2); padding: 24px; border-radius:12px; text-align: center;">
               <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Estimated Total Cost</p>
               <div style="font-size: 2.8rem; font-weight: 800; color: var(--accent); margin: 10px 0;" id="calcEstimatedCost">$120.00</div>
@@ -737,7 +694,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header"><h3>Unlocked Volume Discount Levels</h3></div>
           <div class="discount-progress" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
@@ -763,7 +719,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section">
           <div class="card-header"><h3>Volume Tier Price comparison Table</h3></div>
           <div class="orders-table-wrap">
@@ -797,13 +752,11 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-analytics">
         <div class="dash-welcome">
           <h1>Analytics & Sales Trends</h1>
           <p>Monitor revenue changes, conversion growth, and product performance over time.</p>
         </div>
-
         <div class="dash-grid card-section">
           <div class="dash-card chart-card">
             <div class="card-header"><h3>Monthly Revenue Distribution</h3></div>
@@ -814,7 +767,6 @@
             <div class="chart-area" style="height: 250px;"><canvas id="profitChart"></canvas></div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header"><h3>Performance Analysis Log</h3></div>
           <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.8;">
@@ -823,7 +775,6 @@
             <li>Materials waste was reduced by 14% via our automated box coordinates selector.</li>
           </ul>
         </div>
-
         <div class="stats-grid card-section">
           <div class="stat-card">
             <div class="stat-info">
@@ -847,7 +798,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section">
           <div class="card-header"><h3>Material Sales Distribution</h3></div>
           <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center;">
@@ -858,13 +808,11 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-impact">
         <div class="dash-welcome">
           <h1>Eco Impact Ledger</h1>
           <p>Verified environmental metrics reporting carbon offsets, paper, and plastic reductions.</p>
         </div>
-
         <div class="stats-grid card-section">
           <div class="stat-card">
             <div class="stat-card-icon" style="background:var(--accent-light); color:var(--accent);"><i data-lucide="leaf" class="icon-sm"></i></div>
@@ -891,19 +839,16 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header"><h3>Monthly Offset Performance</h3></div>
           <div class="chart-area" style="height: 250px;"><canvas id="barChart"></canvas></div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px; padding: 40px; text-align: center;">
           <div class="success-icon-wrapper" style="font-size:4rem; color:var(--accent);"><i data-lucide="file-text" class="icon-lg"></i></div>
           <h3>Q4 Certified Impact Audit</h3>
           <p style="max-width: 500px; margin: 8px auto 24px; color: var(--text-muted); font-size: 0.95rem;">Download the verified ESG impact audit for Q4 2025. This document meets all GRI corporate reporting standards.</p>
           <button class="btn-primary" style="padding: 12px 28px;">Download Certified PDF</button>
         </div>
-
         <div class="dash-card card-section">
           <div class="card-header"><h3>Suggested Circular logistics Practices</h3></div>
           <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.8;">
@@ -913,13 +858,11 @@
           </ul>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-branding">
         <div class="dash-welcome">
           <h1>Custom Brand Assets</h1>
           <p>Configure logo layouts, select printing colors, and preview mockups.</p>
         </div>
-
         <div class="dash-grid card-section">
           <div class="dash-card">
             <h3>Box Sleeves Template</h3>
@@ -932,7 +875,6 @@
             <button class="btn-outline-sm" style="margin-top:16px;">Download Template Dielines</button>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <h3>Vector Logo Upload</h3>
           <div style="border: 2px dashed var(--border); border-radius:12px; padding: 40px; text-align: center; margin-top: 16px;">
@@ -942,7 +884,6 @@
             <button class="btn-primary-sm" onclick="alert('File selector opened!');">Select SVG or PNG</button>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header"><h3>Ink Selections & Coating Specs</h3></div>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size:0.9rem; color: var(--text-muted);">
@@ -956,7 +897,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section">
           <div class="card-header"><h3>Recent Branding Proofs</h3></div>
           <div class="dash-grid" style="grid-template-columns: repeat(3, 1fr); gap: 16px;">
@@ -977,13 +917,11 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-team">
         <div class="dash-welcome">
           <h1>Team & Collaboration</h1>
           <p>Invite procurement managers and logistics operators to streamline reorder configurations.</p>
         </div>
-
         <div class="stats-grid card-section">
           <div class="stat-card">
             <div class="stat-info">
@@ -1007,9 +945,7 @@
             </div>
           </div>
         </div>
-
         <div class="dash-grid card-section" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
-
           <div class="p-plan-card" style="padding: 24px; display: flex; flex-direction: column; align-items: center; text-align: center;">
             <img src="../assets/images/avatar-marcus.png" alt="Jamie" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 1.5px solid var(--border);"/>
             <strong style="color: var(--text);">Jamie Rivera</strong>
@@ -1020,7 +956,6 @@
               <a href="#" class="p-table-link"><i data-lucide="phone" class="icon-sm"></i></a>
             </div>
           </div>
-
           <div class="p-plan-card" style="padding: 24px; display: flex; flex-direction: column; align-items: center; text-align: center;">
             <img src="../assets/images/avatar-sarah.png" alt="Sarah" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 1.5px solid var(--border);"/>
             <strong style="color: var(--text);">Sarah Chen</strong>
@@ -1031,7 +966,6 @@
               <a href="#" class="p-table-link"><i data-lucide="phone" class="icon-sm"></i></a>
             </div>
           </div>
-
           <div class="p-plan-card" style="padding: 24px; display: flex; flex-direction: column; align-items: center; text-align: center;">
             <img src="../assets/images/avatar-marcus.png" alt="Marcus" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 1.5px solid var(--border);"/>
             <strong style="color: var(--text);">Marcus Okafor</strong>
@@ -1043,7 +977,6 @@
             </div>
           </div>
         </div>
-
         <div class="dash-card card-section" style="margin-bottom: 24px;">
           <div class="card-header"><h3>Active Permissions & Departments</h3></div>
           <div style="font-size:0.9rem; color:var(--text-muted); line-height: 1.8;">
@@ -1051,21 +984,17 @@
             <p><strong>Logistics:</strong> Read-only access to Shipments timelines and track courier performance indices.</p>
           </div>
         </div>
-
         <div class="dash-card card-section" style="text-align: center; padding: 32px;">
           <button class="btn-primary" onclick="alert('Invite email panel popped up!')">+ Invite Procurement Specialist</button>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-settings">
         <div class="dash-welcome">
           <h1>Account & Security Settings</h1>
           <p>Configure user credentials, company tax registries, and team integration logs.</p>
         </div>
-
         <div class="dash-grid" style="grid-template-columns: 1fr 1fr; align-items: start;">
           <div style="display: flex; flex-direction: column; gap: 20px;">
-
             <div class="dash-card">
               <h3 style="margin-bottom: 20px;">User Profile Configuration</h3>
               <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 20px;">
@@ -1075,7 +1004,6 @@
                   <button class="btn-outline-sm" style="display: block;" onclick="alert('Profile photo removed.');">Remove Photo</button>
                 </div>
               </div>
-
               <div style="display: flex; flex-direction: column; gap: 16px;">
                 <div>
                   <label style="font-size:0.8rem; font-weight:700; display:block; margin-bottom:6px;">Full Name</label>
@@ -1096,7 +1024,6 @@
               </div>
               <button class="btn-primary-sm" style="margin-top: 24px;" onclick="alert('Profile configurations updated!');">Update Profile</button>
             </div>
-
             <div class="dash-card">
               <h3 style="margin-bottom: 20px;">Corporate Identity & Registry</h3>
               <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -1120,9 +1047,7 @@
               <button class="btn-primary-sm" style="margin-top: 24px;" onclick="alert('Corporate registries saved!');">Update Registry</button>
             </div>
           </div>
-
           <div style="display: flex; flex-direction: column; gap: 20px;">
-
             <div class="dash-card">
               <h3 style="margin-bottom: 20px;">Credentials Security</h3>
               <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -1140,7 +1065,6 @@
                 </div>
               </div>
               <button class="btn-primary-sm" style="margin-top: 24px;" onclick="alert('Credentials password updated!');">Change Password</button>
-
               <div style="margin-top: 32px; border-top: 1px solid var(--border); padding-top: 24px;">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
                   <div>
@@ -1154,7 +1078,6 @@
                 </div>
               </div>
             </div>
-
             <div class="dash-card">
               <h3 style="margin-bottom: 20px;">System Preferences & Integrations</h3>
               <div style="display:flex; flex-direction:column; gap:14px; color:var(--text2); font-size: 0.85rem;">
@@ -1171,7 +1094,6 @@
                   Send weekly carbon offset performance logs
                 </label>
               </div>
-
               <div style="margin-top: 32px; border-top: 1px solid var(--border); padding-top: 24px;">
                 <h4 style="font-size:0.85rem; font-weight:700; color:var(--text); margin-bottom:16px;">Third-Party B2B Integrations</h4>
                 <div style="display:flex; flex-direction:column; gap:16px;">
@@ -1201,7 +1123,6 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane" id="tab-notifications">
         <div class="dash-welcome"><h1>System Notifications</h1><p>Stay updated with logistics milestones.</p></div>
         <div class="dash-card">

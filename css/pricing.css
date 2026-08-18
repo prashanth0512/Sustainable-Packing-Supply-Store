@@ -10,7 +10,6 @@
   color: #ffffff;
   padding: 80px 24px;
 }
-
 .p-hero-overlay {
   position: absolute;
   top: 0;
@@ -22,7 +21,6 @@
   background-position: center;
   z-index: 1;
 }
-
 .p-hero-overlay::after {
   content: '';
   position: absolute;
@@ -36,7 +34,6 @@
     rgba(12, 20, 12, 0.85) 100%
   );
 }
-
 .p-hero-glow {
   position: absolute;
   width: 450px;
@@ -49,7 +46,6 @@
   z-index: 2;
   pointer-events: none;
 }
-
 .p-hero-container {
   position: relative;
   z-index: 3;
@@ -58,7 +54,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .p-hero-glass-card {
   background: rgba(26, 36, 23, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -72,13 +67,11 @@
   -webkit-backdrop-filter: blur(20px);
   animation: floatPricingCard 6s ease-in-out infinite;
 }
-
 @keyframes floatPricingCard {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-6px); }
   100% { transform: translateY(0px); }
 }
-
 .p-hero-title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.15;
@@ -86,7 +79,6 @@
   font-weight: 800;
   color: #ffffff;
 }
-
 .p-hero-highlight,
 .p-hero-title .hero-accent,
 .p-hero .hero-accent,
@@ -96,7 +88,6 @@
   text-shadow: 0 0 16px rgba(232, 200, 162, 0.35) !important;
   font-weight: 800 !important;
 }
-
 .p-hero-subtitle {
   font-size: clamp(0.95rem, 1.3vw, 1.1rem);
   color: #e5e7eb;
@@ -104,26 +95,22 @@
   max-width: 660px;
   margin: 0 auto 32px;
 }
-
 .p-hero-actions {
   display: flex;
   justify-content: center;
   gap: 16px;
   margin-bottom: 36px;
 }
-
 .p-hero-actions .btn-primary {
   background: var(--accent);
   color: #ffffff !important;
   border: none;
 }
-
 .p-hero-actions .btn-primary:hover {
   background: var(--green-primary-hover) !important;
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
-
 :root .p-hero-actions .btn-outline,
 :root:not([data-theme="dark"]) .p-hero-actions .btn-outline,
 .p-hero-actions .btn-outline {
@@ -137,7 +124,6 @@
   padding: 12px 26px !important;
   transition: all var(--transition) !important;
 }
-
 :root .p-hero-actions .btn-outline:hover,
 :root:not([data-theme="dark"]) .p-hero-actions .btn-outline:hover,
 .p-hero-actions .btn-outline:hover {
@@ -147,7 +133,6 @@
   border-color: #ffffff !important;
   transform: translateY(-2px) !important;
 }
-
 .p-hero-trust-indicators {
   display: flex;
   justify-content: center;
@@ -158,22 +143,18 @@
   font-weight: 600;
   flex-wrap: wrap;
 }
-
 .p-hero-trust-indicators span {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-
 .trust-divider {
   opacity: 0.3;
 }
-
 .p-plans-section {
   padding: 100px 0;
   background: var(--bg);
 }
-
 .p-plans-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -181,7 +162,6 @@
   margin-top: 48px;
   align-items: stretch;
 }
-
 .p-plan-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -196,23 +176,19 @@
   position: relative;
   height: 100%;
 }
-
 .p-plan-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
   border-color: var(--accent);
 }
-
 .p-plan-card.featured {
   border-color: var(--accent2);
   box-shadow: 0 15px 40px rgba(122, 182, 72, 0.15);
   background: rgba(26, 36, 23, 0.1);
 }
-
 .p-plan-card.featured:hover {
   box-shadow: 0 20px 50px rgba(122, 182, 72, 0.25);
 }
-
 .p-plan-badge-outline {
   background: var(--bg2);
   color: var(--text-muted);
@@ -224,7 +200,6 @@
   text-transform: uppercase;
   margin-bottom: 24px;
 }
-
 .p-plan-badge-popular {
   background: var(--accent2);
   color: #1a2417;
@@ -237,14 +212,12 @@
   margin-bottom: 24px;
   box-shadow: 0 4px 10px rgba(122, 182, 72, 0.2);
 }
-
 .p-plan-name {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--text);
   margin-bottom: 8px;
 }
-
 .p-plan-desc {
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -252,25 +225,21 @@
   margin-bottom: 28px;
   max-width: 240px;
 }
-
 .p-plan-price {
   margin-bottom: 32px;
 }
-
 .p-plan-price .price-amount {
   font-size: 3rem;
   font-weight: 800;
   color: var(--text);
   line-height: 1;
 }
-
 .p-plan-price .price-period {
   font-size: 0.9rem;
   color: var(--text-muted);
   display: block;
   margin-top: 6px;
 }
-
 .p-plan-features {
   list-style: none;
   padding-left: 0;
@@ -280,7 +249,6 @@
   gap: 16px;
   width: 100%;
 }
-
 .p-plan-features li {
   font-size: 0.95rem;
   color: var(--text2);
@@ -289,16 +257,13 @@
   justify-content: center;
   gap: 8px;
 }
-
 .p-plan-features li svg {
   color: var(--accent);
 }
-
 .p-comparison-section {
   padding: 100px 0;
   background: var(--bg2);
 }
-
 .p-table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -308,46 +273,38 @@
   background: var(--surface);
   margin-top: 48px;
 }
-
 .p-comparison-table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
   min-width: 800px;
 }
-
 .p-comparison-table th,
 .p-comparison-table td {
   padding: 20px 24px;
   border-bottom: 1px solid var(--border);
 }
-
 .p-comparison-table th {
   background: var(--surface2);
   font-weight: 700;
   color: var(--text);
   font-size: 0.95rem;
 }
-
 .p-comparison-table tbody tr {
   transition: background var(--transition);
 }
-
 .p-comparison-table tbody tr:hover {
   background: transparent;
 }
-
 .p-comparison-table td strong {
   color: var(--text);
 }
-
 .p-comparison-table .highlight-cell {
   background: rgba(232, 200, 162, 0.18) !important;
   color: var(--accent-light-highlight) !important;
   -webkit-text-fill-color: var(--accent-light-highlight) !important;
   font-weight: 800 !important;
 }
-
 .p-table-link {
   color: var(--accent-light-highlight) !important;
   -webkit-text-fill-color: var(--accent-light-highlight) !important;
@@ -362,7 +319,6 @@
   display: inline-block !important;
   transition: all var(--transition) !important;
 }
-
 .p-table-link:hover {
   background: var(--accent-light-highlight) !important;
   color: #102e11 !important;
@@ -370,14 +326,12 @@
   border-color: var(--accent-light-highlight) !important;
   transform: translateY(-1px) !important;
 }
-
 .p-benefits-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-top: 48px;
 }
-
 .p-benefit-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -392,39 +346,33 @@
   justify-content: center;
   height: 100%;
 }
-
 .p-benefit-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
   box-shadow: var(--shadow-lg);
 }
-
 .p-benefit-card svg {
   color: var(--accent);
   margin-bottom: 18px;
 }
-
 .p-benefit-card h4 {
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 8px;
   color: var(--text);
 }
-
 .p-benefit-card p {
   font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.45;
   margin: 0;
 }
-
 .p-final-cta-section {
   padding: 100px 0;
   background: var(--bg);
   position: relative;
   overflow: hidden;
 }
-
 .p-cta-glow-1 {
   position: absolute;
   width: 400px;
@@ -437,7 +385,6 @@
   z-index: 1;
   pointer-events: none;
 }
-
 .p-cta-glow-2 {
   position: absolute;
   width: 400px;
@@ -450,7 +397,6 @@
   z-index: 1;
   pointer-events: none;
 }
-
 .p-cta-card {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
   border-radius: var(--radius-lg);
@@ -466,7 +412,6 @@
   max-width: 900px;
   margin: 0 auto;
 }
-
 .p-cta-card h2 {
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   margin: 20px 0 12px;
@@ -474,7 +419,6 @@
   font-weight: 800;
   line-height: 1.25;
 }
-
 .p-cta-card p {
   color: rgba(255, 255, 255, 0.95);
   font-size: 1.05rem;
@@ -482,35 +426,29 @@
   margin-bottom: 32px;
   line-height: 1.6;
 }
-
 .p-cta-actions {
   display: flex;
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .p-cta-actions .btn-primary {
   background: #ffffff;
   color: var(--accent);
 }
-
 .p-cta-actions .btn-primary:hover {
   background: var(--accent2);
   color: #1a2417;
 }
-
 .p-cta-actions .btn-outline {
   border-color: rgba(255, 255, 255, 0.4);
   color: #ffffff;
 }
-
 .p-cta-actions .btn-outline:hover {
   border-color: #ffffff;
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
-
 .p-cta-trust-indicators {
   display: flex;
   justify-content: center;
@@ -521,13 +459,11 @@
   font-weight: 600;
   flex-wrap: wrap;
 }
-
 .p-cta-trust-indicators span {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-
 @media (max-width: 1024px) {
   .p-plans-grid {
     grid-template-columns: 1fr;
@@ -535,39 +471,32 @@
     max-width: 480px;
     margin: 48px auto 0;
   }
-
   .p-benefits-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .p-hero {
     height: auto;
     min-height: auto;
     padding: 120px 20px 60px;
   }
-
   .p-hero-glass-card {
     padding: 32px 24px;
   }
-
   .p-plans-section,
   .p-comparison-section,
   .p-final-cta-section {
     padding: 60px 0;
   }
-
   .p-benefits-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
   .p-cta-card {
     padding: 40px 24px;
   }
 }
-
 @media (max-width: 480px) {
   .p-hero-actions,
   .p-cta-actions {
@@ -575,7 +504,6 @@
     gap: 12px;
     width: 100%;
   }
-
   .p-hero-actions .btn-primary,
   .p-hero-actions .btn-outline,
   .p-cta-actions .btn-primary,
@@ -584,7 +512,6 @@
     justify-content: center;
   }
 }
-
 .p-hero-glass-card .premium-badge {
   display: inline-flex !important;
   align-items: center !important;
@@ -602,19 +529,16 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
   backdrop-filter: blur(8px) !important;
 }
-
 .p-plans-section {
   background: var(--bg1) !important;
   padding: 90px 0 !important;
 }
-
 .p-plans-grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 32px !important;
   align-items: stretch !important;
 }
-
 .p-plan-card {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
@@ -627,13 +551,11 @@
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   position: relative !important;
 }
-
 .p-plan-card:hover {
   transform: translateY(-6px) !important;
   border-color: var(--accent) !important;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1) !important;
 }
-
 .p-plan-badge-outline {
   background: rgba(142, 212, 78, 0.15) !important;
   color: var(--accent) !important;
@@ -646,39 +568,33 @@
   display: inline-block !important;
   width: fit-content !important;
 }
-
 .p-plan-name {
   font-size: 1.35rem !important;
   font-weight: 800 !important;
   color: var(--text) !important;
   margin-bottom: 8px !important;
 }
-
 .p-plan-desc {
   color: var(--text-muted) !important;
   font-size: 0.9rem !important;
   line-height: 1.5 !important;
   margin-bottom: 20px !important;
 }
-
 .p-plan-price .price-amount {
   font-size: 2.5rem !important;
   font-weight: 800 !important;
   color: var(--text) !important;
 }
-
 .p-plan-price .price-period {
   color: var(--text-muted) !important;
   font-size: 0.85rem !important;
   font-weight: 500 !important;
 }
-
 .p-plan-features {
   list-style: none !important;
   padding: 0 !important;
   margin: 24px 0 32px 0 !important;
 }
-
 .p-plan-features li {
   color: var(--text) !important;
   font-size: 0.88rem !important;
@@ -687,11 +603,9 @@
   align-items: center !important;
   gap: 10px !important;
 }
-
 .p-plan-features li i {
   color: var(--accent) !important;
 }
-
 .p-plan-card.featured {
   background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   color: #ffffff !important;
@@ -700,12 +614,10 @@
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35), 0 0 24px rgba(196, 154, 108, 0.2) !important;
   transform: scale(1.03) !important;
 }
-
 .p-plan-card.featured:hover {
   transform: scale(1.03) translateY(-6px) !important;
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(196, 154, 108, 0.3) !important;
 }
-
 .p-plan-badge-popular {
   background: var(--accent) !important;
   color: #ffffff !important;
@@ -718,32 +630,25 @@
   width: fit-content !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
 }
-
 .p-plan-card.featured .p-plan-name {
   color: #ffffff !important;
 }
-
 .p-plan-card.featured .p-plan-desc {
   color: rgba(255, 255, 255, 0.88) !important;
 }
-
 .p-plan-card.featured .p-plan-price .price-amount {
   color: var(--accent2) !important;
   font-size: 2.6rem !important;
 }
-
 .p-plan-card.featured .p-plan-price .price-period {
   color: rgba(255, 255, 255, 0.75) !important;
 }
-
 .p-plan-card.featured .p-plan-features li {
   color: rgba(255, 255, 255, 0.9) !important;
 }
-
 .p-plan-card.featured .p-plan-features li i {
   color: var(--accent2) !important;
 }
-
 .p-comparison-section {
   background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   color: #ffffff !important;
@@ -751,21 +656,17 @@
   position: relative !important;
   overflow: hidden !important;
 }
-
 .p-comparison-section .section-title {
   color: #ffffff !important;
 }
-
 .p-comparison-section .section-subtitle {
   color: rgba(255, 255, 255, 0.88) !important;
 }
-
 .p-comparison-section .section-tag {
   background: rgba(255, 255, 255, 0.12) !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
-
 .p-table-wrapper {
   background: rgba(255, 255, 255, 0.08) !important;
   backdrop-filter: blur(16px) !important;
@@ -779,25 +680,20 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(196, 154, 108, 0.5) rgba(255, 255, 255, 0.05);
 }
-
 .p-table-wrapper::-webkit-scrollbar {
   height: 8px;
 }
-
 .p-table-wrapper::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 0 0 24px 24px;
 }
-
 .p-table-wrapper::-webkit-scrollbar-thumb {
   background: rgba(196, 154, 108, 0.4);
   border-radius: 10px;
 }
-
 .p-table-wrapper::-webkit-scrollbar-thumb:hover {
   background: rgba(196, 154, 108, 0.8);
 }
-
 .p-table-scroll-hint {
   display: none;
   align-items: center;
@@ -813,20 +709,17 @@
   margin: 28px auto 0;
   width: fit-content;
 }
-
 @media (max-width: 850px) {
   .p-table-scroll-hint {
     display: inline-flex !important;
   }
 }
-
 .p-comparison-table {
   width: 100% !important;
   min-width: 750px !important;
   border-collapse: collapse !important;
   color: #ffffff !important;
 }
-
 .p-comparison-table th {
   background: rgba(255, 255, 255, 0.12) !important;
   color: #ffffff !important;
@@ -836,7 +729,6 @@
   text-align: center !important;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
 }
-
 .p-comparison-table td {
   padding: 16px 24px !important;
   font-size: 0.9rem !important;
@@ -844,21 +736,17 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   text-align: center !important;
 }
-
 .p-comparison-table tbody tr:hover {
   background: transparent !important;
 }
-
 .p-comparison-table tr:hover td {
   background: rgba(255, 255, 255, 0.14) !important;
   color: #ffffff !important;
 }
-
 .p-comparison-table td strong {
   color: #ffffff !important;
   font-weight: 700 !important;
 }
-
 :root .p-comparison-section .hero-accent,
 :root:not([data-theme="dark"]) .p-comparison-section .hero-accent,
 .p-comparison-section .hero-accent,
@@ -868,14 +756,12 @@
   text-shadow: 0 0 16px rgba(232, 200, 162, 0.35) !important;
   font-weight: 800 !important;
 }
-
 .p-comparison-table .highlight-cell {
   color: var(--accent-light-highlight) !important;
   -webkit-text-fill-color: var(--accent-light-highlight) !important;
   font-weight: 800 !important;
   background: rgba(232, 200, 162, 0.18) !important;
 }
-
 .p-table-link {
   color: var(--accent-light-highlight) !important;
   -webkit-text-fill-color: var(--accent-light-highlight) !important;
@@ -889,46 +775,38 @@
   transition: all 0.2s ease !important;
   display: inline-block !important;
 }
-
 .p-table-link:hover {
   background: var(--accent-light-highlight) !important;
   color: #102e11 !important;
   -webkit-text-fill-color: #102e11 !important;
   border-color: var(--accent-light-highlight) !important;
 }
-
 .p-value-section {
   background: #ffffff !important;
   color: #102e11 !important;
   padding: 90px 0 !important;
   position: relative !important;
 }
-
 .p-value-section .section-title {
   color: #102e11 !important;
   font-weight: 800 !important;
 }
-
 .p-value-section .section-title .hero-accent {
   color: var(--accent) !important;
 }
-
 .p-value-section .section-subtitle {
   color: #555555 !important;
 }
-
 .p-value-section .section-tag {
   background: rgba(37, 89, 51, 0.08) !important;
   color: var(--green-primary) !important;
   border: 1px solid rgba(37, 89, 51, 0.2) !important;
 }
-
 .p-benefits-grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 24px !important;
 }
-
 .p-benefit-card {
   background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
@@ -938,38 +816,32 @@
   color: #102e11 !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
-
 .p-benefit-card:hover {
   transform: translateY(-6px) !important;
   border-color: var(--accent) !important;
   box-shadow: 0 14px 32px rgba(196, 154, 108, 0.12) !important;
 }
-
 .p-benefit-card i,
 .p-benefit-card svg {
   color: var(--accent) !important;
   margin-bottom: 14px !important;
 }
-
 .p-benefit-card h4 {
   color: #102e11 !important;
   font-size: 1.1rem !important;
   font-weight: 800 !important;
   margin-bottom: 8px !important;
 }
-
 .p-benefit-card p {
   color: #4a5568 !important;
   font-size: 0.88rem !important;
   line-height: 1.55 !important;
   margin: 0 !important;
 }
-
 .p-final-cta-section {
   background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   padding: 80px 0 !important;
 }
-
 .p-cta-card {
   background: rgba(255, 255, 255, 0.08) !important;
   backdrop-filter: blur(20px) !important;
@@ -980,14 +852,12 @@
   text-align: center !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35) !important;
 }
-
 .p-cta-card h2 {
   color: #ffffff !important;
   font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
   font-weight: 800 !important;
   margin-bottom: 16px !important;
 }
-
 .p-cta-card p {
   color: rgba(255, 255, 255, 0.88) !important;
   max-width: 640px !important;
@@ -995,7 +865,6 @@
   font-size: 1.05rem !important;
   line-height: 1.6 !important;
 }
-
 :root .p-cta-card .hero-accent,
 :root:not([data-theme="dark"]) .p-cta-card .hero-accent,
 .p-cta-card .hero-accent,
@@ -1006,11 +875,9 @@
   text-shadow: 0 0 16px rgba(232, 200, 162, 0.35) !important;
   font-weight: 800 !important;
 }
-
 .accent-text {
   color: var(--accent) !important;
 }
-
 .btn-primary {
   background: var(--accent) !important;
   color: #ffffff !important;
@@ -1024,14 +891,12 @@
   align-items: center !important;
   gap: 8px !important;
 }
-
 .btn-primary:hover {
   transform: translateY(-2px) !important;
   background: var(--accent-hover) !important;
   box-shadow: 0 10px 24px rgba(196, 154, 108, 0.45) !important;
   color: #ffffff !important;
 }
-
 .btn-outline {
   background: transparent !important;
   border: 2px solid var(--accent2) !important;
@@ -1044,63 +909,51 @@
   align-items: center !important;
   gap: 8px !important;
 }
-
 .btn-outline:hover {
   background: var(--accent2) !important;
   color: #ffffff !important;
   transform: translateY(-2px) !important;
   border-color: var(--accent2) !important;
 }
-
 [data-theme="dark"] .p-value-section {
   background: #061007 !important;
   color: #ffffff !important;
 }
-
 [data-theme="dark"] .p-value-section .section-title {
   color: #ffffff !important;
 }
-
 [data-theme="dark"] .p-value-section .section-title .hero-accent {
   color: #C49A6C !important;
 }
-
 [data-theme="dark"] .p-value-section .section-subtitle {
   color: rgba(255, 255, 255, 0.82) !important;
 }
-
 [data-theme="dark"] .p-value-section .section-tag {
   background: rgba(196, 154, 108, 0.16) !important;
   color: #C49A6C !important;
   border-color: rgba(196, 154, 108, 0.35) !important;
 }
-
 [data-theme="dark"] .p-benefit-card {
   background: #132415 !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
   color: #ffffff !important;
 }
-
 [data-theme="dark"] .p-benefit-card:hover {
   background: #192d1c !important;
   border-color: #C49A6C !important;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6) !important;
 }
-
 [data-theme="dark"] .p-benefit-card i,
 [data-theme="dark"] .p-benefit-card svg {
   color: #C49A6C !important;
 }
-
 [data-theme="dark"] .p-benefit-card h4 {
   color: #ffffff !important;
 }
-
 [data-theme="dark"] .p-benefit-card p {
   color: rgba(255, 255, 255, 0.82) !important;
 }
-
 @media (max-width: 1024px) {
   .p-plans-grid {
     grid-template-columns: 1fr !important;
@@ -1114,14 +967,11 @@
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
-
 @media (max-width: 640px) {
   .p-benefits-grid {
     grid-template-columns: 1fr !important;
   }
 }
-
-/* Rate Sheet Table Scroll Hint Badge (Hidden on Laptop/Desktop, Visible on Mobile Only) */
 .p-table-scroll-hint {
   display: none !important;
   margin: 0 !important;
@@ -1129,7 +979,6 @@
   height: 0 !important;
   overflow: hidden !important;
 }
-
 @media (max-width: 850px) {
   .p-table-scroll-hint {
     display: inline-flex !important;
@@ -1148,13 +997,11 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     height: auto !important;
   }
-
   .p-table-scroll-hint i,
   .p-table-scroll-hint svg {
     color: #ffffff !important;
     stroke: #ffffff !important;
   }
-
   [data-theme="dark"] .p-table-scroll-hint,
   html[data-theme="dark"] .p-table-scroll-hint {
     background: #E8C8A2 !important;
@@ -1163,7 +1010,6 @@
     border-color: #E8C8A2 !important;
     font-weight: 700 !important;
   }
-
   [data-theme="dark"] .p-table-scroll-hint i,
   [data-theme="dark"] .p-table-scroll-hint svg,
   html[data-theme="dark"] .p-table-scroll-hint i,
@@ -1172,13 +1018,10 @@
     stroke: #000000 !important;
   }
 }
-
-/* Pricing CTA Banner Card Button Text Contrast Fix */
 .p-final-cta-section {
   background: linear-gradient(135deg, var(--green-dark-bg) 0%, var(--green-dark-bg-end) 100%) !important;
   padding: 80px 0 !important;
 }
-
 .p-cta-card {
   background: rgba(255, 255, 255, 0.08) !important;
   backdrop-filter: blur(20px) !important;
@@ -1189,14 +1032,12 @@
   text-align: center !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35) !important;
 }
-
 .p-cta-card h2 {
   color: #ffffff !important;
   font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
   font-weight: 800 !important;
   margin-bottom: 16px !important;
 }
-
 .p-cta-card p {
   color: rgba(255, 255, 255, 0.88) !important;
   max-width: 640px !important;
@@ -1204,7 +1045,6 @@
   font-size: 1.05rem !important;
   line-height: 1.6 !important;
 }
-
 .p-cta-actions .btn-primary {
   background: var(--accent) !important;
   color: #ffffff !important;
@@ -1213,7 +1053,6 @@
   border: 1.5px solid var(--accent) !important;
   box-shadow: 0 6px 18px rgba(122, 69, 34, 0.45) !important;
 }
-
 .p-cta-actions .btn-primary:hover {
   background: var(--accent-hover) !important;
   color: #ffffff !important;
@@ -1222,7 +1061,6 @@
   box-shadow: 0 10px 24px rgba(122, 69, 34, 0.55) !important;
   transform: translateY(-2px);
 }
-
 .p-cta-actions .btn-outline,
 .p-cta-card .btn-outline {
   background: rgba(255, 255, 255, 0.12) !important;
@@ -1234,7 +1072,6 @@
   border-radius: 30px !important;
   transition: all var(--transition) !important;
 }
-
 .p-cta-actions .btn-outline:hover,
 .p-cta-card .btn-outline:hover {
   background: #ffffff !important;
@@ -1244,7 +1081,6 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
   transform: translateY(-2px);
 }
-
 .p-cta-trust-indicators span {
   color: rgba(255, 255, 255, 0.9) !important;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important;

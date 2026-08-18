@@ -1,9 +1,7 @@
 window.addEventListener('theme-changed', (e) => {
   initCharts();
 });
-
 let charts = {};
-
 document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.getElementById('dashSidebar');
   const main = document.querySelector('.dash-main');
@@ -17,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       main?.classList.add('sidebar-closedDesktop');
     }
   };
-
   const openSidebar = () => {
     if (window.innerWidth <= 1024) {
       sidebar?.classList.add('open');
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
       main?.classList.remove('sidebar-closedDesktop');
     }
   };
-
   const toggleSidebar = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -39,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       main?.classList.toggle('sidebar-closedDesktop');
     }
   };
-
   if (toggleBtn) {
     toggleBtn.addEventListener('click', toggleSidebar);
   }
@@ -50,38 +45,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-
   const navItems = document.querySelectorAll('.dash-nav-item');
   const tabPanes = document.querySelectorAll('.tab-pane');
-
   function switchTab(tabId) {
     if (!tabId || tabId === 'back') return;
-
     navItems.forEach(i => {
       i.classList.remove('active');
       if (i.getAttribute('data-tab') === tabId) i.classList.add('active');
     });
-
     tabPanes.forEach(p => {
       p.classList.remove('active');
       p.style.display = 'none'; 
     });
-
     const activePane = document.getElementById('tab-' + tabId);
     if (activePane) {
       activePane.classList.add('active');
       activePane.style.display = 'block'; 
-
       if (tabId === 'overview' || tabId === 'analytics' || tabId === 'impact') {
         setTimeout(initCharts, 50);
       }
     }
-
     if (window.innerWidth <= 1024) {
       closeSidebar();
     }
   }
-
   navItems.forEach(item => {
     item.addEventListener('click', e => {
       const tabId = item.getAttribute('data-tab');
@@ -91,15 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
   document.getElementById('profileBtn')?.addEventListener('click', () => {
     switchTab('settings');
   });
-
   document.getElementById('notifBtn')?.addEventListener('click', () => {
     switchTab('notifications');
   });
-
   document.querySelectorAll('.reorder-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       btn.innerHTML = '<i data-lucide="check-circle" class="icon-sm"></i> Triggered';
@@ -111,18 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 2000);
     });
   });
-
   const calcProduct = document.getElementById('calcProductSelect');
   const calcQtyInput = document.getElementById('calcQuantityInput');
   const calcQtySlider = document.getElementById('calcQuantitySlider');
   const calcCost = document.getElementById('calcEstimatedCost');
   const calcTag = document.getElementById('calcDiscountTag');
-
   function updateCalculator() {
     if (!calcProduct || !calcQtyInput || !calcCost) return;
     const qty = parseInt(calcQtyInput.value) || 0;
     const unitPrice = parseFloat(calcProduct.options[calcProduct.selectedIndex].getAttribute('data-price')) || 0;
-
     let discount = 0;
     if (qty >= 25000) {
       discount = 0.40;
@@ -133,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (qty >= 500) {
       discount = 0.05;
     }
-
     const total = qty * unitPrice * (1 - discount);
     calcCost.textContent = '$' + total.toFixed(2);
     if (calcTag) {
@@ -146,45 +126,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-
   calcQtyInput?.addEventListener('input', () => {
     if (calcQtySlider) calcQtySlider.value = calcQtyInput.value;
     updateCalculator();
   });
-
   calcQtySlider?.addEventListener('input', () => {
     if (calcQtyInput) calcQtyInput.value = calcQtySlider.value;
     updateCalculator();
   });
-
   calcProduct?.addEventListener('change', updateCalculator);
   updateCalculator();
-
   const ordersSearch = document.getElementById('ordersSearchInput');
   const ordersStatus = document.getElementById('ordersStatusFilter');
   const ordersSort = document.getElementById('ordersSortOrder');
   const ordersTableBody = document.querySelector('#ordersTable tbody');
-
   function filterOrdersTable() {
     if (!ordersTableBody) return;
     const searchVal = ordersSearch?.value.toLowerCase() || '';
     const statusVal = ordersStatus?.value || 'all';
     const rows = Array.from(ordersTableBody.querySelectorAll('tr'));
-
     rows.forEach(row => {
       const text = row.textContent.toLowerCase();
       const status = row.getAttribute('data-status') || '';
-
       const matchSearch = text.includes(searchVal);
       const matchStatus = statusVal === 'all' || status === statusVal;
-
       if (matchSearch && matchStatus) {
         row.style.display = '';
       } else {
         row.style.display = 'none';
       }
     });
-
     const sortVal = ordersSort?.value;
     if (sortVal) {
       const sortedRows = rows.sort((a, b) => {
@@ -195,13 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
       sortedRows.forEach(row => ordersTableBody.appendChild(row));
     }
   }
-
   ordersSearch?.addEventListener('input', filterOrdersTable);
   ordersStatus?.addEventListener('change', filterOrdersTable);
   ordersSort?.addEventListener('change', filterOrdersTable);
-
   initCharts();
-
   setTimeout(() => {
     document.querySelectorAll('.progress-fill').forEach(bar => {
       const w = bar.style.width;
@@ -209,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { bar.style.width = w; }, 100);
     });
   }, 400);
-
   const runLucide = () => {
     if (window.lucide) {
       window.lucide.createIcons();
@@ -219,15 +186,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   runLucide();
 });
-
 function initCharts() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const textColor = isDark ? '#7a9a72' : '#6b7f65';
   const borderColor = isDark ? '#2d4028' : '#d8e4cf';
-
   Object.values(charts).forEach(chart => chart.destroy());
   charts = {};
-
   const lineCanvas = document.getElementById('lineChart');
   if (lineCanvas) {
     charts.line = new Chart(lineCanvas.getContext('2d'), {
@@ -254,7 +218,6 @@ function initCharts() {
       }
     });
   }
-
   const revenueCanvas = document.getElementById('revenueChart');
   if (revenueCanvas) {
     charts.revenue = new Chart(revenueCanvas.getContext('2d'), {
@@ -281,7 +244,6 @@ function initCharts() {
       }
     });
   }
-
   const analyticsRevenueCanvas = document.getElementById('analyticsRevenueChart');
   if (analyticsRevenueCanvas) {
     charts.analyticsRevenue = new Chart(analyticsRevenueCanvas.getContext('2d'), {
@@ -330,7 +292,6 @@ function initCharts() {
       }
     });
   }
-
   const profitCanvas = document.getElementById('profitChart');
   if (profitCanvas) {
     charts.profit = new Chart(profitCanvas.getContext('2d'), {
@@ -357,7 +318,6 @@ function initCharts() {
       }
     });
   }
-
   const pieCanvas = document.getElementById('pieChart');
   if (pieCanvas) {
     charts.pie = new Chart(pieCanvas.getContext('2d'), {
@@ -383,7 +343,6 @@ function initCharts() {
       }
     });
   }
-
   const barCanvas = document.getElementById('barChart');
   if (barCanvas) {
     charts.bar = new Chart(barCanvas.getContext('2d'), {
@@ -408,7 +367,6 @@ function initCharts() {
       }
     });
   }
-
   const overviewBarCanvas = document.getElementById('overviewBarChart');
   if (overviewBarCanvas) {
     charts.overviewBar = new Chart(overviewBarCanvas.getContext('2d'), {

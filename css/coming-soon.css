@@ -22,7 +22,6 @@
 .back-link { color: var(--text-muted); font-size: 0.875rem; margin-top: 16px; }
 .back-link:hover { color: var(--green-primary); }
 .inline-style-cb4589 { display:none }
-
 [data-theme="dark"] .coming-tag {
   background: rgba(196, 154, 108, 0.12);
   color: var(--accent2);

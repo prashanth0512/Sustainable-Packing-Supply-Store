@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const path = window.location.pathname;
-
   let defaultService = 'compostable';
   if (path.includes('eco-mailers')) defaultService = 'mailers';
   else if (path.includes('recyclable-boxes')) defaultService = 'recyclable';
   else if (path.includes('compostable-bags')) defaultService = 'compostable';
-
   const serviceId = params.get('service') || defaultService;
   const data = SERVICES_DATA[serviceId];
-
   if (!data) {
     console.error('Service data not found for ID:', serviceId);
     return;
   }
-
   function getAssetPath(url) {
     if (!url) return '';
     if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('//')) {
@@ -23,38 +19,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const isSubfolder = window.location.pathname.includes('/html/');
     return (isSubfolder ? '../' : '') + url;
   }
-
   document.title = `${data.title} — Premium Sustainable Packaging | VerdantPack`;
-
   const heroBg = document.getElementById('heroBg');
   if (heroBg) heroBg.style.backgroundImage = `url('${getAssetPath(data.heroBg)}')`;
-
   const heroBadge = document.getElementById('heroBadge');
   if (heroBadge) {
     heroBadge.innerHTML = `<i data-lucide="leaf" class="icon-sm"></i> ${data.heroBadge || data.tag}`;
   }
-
   const heroTitle = document.getElementById('heroTitle');
   if (heroTitle) heroTitle.textContent = data.title;
-
   const heroSubtitle = document.getElementById('heroSubtitle');
   if (heroSubtitle) heroSubtitle.textContent = data.heroSubtitle || data.description;
-
   const usedIn = document.getElementById('usedIn');
   if (usedIn) usedIn.textContent = data.usedIn;
-
   const overviewImg = document.getElementById('overviewImg');
   if (overviewImg) {
     overviewImg.src = getAssetPath(data.overviewImg || data.image);
     overviewImg.alt = data.title;
   }
-
   const overviewHeading = document.getElementById('overviewHeading');
   if (overviewHeading) overviewHeading.textContent = data.overviewHeading || `Custom Engineered ${data.title}`;
-
   const overviewDesc = document.getElementById('overviewDesc');
   if (overviewDesc) overviewDesc.textContent = data.overviewDesc || data.description;
-
   const benefitsGrid = document.getElementById('benefitsGrid');
   if (benefitsGrid && data.benefits) {
     benefitsGrid.innerHTML = data.benefits.map(b => `
@@ -69,19 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `).join('');
   }
-
   const industriesList = document.getElementById('industriesList');
   if (industriesList && data.industries) {
     industriesList.innerHTML = data.industries.map(ind => `
       <span class="industry-tag">${ind}</span>
     `).join('');
   }
-
   const detailsGrid = document.getElementById('detailsGrid');
   if (detailsGrid && data.details) {
     const d = data.details;
     detailsGrid.innerHTML = `
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="sprout"></i></span>
@@ -89,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p>${d.materials}</p>
       </div>
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="leaf"></i></span>
@@ -97,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p>${d.sustainability}</p>
       </div>
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="shield"></i></span>
@@ -105,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p>${d.strength}</p>
       </div>
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="maximize-2"></i></span>
@@ -113,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p>${d.sizes}</p>
       </div>
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="palette"></i></span>
@@ -121,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p>${d.printing}</p>
       </div>
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="edit-3"></i></span>
@@ -129,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p>${d.branding}</p>
       </div>
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="award"></i></span>
@@ -139,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
           ${d.certifications.map(c => `<li>${c}</li>`).join('')}
         </ul>
       </div>
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="globe"></i></span>
@@ -147,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p>${d.advantages}</p>
       </div>
-
       <div class="detail-card">
         <div class="detail-card-header">
           <span class="card-icon"><i data-lucide="check-circle"></i></span>
@@ -159,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
   }
-
   const timelineSteps = document.getElementById('timelineSteps');
   const timelineProgress = document.getElementById('timelineProgress');
   if (timelineSteps && data.timeline) {
@@ -172,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>${step.desc}</p>
       </div>
     `).join('');
-
     const cards = timelineSteps.querySelectorAll('.timeline-card');
     cards.forEach((card, index) => {
       card.addEventListener('mouseenter', () => {
@@ -214,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `).join('');
   }
-
   const galleryGrid = document.getElementById('galleryGrid');
   if (galleryGrid && data.gallery) {
     galleryGrid.innerHTML = data.gallery.map(item => `
@@ -230,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `).join('');
   }
-
   const faqAccordion = document.getElementById('faqAccordion');
   if (faqAccordion && data.faqs) {
     faqAccordion.innerHTML = data.faqs.map(faq => `
@@ -246,19 +217,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     `).join('');
-
     const faqCards = faqAccordion.querySelectorAll('.faq-card');
     faqCards.forEach(card => {
       const header = card.querySelector('.faq-header');
       const body = card.querySelector('.faq-body');
       header.addEventListener('click', () => {
         const isActive = card.classList.contains('active');
-
         faqCards.forEach(c => {
           c.classList.remove('active');
           c.querySelector('.faq-body').style.maxHeight = null;
         });
-
         if (!isActive) {
           card.classList.add('active');
           body.style.maxHeight = body.scrollHeight + "px";
@@ -266,12 +234,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
   const relatedGrid = document.getElementById('relatedGrid');
   if (relatedGrid) {
     const keys = Object.keys(SERVICES_DATA).filter(k => k !== serviceId);
     const selectedKeys = keys.slice(0, 3);
-
     relatedGrid.innerHTML = selectedKeys.map(key => {
       const item = SERVICES_DATA[key];
       const detailLink = (window.location.pathname.includes('/html/') ? '' : 'html/') + 'service-detail.html?service=' + key;
@@ -297,7 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }).join('');
   }
-
   setTimeout(() => {
     if (window.lucide) {
       window.lucide.createIcons();

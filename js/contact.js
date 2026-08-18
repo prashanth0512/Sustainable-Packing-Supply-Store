@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
-
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
   const runLucide = () => {
     if (window.lucide) {
       window.lucide.createIcons();

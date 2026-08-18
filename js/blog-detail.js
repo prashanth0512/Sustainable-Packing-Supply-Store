@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('BLOGS_DATA is not defined. Make sure navigation-data.js is loaded.');
     return;
   }
-
   const params = new URLSearchParams(window.location.search);
   const postId = params.get('post') || 'plastic-cost';
   const data = BLOGS_DATA[postId] || BLOGS_DATA['plastic-cost'];
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'Sofia Nakamura': '../assets/images/avatar-anika.png',
     'Jamie Rivera': '../assets/images/avatar-jamie.png'
   };
-
   const authorRoles = {
     'Marcus Okafor': 'Head of Sustainability',
     'Sarah Jenkins': 'Bio-Polymer Scientist',
@@ -24,18 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     'Sofia Nakamura': 'Fulfillment Engineer',
     'Jamie Rivera': 'B-Corp Lead Auditor'
   };
-
   if (data) {
     document.title = `${data.title} — VerdantPack`;
-
     const heroOverlay = document.getElementById('heroOverlay');
     if (heroOverlay) {
       heroOverlay.style.backgroundImage = `url('../${data.image}')`;
     }
-
     const heroBadge = document.getElementById('heroBadge');
     if (heroBadge) heroBadge.textContent = data.tag;
-
     function formatHeroTitle(rawTitle) {
       if (!rawTitle) return '';
       const titleAccents = {
@@ -47,11 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'bcorp-guide': '<span class="hero-accent">B-Corp Certification</span> Guide: Step-by-Step for Sustainable Brands',
         'eco-logistics': 'Decentralized <span class="hero-accent">Eco-Logistics</span>: Slashing Shipping Costs & <span class="hero-accent">Emissions</span>'
       };
-
       if (titleAccents[postId]) {
         return titleAccents[postId];
       }
-
       const words = rawTitle.trim().split(/\s+/);
       if (words.length > 3) {
         let count = 0;
@@ -67,34 +59,25 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       return rawTitle;
     }
-
     const heroTitle = document.getElementById('heroTitle');
     if (heroTitle) heroTitle.innerHTML = formatHeroTitle(data.title);
-
     const heroSubtitle = document.getElementById('heroSubtitle');
     if (heroSubtitle) heroSubtitle.textContent = data.subtitle;
-
     const avatarPath = authorAvatars[data.author] || '../assets/images/avatar-marcus.png';
     const heroAuthorAvatar = document.getElementById('heroAuthorAvatar');
     if (heroAuthorAvatar) heroAuthorAvatar.src = avatarPath;
-
     const heroAuthorName = document.getElementById('heroAuthorName');
     if (heroAuthorName) heroAuthorName.textContent = data.author;
-
     const heroPublishDate = document.getElementById('heroPublishDate');
     if (heroPublishDate) heroPublishDate.textContent = data.date;
-
     const heroReadTime = document.getElementById('heroReadTime');
     if (heroReadTime) heroReadTime.textContent = data.readTime;
-
     const featureImg = document.getElementById('featureImg');
     if (featureImg) featureImg.src = `../${data.image}`;
-
     function formatArticleRichText(contentHtml) {
       if (!contentHtml) return '';
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = contentHtml;
-
       const headings = tempDiv.querySelectorAll('h2, h3');
       headings.forEach(h => {
         const rawText = h.textContent.trim();
@@ -123,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
           h.innerHTML = words.join(' ');
         }
       });
-
       const paragraphs = tempDiv.querySelectorAll('p');
       const keywords = [
         'Sustainable', 'Packaging', 'Carbon Neutral', 'Eco Materials',
@@ -131,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ];
       const keywordCounts = {};
       keywords.forEach(k => keywordCounts[k.toLowerCase()] = 0);
-
       paragraphs.forEach(p => {
         let text = p.innerHTML;
         keywords.forEach(kw => {
@@ -146,19 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         p.innerHTML = text;
       });
-
       return tempDiv.innerHTML;
     }
-
     const articleRichText = document.getElementById('articleRichText');
     if (articleRichText) articleRichText.innerHTML = formatArticleRichText(data.content);
-
     const quoteText = document.getElementById('quoteText');
     if (quoteText) quoteText.textContent = data.quote.text;
-
     const quoteAuthor = document.getElementById('quoteAuthor');
     if (quoteAuthor) quoteAuthor.textContent = `- ${data.quote.author}`;
-
     const statsGrid = document.getElementById('statsGrid');
     if (statsGrid && data.stats) {
       statsGrid.innerHTML = data.stats.map(s => `
@@ -169,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `).join('');
     }
-
     const tipsList = document.getElementById('tipsList');
     if (tipsList && data.tips) {
       tipsList.innerHTML = data.tips.map(t => `<li>${t}</li>`).join('');
@@ -180,22 +155,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const insightsText = document.getElementById('insightsText');
     if (insightsText) insightsText.textContent = data.insights;
-
     const sidebarAuthorAvatar = document.getElementById('sidebarAuthorAvatar');
     if (sidebarAuthorAvatar) sidebarAuthorAvatar.src = avatarPath;
-
     const sidebarAuthorName = document.getElementById('sidebarAuthorName');
     if (sidebarAuthorName) sidebarAuthorName.textContent = data.author;
-
     const sidebarAuthorRole = document.getElementById('sidebarAuthorRole');
     if (sidebarAuthorRole) sidebarAuthorRole.textContent = authorRoles[data.author] || 'Sustainability Scientist';
-
     const sidebarReadTime = document.getElementById('sidebarReadTime');
     if (sidebarReadTime) sidebarReadTime.textContent = data.readTime;
-
     const sidebarCategory = document.getElementById('sidebarCategory');
     if (sidebarCategory) sidebarCategory.textContent = data.tag;
-
     const recentPostsList = document.getElementById('recentPostsList');
     if (recentPostsList) {
       const otherBlogs = Object.keys(BLOGS_DATA).filter(k => k !== postId);
@@ -203,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="blog-detail.html?post=${k}" class="bd-recent-post-link">${BLOGS_DATA[k].title}</a>
       `).join('');
     }
-
     const galleryGrid = document.getElementById('galleryGrid');
     if (galleryGrid && data.gallery) {
       galleryGrid.innerHTML = data.gallery.map(item => `
@@ -215,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `).join('');
     }
-
     const faqAccordion = document.getElementById('faqAccordion');
     if (faqAccordion && data.faqs) {
       faqAccordion.innerHTML = data.faqs.map(faq => `
@@ -229,19 +196,16 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       `).join('');
-
       const headers = faqAccordion.querySelectorAll('.accordion-header');
       headers.forEach(header => {
         header.addEventListener('click', () => {
           const item = header.parentElement;
           const content = item.querySelector('.accordion-content');
           const isActive = item.classList.contains('active');
-
           faqAccordion.querySelectorAll('.accordion-item.active').forEach(activeItem => {
             activeItem.classList.remove('active');
             activeItem.querySelector('.accordion-content').style.maxHeight = null;
           });
-
           if (!isActive) {
             item.classList.add('active');
             content.style.maxHeight = content.scrollHeight + 'px';
@@ -249,13 +213,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
-
     const relatedGrid = document.getElementById('relatedGrid');
     if (relatedGrid) {
       const otherBlogs = Object.keys(BLOGS_DATA).filter(k => k !== postId);
       const relatedKeys = otherBlogs.slice(0, 3);
       relatedGrid.innerHTML = '';
-
       relatedKeys.forEach(k => {
         const item = BLOGS_DATA[k];
         const card = document.createElement('article');
@@ -263,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
           window.location.href = `blog-detail.html?post=${k}`;
         });
-
         const excerpts = {
           'plastic-cost': 'Beyond the environmental impact, plastic packaging carries hidden costs that most businesses never calculate. We break down the full financial case.',
           'composting-labels': 'Decoding the certification labels on your packaging so you can make genuinely informed choices between home and industrial composting.',
@@ -273,9 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'bcorp-guide': 'A complete blueprint to B Impact Assessments, local environmental sourcing audits, and circular packaging points tracking.',
           'eco-logistics': 'How regionalizing inventory micro-hubs closer to urban areas cuts shipping distance, saves cost, and slashes line-haul freight emissions.'
         };
-
         const excerpt = excerpts[k] || 'Read our latest insights on sustainable supply chains and eco-friendly packaging advancements.';
-
         card.innerHTML = `
           <div class="card-img-wrapper">
             <span class="card-category">${item.tag}</span>
@@ -293,18 +252,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
-
   const bar = document.createElement('div');
   bar.style.cssText = 'position:fixed;top:72px;left:0;height:4px;background:var(--accent);z-index:999;transition:width 0.1s linear;width:0;';
   document.body.appendChild(bar);
-
   window.addEventListener('scroll', () => {
     const total = document.documentElement.scrollHeight - window.innerHeight;
     if (total > 0) {
       bar.style.width = Math.min(100, (window.scrollY / total) * 100) + '%';
     }
   });
-
   const runLucide = () => {
     if (window.lucide) {
       window.lucide.createIcons();
